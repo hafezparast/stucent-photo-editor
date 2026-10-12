@@ -47,10 +47,32 @@ if grep -Eq '(src|href)="/[^/]' "$SITE/index.html"; then
   echo "error: $SITE/index.html has root-absolute URLs; it would break when served from a sub-path" >&2
   exit 1
 fi
-# One wasm download in every browser: no integrity value on the preload that the loader's own fetch
-# would not repeat (WebKit downloads the file twice otherwise).
-if grep -q 'rel="preload"[^>]*integrity=' "$SITE/index.html"; then
-  echo "error: the wasm preload carries an integrity value (WebKit would download the wasm twice)" >&2
+# One wasm download in every browser. WebKit does not hand trunk's `<link rel="preload" as="fetch">`
+# to the loader's own fetch() (with or without an integrity value), so it downloaded the 25 MB file
+# twice. Instead: drop the preload, start the one fetch() first thing in <head>, and give that
+# Response promise to wasm-bindgen's init(), which accepts one.
+python3 - "$SITE/index.html" <<'PY'
+import re, sys
+path = sys.argv[1]
+html = open(path, encoding="utf-8").read()
+if "__stucentWasm" in html:
+    sys.exit(0)  # already rewritten (a --skip-build re-run)
+m = re.search(r"init\(\{ module_or_path: '(\./[^']+_bg\.wasm)' \}\)", html)
+if not m:
+    sys.exit("error: trunk's loader call init({ module_or_path: '…_bg.wasm' }) not found in index.html")
+wasm = m.group(1)
+html = html.replace(m.group(0), "init({ module_or_path: window.__stucentWasm || '%s' })" % wasm)
+html, n = re.subn(r'<link rel="preload" href="%s"[^>]*>' % re.escape(wasm), "", html)
+if n != 1:
+    sys.exit("error: expected one wasm preload link, found %d" % n)
+early = "<script>window.__stucentWasm = fetch('%s');</script>" % wasm
+html = html.replace('<meta charset="utf-8">', '<meta charset="utf-8">\n  ' + early, 1)
+if early not in html:
+    sys.exit("error: could not place the early wasm fetch")
+open(path, "w", encoding="utf-8").write(html)
+PY
+if grep -q 'rel="preload"[^>]*\.wasm' "$SITE/index.html"; then
+  echo "error: index.html still preloads the wasm (WebKit would download it twice)" >&2
   exit 1
 fi
 

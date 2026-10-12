@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <title>StuCent Photo Editor</title>
-  <!-- StuCent: data-integrity="none" so the wasm preload matches the loader's own fetch. With an
-       integrity value on the preload only, WebKit does not reuse it and downloads the wasm twice. -->
+  <!-- StuCent: WebKit did not reuse trunk's wasm preload and downloaded the wasm twice.
+       scripts/build-stucent-web.sh replaces the preload with one early fetch() handed to init();
+       data-integrity="none" keeps the loader and that fetch identical. -->
   <link data-trunk rel="rust" data-bin="photocraft-web" data-cargo-profile="wasm-release" data-cargo-features="heif,host-bridge,stucent" data-integrity="none" data-wasm-opt="z" data-weak-refs />
   <style>
     html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #262626; }

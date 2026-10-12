@@ -20,7 +20,7 @@ Only the web app is built and shipped. Upstream code is untouched except for sma
 | Name "StuCent Photo Editor" in every UI language, neutral title-bar mark, no Discord / website / GitHub / ArtCraft links, About names the upstream version | `crates/ui-egui/src/brand.rs`, `links.rs`, `i18n/` | `photocraft-ui-egui/stucent-brand` (web: `stucent`) |
 | Host bridge: a page that embeds the editor in an `<iframe>` drives it with `postMessage` | `apps/photocraft-web/src/host_bridge.rs`, `bridge_protocol.rs` | `host-bridge` |
 | Menu items locked by the host show disabled and are refused | `Services::locked_command`, `menus::locked` | always compiled, used by the bridge |
-| WebKit downloaded the wasm twice (preload with `integrity` not reused) | `apps/photocraft-web/index.html` (`data-integrity="none"`) | — |
+| WebKit downloaded the wasm twice (it does not hand trunk's preload to the loader's fetch) | `scripts/build-stucent-web.sh` replaces the preload with one early `fetch()` given to `init()` | — |
 | UI languages Malay (`ms`), Swahili (`sw`), Turkish (`tr`), Vietnamese (`vi`) | `crates/ui-egui/src/i18n/{ms,sw,tr,vi}.tsv` | — |
 
 **Not yet supported:** Arabic, Persian and Tamil. The UI has no right-to-left layout (egui has no
@@ -63,7 +63,7 @@ scripts/build-stucent-web.sh          # → dist/stucent/stucent-photo-editor-we
 
 The script checks the tag against `VERSION` in `apps/photocraft-web/src/bridge_protocol.rs`, builds
 with trunk (binaryen `version_133` by default, `TRUNK_TOOLS_WASM_OPT` to change), enforces the
-24 MiB wasm gate, refuses a wasm preload with an integrity value, and writes `manifest.json` (file
+24 MiB wasm gate, replaces the wasm preload with a single early fetch (one download in WebKit too), and writes `manifest.json` (file
 sizes and SHA-256) into the zip. A cold build takes about 30 minutes (fat LTO).
 
 CI: `.github/workflows/stucent-web.yml` runs the bridge and branding tests and the same script on
