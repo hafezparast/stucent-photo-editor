@@ -96,15 +96,37 @@ pub fn start() {
                         app.set_wgpu(rs);
                     }
                     let unsaved = Arc::new(AtomicBool::new(false));
-                    guard_unload(unsaved.clone());
-                    Ok(Box::new(WebShell { app, inbox, unsaved, served, database, presets }))
+                    #[cfg(feature = "host-bridge")]
+                    let bridge = crate::host_bridge::HostBridge::install(cc.egui_ctx.clone(), &mut app);
+                    // Embedded, the host page keeps the work (autosave snapshots): no "Leave site?" prompt.
+                    #[cfg(feature = "host-bridge")]
+                    let embedded = bridge.is_some();
+                    #[cfg(not(feature = "host-bridge"))]
+                    let embedded = false;
+                    if !embedded {
+                        guard_unload(unsaved.clone());
+                    }
+                    Ok(Box::new(WebShell {
+                        app,
+                        inbox,
+                        unsaved,
+                        served,
+                        database,
+                        presets,
+                        #[cfg(feature = "host-bridge")]
+                        bridge,
+                    }))
                 }),
             )
             .await;
         if let Some(el) = document.get_element_by_id("photocraft_loading") {
             match result {
                 Ok(()) => el.remove(),
-                Err(e) => el.set_inner_html(&format!("<p>PhotoCraft failed to start: {e:?}</p><p>A browser with WebGPU or WebGL2 is required.</p>")),
+                Err(e) => el.set_inner_html(&format!(
+                    "<p>{} failed to start: {}</p><p>A browser with WebGPU or WebGL2 is required.</p>",
+                    photocraft_ui_egui::brand::APP_NAME,
+                    escape_html(&format!("{e:?}"))
+                )),
             }
         }
     });
@@ -156,6 +178,11 @@ fn guard_unload(unsaved: Arc<AtomicBool>) {
     if window.add_event_listener_with_callback("beforeunload", cb.as_ref().unchecked_ref()).is_ok() {
         cb.forget();
     }
+}
+
+/// Text for `innerHTML` (an error message may quote anything).
+fn escape_html(s: &str) -> String {
+    s.replace('&', "&amp;").replace('<', "&lt;").replace('>', "&gt;")
 }
 
 fn query() -> String {
@@ -228,6 +255,9 @@ struct WebShell {
     served: Served,
     database: Option<web_sys::IdbDatabase>,
     presets: crate::preset_bridge::Bridge,
+    /// The embedding page's `postMessage` bridge, when the URL names one (`?host=`).
+    #[cfg(feature = "host-bridge")]
+    bridge: Option<crate::host_bridge::HostBridge>,
 }
 
 impl WebShell {
@@ -284,6 +314,8 @@ impl WebShell {
 
 impl eframe::App for WebShell {
     fn logic(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
+        #[cfg(feature = "host-bridge")]
+        crate::host_bridge::filter_input(ctx);
         let dropped = ctx.input_mut(|i| std::mem::take(&mut i.raw.dropped_files));
         for f in dropped {
             let inbox = self.inbox.clone();
@@ -301,6 +333,10 @@ impl eframe::App for WebShell {
         }
         self.serve_fonts(ctx);
         self.app.logic(ctx, frame);
+        #[cfg(feature = "host-bridge")]
+        if let Some(bridge) = self.bridge.as_mut() {
+            bridge.pump(&mut self.app, ctx);
+        }
         self.save_presets(ctx);
     }
 
@@ -355,6 +391,10 @@ fn services(inbox: Inbox) -> Services {
         file_dialog: Some(Box::new(|request, _parent, reply| match request {
             // The browser's file picker hands over the files' contents, not paths. File › Open
             // asks for several files (`multiple`), each opened in its own tab.
+            // Exam mode (host bridge): no file picker and no download, from any path (the start
+            // screen's Open button, Place, a preset import) — the host keeps the work.
+            #[cfg(feature = "host-bridge")]
+            _ if crate::host_bridge::exam_mode() => reply.send(None),
             FileDialogRequest::Open { multiple, extensions, .. } => wasm_bindgen_futures::spawn_local(async move {
                 let dialog = if let Some(exts) = extensions {
                     rfd::AsyncFileDialog::new().add_filter("Supported Files", &exts)
@@ -386,7 +426,13 @@ fn services(inbox: Inbox) -> Services {
                 reply.send(Some(FileDialogAnswer::SaveTo(name)));
             }
         })),
-        write: Some(Box::new(|path: &str, bytes: &[u8]| download(path, bytes))),
+        write: Some(Box::new(|path: &str, bytes: &[u8]| {
+            #[cfg(feature = "host-bridge")]
+            if crate::host_bridge::exam_mode() {
+                return Err("Saving and exporting files is turned off in exam mode".into());
+            }
+            download(path, bytes)
+        })),
         encode_png: Some(Box::new(|w, h, rgba| {
             let img = Image::from_u8(w, h, ChannelLayout::Rgba, rgba.to_vec()).map_err(|e| e.to_string())?;
             photocraft_codecs::encode(&img, photocraft_codecs::Format::Png, &EncodeOptions::default()).map_err(|e| e.to_string())

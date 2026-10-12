@@ -1,0 +1,3411 @@
+# Swahili (Kiswahili) (sw) catalog. Columns, separated by a TAB:  context <TAB> source <TAB> translation
+#
+#   context  empty                a plain UI string; `source` is the English text in the code
+#            @id                  a command id (e.g. file.saveAs): wins over the English text for
+#                                 that menu item, so one id can read differently from its twin
+#            @plural              `source` is "one|other" (English forms); the translation lists the
+#                                 language's forms separated by "|" (see `plural` in i18n/mod.rs)
+#            anything else        a disambiguating context passed to `tr_ctx`
+#   escapes  \n  \t  \\  inside a column. `{name}` placeholders must appear in both columns.
+#   lines starting with # and blank lines are ignored.
+#
+# Added for the StuCent Photo Editor fork (hafezparast/stucent-photo-editor). Clean-room: every
+# entry was written from the plain meaning of the English label using ordinary Swahili computing
+# vocabulary (tabaka, brashi, uteuzi, turubai, barakoa ...). No proprietary localisation resource, string table or product UI was
+# consulted or copied. Product and technology names (PhotoCraft, ArtCraft, OpenType, CMYK, Lab ...)
+# stay in Latin letters; the trailing "…" of dialog commands is kept. Machine-assisted: a native
+# speaker's review is welcome.
+
+	% of all commits	% ya komiti zote
+	(coming soon)	(inakuja hivi karibuni)
+	(print to the printer)	(chapisha kwenye printa)
+	+ Add variable	+ Ongeza kigezo
+	0 turns this threshold off; SVG groups nested deeper than 100 levels are always rasterized.	0 huzima kizingiti hiki; vikundi vya SVG vilivyowekwa ndani zaidi ya viwango 100 hugeuzwa kuwa pikseli kila mara.
+	10 fps	fps 10
+	100%	100%
+	101 by 101 Average	Wastani 101 kwa 101
+	11 by 11 Average	Wastani 11 kwa 11
+	125%	125%
+	15 fps	fps 15
+	150%	150%
+	16 Bits/Channel	Biti 16/Chaneli
+	16 bit	biti 16
+	175%	175%
+	180°	180°
+	2-up Horizontal	2 kwa Mlalo
+	2-up Vertical	2 kwa Wima
+	200%	200%
+	24 fps	fps 24
+	25 fps	fps 25
+	250%	250%
+	3 by 3 Average	Wastani 3 kwa 3
+	3 x 3	3 x 3
+	3-up Horizontal	3 kwa Mlalo
+	3-up Stacked	3 Zilizopangwa
+	3-up Vertical	3 kwa Wima
+	30 fps	fps 30
+	30 frames @ 30 fps	fremu 30 @ fps 30
+	300%	300%
+	31 by 31 Average	Wastani 31 kwa 31
+	32 Bits/Channel	Biti 32/Chaneli
+	32 bit (float)	biti 32 (desimali)
+	32-bit Preview Options	Chaguo za Onyesho la Biti 32
+	32-bit Preview Options…	Chaguo za Onyesho la Biti 32…
+	3D	3D
+	3D LUT File	Faili ya LUT ya 3D
+	3D…	3D…
+	4 x 4	4 x 4
+	4-up	4 kwa Pamoja
+	5 by 5 Average	Wastani 5 kwa 5
+	5 x 5	5 x 5
+	50% Gray	Kijivu 50%
+	51 by 51 Average	Wastani 51 kwa 51
+	6-up	6 kwa Pamoja
+	75%	75%
+	8 Bits/Channel	Biti 8/Chaneli
+	8 bit	biti 8
+	80%	80%
+	85%	85%
+	90%	90%
+	90° Clockwise	90° Mwendo wa Saa
+	90° Counter Clockwise	90° Kinyume cha Saa
+	95%	95%
+	@{login}: {prs} PRs, {commits} commits, +{added} / −{deleted} lines (Δ {delta}), +{binAdded} / −{binDeleted} binary assets, {first} – {last}	@{login}: PR {prs}, komiti {commits}, mistari +{added} / −{deleted} (Δ {delta}), rasilimali za binari +{binAdded} / −{binDeleted}, {first} – {last}
+	A save to {name} is still running; try again when it finishes	Uhifadhi kwenye {name} bado unaendelea; jaribu tena ukimaliza
+	ACES	ACES
+	AI Integrations	Miunganiko ya AI
+	AI Integrations…	Miunganiko ya AI…
+	About	Kuhusu
+	About PhotoCraft	Kuhusu PhotoCraft
+	Absolute	Kamili
+	Absolute Colorimetric	Rangi Kamili
+	Accented Edges	Kingo Zilizosisitizwa
+	Accurate	Sahihi
+	Action	Kitendo
+	Actions	Vitendo
+	Active	Hai
+	Actual Color	Rangi Halisi
+	Adaptive	Inayojirekebisha
+	Adaptive Wide Angle	Pembe Pana Inayojirekebisha
+	Adaptive Wide Angle isn't open	Pembe Pana Inayojirekebisha haijafunguliwa
+	Adaptive Wide Angle…	Pembe Pana Inayojirekebisha…
+	Add	Ongeza
+	Add Layer Above to Selection	Ongeza Tabaka la Juu kwenye Uteuzi
+	Add Layer Below to Selection	Ongeza Tabaka la Chini kwenye Uteuzi
+	Add Layer Mask	Ongeza Barakoa ya Tabaka
+	Add Noise	Ongeza Kelele
+	Add Noise…	Ongeza Kelele…
+	Add Pins	Ongeza Pini
+	Add Stop	Ongeza Kituo
+	Add Vector Mask	Ongeza Barakoa ya Vekta
+	Add a layer style	Ongeza mtindo wa tabaka
+	Add a mask  (from the selection; {key} inverts)	Ongeza barakoa  (kutoka kwenye uteuzi; {key} hugeuza)
+	Add a mask  (from the selection; ⌥ inverts)	Ongeza barakoa  (kutoka kwenye uteuzi; ⌥ hugeuza)
+	Add an adjustment	Ongeza marekebisho
+	Add beauty precomp from the AOVs	Ongeza mchanganyiko wa awali wa beauty kutoka kwa AOV
+	Add disk	Ongeza diski
+	Add pair	Ongeza jozi
+	Add space after paragraph	Ongeza nafasi baada ya aya
+	Add space before paragraph	Ongeza nafasi kabla ya aya
+	Add to	Ongeza kwenye
+	Add to Sample	Ongeza kwenye Sampuli
+	Add to Swatches	Ongeza kwenye Sampuli za Rangi
+	Add to selection  ({key})	Ongeza kwenye uteuzi  ({key})
+	Add to selection  (⇧)	Ongeza kwenye uteuzi  (⇧)
+	Add vector mask	Ongeza barakoa ya vekta
+	Additional plugins folder	Folda ya ziada ya programu-jalizi
+	Adds grain to the soft edges of the brush tip.	Huongeza chembechembe kwenye kingo laini za ncha ya brashi.
+	Adds the current gradient to the Gradients panel	Huongeza gredienti ya sasa kwenye paneli ya Gredienti
+	Adjust Interval For Loops	Rekebisha Muda wa Mizunguko
+	Adjust for Zoom	Rekebisha kwa Kukuza
+	Adjustment	Marekebisho
+	Adjustment Layer	Tabaka la Marekebisho
+	Adjustment Preview	Onyesho la Marekebisho
+	Adjustment Properties	Sifa za Marekebisho
+	Adjustment layers have nothing to transform	Matabaka ya marekebisho hayana kitu cha kubadilisha
+	Adjustment visible	Marekebisho yanaonekana
+	Adjustments	Marekebisho
+	Adobe	Adobe
+	Adobe Every-line Composer	Adobe Every-line Composer
+	Adobe PDF Presets…	Mipangilio ya PDF ya Adobe…
+	Adobe RGB (1998)	Adobe RGB (1998)
+	Adobe RGB (1998) compatible	Inayooana na Adobe RGB (1998)
+	Adobe Single-line Composer	Adobe Single-line Composer
+	Adobe rgb	Adobe rgb
+	Advanced	Kina
+	Advanced Blending	Uchanganyaji wa Kina
+	Advanced Controls	Vidhibiti vya Kina
+	Adwaita	Adwaita
+	Adwaita Dark Theme	Mandhari Meusi ya Adwaita
+	Adwaita Light Theme	Mandhari Meupe ya Adwaita
+	Adwaita dark	Adwaita meusi
+	After (X)	Baada ya (X)
+	Again	Tena
+	Airbrush: keeps depositing paint while the pointer rests.	Brashi ya hewa: huendelea kuweka rangi kiashiria kikitulia.
+	Airbrush: keeps painting while the pointer rests.	Brashi ya hewa: huendelea kupaka rangi kiashiria kikitulia.
+	Align	Panga
+	Align and Distribute	Panga na Sambaza
+	Align and distribute	Panga na sambaza
+	Align horizontal centers	Panga vituo vya mlalo
+	Align left edges	Panga kingo za kushoto
+	Align right edges	Panga kingo za kulia
+	Align with layer	Panga na tabaka
+	Align {what}	Panga {what}
+	Aligned	Imepangwa
+	Alignment	Mpangilio
+	All	Zote
+	All Caps	Herufi Kubwa Zote
+	All Layers	Matabaka Yote
+	All Layers No Adjustments	Matabaka Yote Bila Marekebisho
+	All Slices	Vipande Vyote
+	All User Slices	Vipande Vyote vya Mtumiaji
+	All shortcuts reset to PhotoCraft defaults.	Njia zote za mkato zimerejeshwa kwa chaguo-msingi za PhotoCraft.
+	Allow agent control	Ruhusu udhibiti wa wakala
+	Allow scripts to connect	Ruhusu hati kuunganishwa
+	Alpha	Alfa
+	Alt	Alt
+	Alt-click to define a source point to clone from	Bofya kwa Alt kuweka sehemu ya chanzo cha kunakili
+	Alt-click went to the desktop, which moves windows with Alt-drag. Set its window-move key to Super, or latch Alt in Window › Modifier Keys.	Kubofya kwa Alt kulienda kwenye eneo-kazi, ambalo husogeza madirisha kwa Alt-kuburuta. Weka kitufe chake cha kusogeza dirisha kiwe Super, au funga Alt katika Dirisha › Vitufe vya Kirekebishaji.
+	Alternates for Current Selection	Mbadala kwa Uteuzi wa Sasa
+	Alternative	Mbadala
+	Altitude	Mwinuko
+	Always	Kila mara
+	Always Show Overlay	Onyesha Tabaka-juu Kila Mara
+	Always create smart objects when placing	Unda vitu mahiri kila mara unapoweka
+	Always use pressure for opacity	Tumia shinikizo kwa uangavu kila mara
+	Always use pressure for size	Tumia shinikizo kwa ukubwa kila mara
+	Ambience	Mandhari
+	Ambient	Mazingira
+	Amount	Kiasi
+	Amplitude Max	Upeo wa Ukubwa wa Wimbi
+	Amplitude Min	Kiwango cha Chini cha Ukubwa wa Wimbi
+	Analysis	Uchanganuzi
+	Anamorphic 2:1 (2)	Anamofiki 2:1 (2)
+	Anchor:	Nanga:
+	Android 1080p	Android 1080p
+	Angle	Pembe
+	Angle Gradient	Gredienti ya Pembe
+	Angle Jitter	Mtikisiko wa Pembe
+	Angle:	Pembe:
+	Angled Strokes	Mipigo ya Mshazari
+	Animated zoom	Kukuza kwa uhuishaji
+	Anisotropic	Anisotropiki
+	Answer the unsaved-changes prompt first	Jibu kwanza swali la mabadiliko ambayo hayajahifadhiwa
+	Anti-Alias	Kulainisha Kingo
+	Anti-alias	Kulainisha kingo
+	Anti-aliasing method	Mbinu ya kulainisha kingo
+	Aperture	Kitundu
+	Appearance	Mwonekano
+	Appearance (Layer Style)	Mwonekano (Mtindo wa Tabaka)
+	Appearance Mode	Hali ya Mwonekano
+	Apple RGB	Apple RGB
+	Apple Watch 45mm	Apple Watch 45mm
+	Applies at next launch.	Inatumika utakapofungua tena.
+	Apply	Tumia
+	Apply At Canvas Bounds	Tumia kwenye Mipaka ya Turubai
+	Apply Data Set	Tumia Seti ya Data
+	Apply Data Set…	Tumia Seti ya Data…
+	Apply Image	Tumia Picha
+	Apply Image…	Tumia Picha…
+	Apply Layer Comp	Tumia Mpangilio wa Matabaka
+	Apply Layer Mask	Tumia Barakoa ya Tabaka
+	Apply Per Tip	Tumia kwa Kila Ncha
+	Apply auto tone	Tumia toni kiotomatiki
+	Apply next selected layer comp	Tumia mpangilio wa matabaka unaofuata uliochaguliwa
+	Apply previous selected layer comp	Tumia mpangilio wa matabaka uliotangulia uliochaguliwa
+	Apply the pen's tilt and rotation to the tip shape	Tumia mwinamo na mzunguko wa kalamu kwenye umbo la ncha
+	Aqua	Aqua
+	Arbitrary	Holela
+	Arbitrary…	Holela…
+	Arc	Tao
+	Arch	Upinde
+	Area	Eneo
+	Around Center	Kuzunguka Katikati
+	Arrange	Panga
+	Arrangement	Mpangilio
+	Art & Illustration	Sanaa na Michoro
+	Art History Brush	Brashi ya Historia ya Sanaa
+	ArtCraft	ArtCraft
+	ArtCraft Website	Tovuti ya ArtCraft
+	Artboard	Ubao wa Sanaa
+	Artboard Background Color	Rangi ya Mandharinyuma ya Ubao wa Sanaa
+	Artboard Guides	Miongozo ya Ubao wa Sanaa
+	Artboard from Group	Ubao wa Sanaa kutoka Kikundi
+	Artboard from Group…	Ubao wa Sanaa kutoka Kikundi…
+	Artboard from Layers	Ubao wa Sanaa kutoka Matabaka
+	Artboard from Layers…	Ubao wa Sanaa kutoka Matabaka…
+	Artboards to Files	Mbao za Sanaa kwenda Faili
+	Artboards to Files…	Mbao za Sanaa kwenda Faili…
+	Artboards to PDF	Mbao za Sanaa kwenda PDF
+	Artboards to PDF…	Mbao za Sanaa kwenda PDF…
+	Artboard…	Ubao wa Sanaa…
+	Artist	Msanii
+	Artistic	Kisanii
+	Ask	Uliza
+	Ask Before Saving Saved Embedded	Uliza Kabla ya Kuhifadhi Kilichopachikwa
+	Ask When Pasting	Uliza Unapobandika
+	Ask before saving layered tiff	Uliza kabla ya kuhifadhi tiff yenye matabaka
+	Aspect Ratio	Uwiano wa Vipimo
+	Assign Profile	Weka Wasifu
+	Assign Profile…	Weka Wasifu…
+	Assign working space	Weka nafasi ya kazi
+	At	Kwenye
+	Audio	Sauti
+	Author	Mwandishi
+	Author:	Mwandishi:
+	Auto	Otomatiki
+	Auto Adjust Opacity	Rekebisha Uangavu Kiotomatiki
+	Auto Center Preview	Weka Onyesho Katikati Kiotomatiki
+	Auto Clean Brush	Safisha Brashi Kiotomatiki
+	Auto Color	Rangi Otomatiki
+	Auto Contrast	Utofautishaji Otomatiki
+	Auto Erase	Futa Otomatiki
+	Auto Hide	Ficha Otomatiki
+	Auto Hide Notifications	Ficha Arifa Kiotomatiki
+	Auto Scale	Pima Kiotomatiki
+	Auto Show Overlay	Onyesha Tabaka-juu Kiotomatiki
+	Auto Tone	Toni Otomatiki
+	Auto collapse icon panels	Kunja paneli za aikoni kiotomatiki
+	Auto show hidden panels	Onyesha paneli zilizofichwa kiotomatiki
+	Auto show home screen	Onyesha skrini ya mwanzo kiotomatiki
+	Auto-Align Layers	Panga Matabaka Kiotomatiki
+	Auto-Align Layers…	Panga Matabaka Kiotomatiki…
+	Auto-Blend Layers	Changanya Matabaka Kiotomatiki
+	Auto-Blend Layers…	Changanya Matabaka Kiotomatiki…
+	Auto-Hide	Ficha Otomatiki
+	Auto-Leading	Nafasi ya Mistari Otomatiki
+	Auto-Select:	Chagua Otomatiki:
+	Auto-leading %	% ya nafasi ya mistari otomatiki
+	Automate	Otomatiki
+	Automatic (recommended)	Otomatiki (inapendekezwa)
+	Automatic uses GPU acceleration when available and falls back to CPU rendering on errors.	Otomatiki hutumia kuongeza kasi kwa GPU inapopatikana na hurudi kwenye uchoraji kwa CPU kukiwa na hitilafu.
+	Automatically Create First Snapshot	Unda Picha ya Kwanza ya Hali Kiotomatiki
+	Automatically Create New Snapshot When Saving	Unda Picha Mpya ya Hali Kiotomatiki Unapohifadhi
+	Automatically level near-horizontal line segments	Sawazisha kiotomatiki vipande vya mistari vilivyo karibu kulala
+	Automatically straighten and level	Nyoosha na sawazisha kiotomatiki
+	Automatically straighten near-vertical line segments	Nyoosha kiotomatiki vipande vya mistari vilivyo karibu wima
+	Autosave	Hifadhi kiotomatiki
+	Autosave minutes	Dakika za kuhifadhi kiotomatiki
+	Average	Wastani
+	Avoid Widows/Orphans	Epuka Mistari Iliyotengwa
+	BLANK DOCUMENT PRESETS ({n})	MIPANGILIO YA HATI TUPU ({n})
+	Background	Mandharinyuma
+	Background Color	Rangi ya Mandharinyuma
+	Background Contents	Maudhui ya Mandharinyuma
+	Background Eraser Tool	Zana ya Kifutio cha Mandharinyuma
+	Background From Layer	Mandharinyuma Kutoka Tabaka
+	Background Level	Kiwango cha Mandharinyuma
+	Background from Layer	Mandharinyuma kutoka Tabaka
+	Balance	Usawa
+	Bamboo	Mwanzi
+	Bas Relief	Nakshi Bapa
+	Base Tree Type	Aina ya Msingi ya Mti
+	Baseline	Mstari wa Msingi
+	Baseline Shift	Kusogeza Mstari wa Msingi
+	Baseline shift	Kusogeza mstari wa msingi
+	Basic	Msingi
+	Batch	Kundi
+	Batch…	Kundi…
+	Beep when done	Lia ukimaliza
+	Before (Y)	Kabla ya (Y)
+	Begin recording	Anza kurekodi
+	Bend:	Kunja:
+	Berries	Beri
+	Best	Bora zaidi
+	Bevel	Ukingo wa Mshazari
+	Bevel & Emboss	Ukingo wa Mshazari na Nakshi
+	Bevel & Emboss…	Ukingo wa Mshazari na Nakshi…
+	Bicubic	Bikubiki
+	Bicubic (smooth gradients)	Bikubiki (gredienti laini)
+	Bicubic automatic	Bikubiki otomatiki
+	Bicubic sharper	Bikubiki kali zaidi
+	Bicubic smoother	Bikubiki laini zaidi
+	Bilinear	Bilinia
+	Binary assets added	Rasilimali za binari zilizoongezwa
+	Binary assets removed	Rasilimali za binari zilizoondolewa
+	Bit depth	Kina cha biti
+	Bitmap	Bitmap
+	Bitmap…	Bitmap…
+	Black	Nyeusi
+	Black & White	Nyeusi na Nyeupe
+	Black & White…	Nyeusi na Nyeupe…
+	Black Clip	Ukataji wa Nyeusi
+	Black Intensity	Ukali wa Nyeusi
+	Black Matte	Matte Nyeusi
+	Black Point Compensation	Fidia ya Nukta Nyeusi
+	Black, White	Nyeusi, Nyeupe
+	Blacks	Weusi
+	Blade Curvature	Mkunjo wa Ubapa
+	Blast	Mlipuko
+	Bleach Bypass	Kupita Dawa ya Kung'arisha
+	Blend	Changanya
+	Blend If	Changanya Ikiwa
+	Blend If:	Changanya Ikiwa:
+	Blend Mode	Hali ya Mchanganyiko
+	Blend RGB Colors Using Gamma 1.0	Changanya Rangi za RGB kwa Gamma 1.0
+	Blending	Uchanganyaji
+	Blending Options	Chaguo za Mchanganyiko
+	Blending Options…	Chaguo za Mchanganyiko…
+	Block	Kizuizi
+	Blocks	Vizuizi
+	Blue	Bluu
+	Blue Yellow	Bluu Njano
+	Blue, Red, Yellow	Bluu, Nyekundu, Njano
+	Blues	Bluu
+	Blur	Ukungu
+	Blur Angle	Pembe ya Ukungu
+	Blur Gallery	Matunzio ya Ukungu
+	Blur More	Ukungu Zaidi
+	Blur Tool	Zana ya Ukungu
+	Bold	Nzito
+	Bold Italic	Nzito ya Mlalo
+	Border	Mpaka
+	Border Thickness	Unene wa Mpaka
+	Border…	Mpaka…
+	Both	Zote mbili
+	Both Axes	Mihimili Yote Miwili
+	Bottom	Chini
+	Bottom Edges	Kingo za Chini
+	Bottom Left	Chini Kushoto
+	Bottom Right	Chini Kulia
+	Box Blur	Ukungu wa Kisanduku
+	Box Blur…	Ukungu wa Kisanduku…
+	Branches Color	Rangi ya Matawi
+	Branches Height	Urefu wa Matawi
+	Branches Thickness	Unene wa Matawi
+	Breeze Dark Theme	Mandhari Meusi ya Breeze
+	Breeze Light Theme	Mandhari Meupe ya Breeze
+	Breeze dark	Breeze meusi
+	Breeze light	Breeze meupe
+	Brick	Tofali
+	Brightness	Mng'ao
+	Brightness Jitter	Mtikisiko wa Mng'ao
+	Brightness/Contrast	Mng'ao/Utofautishaji
+	Brightness/Contrast…	Mng'ao/Utofautishaji…
+	Bring Forward	Leta Mbele
+	Bring the selected pin forward	Leta pini iliyochaguliwa mbele
+	Bring to Front	Leta Mbele Kabisa
+	Bristle Detail	Undani wa Nywele za Brashi
+	Browse	Vinjari
+	Browser storage is unavailable; brushes are session-only. Keep this tab open to retain them.	Hifadhi ya kivinjari haipatikani; brashi ni za kipindi hiki tu. Acha kichupo hiki wazi ili kuzihifadhi.
+	Browse…	Vinjari…
+	Brush	Brashi
+	Brush Detail	Undani wa Brashi
+	Brush Name	Jina la Brashi
+	Brush Pose	Mkao wa Brashi
+	Brush Preset Options	Chaguo za Mipangilio ya Brashi
+	Brush Preset picker	Kichaguzi cha mipangilio ya brashi
+	Brush Preview	Onyesho la Brashi
+	Brush Projection	Makadirio ya Brashi
+	Brush Reconstruct Options	Chaguo za Kujenga Upya kwa Brashi
+	Brush Settings	Mipangilio ya Brashi
+	Brush Settings…  (F5): every option of this brush	Mipangilio ya Brashi…  (F5): kila chaguo la brashi hii
+	Brush Size	Ukubwa wa Brashi
+	Brush Stroke	Mpigo wa Brashi
+	Brush Strokes	Mipigo ya Brashi
+	Brush Tip	Ncha ya Brashi
+	Brush Tip Shape	Umbo la Ncha ya Brashi
+	Brush Tool	Zana ya Brashi
+	Brush Tool Options	Chaguo za Zana ya Brashi
+	Brush Type	Aina ya Brashi
+	Brush name	Jina la brashi
+	Brush picker	Kichaguzi cha brashi
+	Brush preset changes are not saved: {error}	Mabadiliko ya mipangilio ya brashi hayajahifadhiwa: {error}
+	Brush preview color	Rangi ya onyesho la brashi
+	Brushes	Brashi
+	Build-up	Kujilimbikiza
+	Bulge	Uvimbe
+	Burlap	Gunia
+	Burn	Choma
+	Burn Tool	Zana ya Kuchoma
+	Butt / Flat	Butu / Bapa
+	Byline	Jina la Mwandishi
+	Byline Title	Cheo cha Mwandishi
+	CIE RGB	CIE RGB
+	CMYK Color	Rangi ya CMYK
+	CMYK:	CMYK:
+	CPU (no GPU acceleration)	CPU (bila kuongeza kasi kwa GPU)
+	CPU / Compatibility	CPU / Uoanifu
+	Cache Level:	Kiwango cha Akiba:
+	Cache levels	Viwango vya akiba
+	Cache tile size	Ukubwa wa kigae cha akiba
+	Calculations	Hesabu
+	Calculations…	Hesabu…
+	Camera Calibration	Urekebishaji wa Kamera
+	Camera Data	Data ya Kamera
+	Camera Make	Chapa ya Kamera
+	Camera Model	Modeli ya Kamera
+	Camera Raw	Camera Raw
+	Camera Raw ({name})	Camera Raw ({name})
+	Camera Raw Defaults	Chaguo-msingi za Camera Raw
+	Camera Raw Filter	Kichujio cha Camera Raw
+	Camera Raw Filter ({layer})	Kichujio cha Camera Raw ({layer})
+	Camera Raw Filter…	Kichujio cha Camera Raw…
+	Camera Raw isn't open	Camera Raw haijafunguliwa
+	Camera Raw…	Camera Raw…
+	Cancel	Ghairi
+	Cancel (Esc)	Ghairi (Esc)
+	Cancel any current edits (Esc)	Ghairi uhariri wowote wa sasa (Esc)
+	Cancel current crop operation  (Esc)	Ghairi upunguzaji wa sasa  (Esc)
+	Cancel opening	Ghairi kufungua
+	Cancel transform (Esc)	Ghairi ubadilishaji (Esc)
+	Cancel warp (Esc)	Ghairi upindaji (Esc)
+	Cancelled opening {name}	Kufungua {name} kumeghairiwa
+	Cancelled {label}	{label} imeghairiwa
+	Candle Light	Mwanga wa Mshumaa
+	Canvas	Turubai
+	Canvas Guides	Miongozo ya Turubai
+	Canvas Size	Ukubwa wa Turubai
+	Canvas Size…	Ukubwa wa Turubai…
+	Canvas border	Mpaka wa turubai
+	Canvas color	Rangi ya turubai
+	Canvas custom color	Rangi maalum ya turubai
+	Canvas extension color:	Rangi ya upanuzi wa turubai:
+	Canvas rotation	Mzunguko wa turubai
+	Caps	Ncha
+	Caption	Maelezo
+	Caption Credits	Sifa za Maelezo
+	Capture	Nasa
+	Capture Comp	Nasa Mpangilio
+	Capture the visibility, position and style of every layer with + below, then switch between versions.	Nasa uonekanaji, nafasi na mtindo wa kila tabaka kwa + hapa chini, kisha badilisha kati ya matoleo.
+	Cascade	Mporomoko
+	Catch-up on Stroke End	Fikia Mwishoni mwa Mpigo
+	Category	Aina
+	Cell Size	Ukubwa wa Seli
+	Center	Katikati
+	Center Crop Marks	Alama za Kukata za Katikati
+	Center X	Kituo X
+	Center Y	Kituo Y
+	Center text	Weka maandishi katikati
+	Centimeters	Sentimita
+	Centre the gradient (offset 0, 0)	Weka gredienti katikati (msogeo 0, 0)
+	Chalk & Charcoal	Chaki na Mkaa
+	Chalk Area	Eneo la Chaki
+	Change	Badilisha
+	Change All	Badilisha Zote
+	Change Screen Mode  (F)	Badilisha Hali ya Skrini  (F)
+	Change To:	Badilisha Kuwa:
+	Channel	Chaneli
+	Channel Mixer	Kichanganyaji cha Chaneli
+	Channel Mixer…	Kichanganyaji cha Chaneli…
+	Channel1	Chaneli1
+	Channel2	Chaneli2
+	Channel3	Chaneli3
+	Channel4	Chaneli4
+	Channel:	Chaneli:
+	Channels	Chaneli
+	Channels:	Chaneli:
+	Character	Herufi
+	Character Panel	Paneli ya Herufi
+	Character Styles	Mitindo ya Herufi
+	Character Styles Panel	Paneli ya Mitindo ya Herufi
+	Charcoal	Mkaa
+	Charcoal Area	Eneo la Mkaa
+	Charcoal Thickness	Unene wa Mkaa
+	Check All Layers	Kagua Matabaka Yote
+	Check Spelling	Kagua Tahajia
+	Check Spelling…	Kagua Tahajia…
+	Choke	Kubana
+	Choose…	Chagua…
+	Chrome	Kromu
+	Circle	Duara
+	Circularity	Mviringo
+	City	Jiji
+	Clarity	Uwazi
+	Classic	Ya Kawaida
+	Classic Theme	Mandhari ya Kawaida
+	Cleanliness	Usafi
+	Clear	Futa
+	Clear All	Futa Zote
+	Clear Amount	Kiasi cha Kufuta
+	Clear Canvas Guides	Futa Miongozo ya Turubai
+	Clear Guides	Futa Miongozo
+	Clear History	Futa Historia
+	Clear Layer Style	Futa Mtindo wa Tabaka
+	Clear Override	Futa Ubatilishaji
+	Clear Recent Files	Futa Faili za Hivi Karibuni
+	Clear Samples	Futa Sampuli
+	Clear Selected Artboard Guides	Futa Miongozo ya Ubao wa Sanaa Uliochaguliwa
+	Clear Slices	Futa Vipande
+	Clear Smart Filters	Futa Vichujio Mahiri
+	Click a red pupil to neutralize it	Bofya mboni nyekundu ili kuiondoa wekundu
+	Click sets foreground · right-click sets background	Kubofya huweka rangi ya mbele · kubofya kulia huweka mandharinyuma
+	Click the first point or press {key} to close · Esc cancels	Bofya nukta ya kwanza au bonyeza {key} kufunga · Esc hughairi
+	Click the first point or press ↵ to close · Esc cancels	Bofya nukta ya kwanza au bonyeza ↵ kufunga · Esc hughairi
+	Click to add a point · drag off or {key}-click or Delete to remove	Bofya kuongeza nukta · buruta nje au bofya kwa {key} au Delete kuondoa
+	Click to add a point · drag off or ⌘/Ctrl-click or Delete to remove	Bofya kuongeza nukta · buruta nje au bofya kwa ⌘/Ctrl au Delete kuondoa
+	Click to add a point, right-click to remove	Bofya kuongeza nukta, bofya kulia kuondoa
+	Click to add text	Bofya kuongeza maandishi
+	Click to apply, {key}-click to clear overrides, double-click for Style Options	Bofya kutumia, bofya kwa {key} kufuta ubatilishaji, bofya mara mbili kwa Chaguo za Mtindo
+	Click to apply, ⌥-click to clear overrides, double-click for Style Options	Bofya kutumia, bofya kwa ⌥ kufuta ubatilishaji, bofya mara mbili kwa Chaguo za Mtindo
+	Click to edit the gradient	Bofya kuhariri gredienti
+	Click to fill similar colours	Bofya kujaza rangi zinazofanana
+	Click to pick · Esc to cancel	Bofya kuchagua · Esc kughairi
+	Click to restore the current colour	Bofya kurejesha rangi ya sasa
+	Click to sample the foreground colour  ·  {key}-click for background	Bofya kuchukua sampuli ya rangi ya mbele  ·  bofya kwa {key} kwa mandharinyuma
+	Click to zoom in  ·  {key}-click to zoom out  ·  drag right/left to zoom in/out	Bofya kukuza  ·  bofya kwa {key} kupunguza  ·  buruta kulia/kushoto kukuza/kupunguza
+	Click to zoom in  ·  ⌥-click to zoom out	Bofya kukuza  ·  bofya kwa ⌥ kupunguza
+	Click with the Note tool to add a note.	Bofya kwa zana ya Dokezo kuongeza dokezo.
+	Click: corner · Drag: smooth · Click first point: close · {key} finish · Esc cancel	Bofya: kona · Buruta: laini · Bofya nukta ya kwanza: funga · {key} maliza · Esc ghairi
+	Click: corner · Drag: smooth · Click first point: close · ↩ finish · Esc cancel	Bofya: kona · Buruta: laini · Bofya nukta ya kwanza: funga · ↩ maliza · Esc ghairi
+	Click: select anchor · Drag: move anchor, handle or segment · {shift}-click: add · {alt}-click: whole subpath	Bofya: chagua nanga · Buruta: sogeza nanga, kishikio au kipande · bofya kwa {shift}: ongeza · bofya kwa {alt}: njia ndogo nzima
+	Clip to layer below	Bana kwenye tabaka la chini
+	Clipboard	Ubao wa kunakili
+	Clipped	Imebanwa
+	Clipping Path	Njia ya Kukata
+	Clone	Nakili
+	Clone Source	Chanzo cha Kunakili
+	Clone Stamp	Muhuri wa Kunakili
+	Clone Stamp Tool	Zana ya Muhuri wa Kunakili
+	Clone source {n} ({key}-click with Clone Stamp to set)	Chanzo cha kunakili {n} (bofya kwa {key} ukitumia Muhuri wa Kunakili kuweka)
+	Close	Funga
+	Close All	Funga Zote
+	Close Others	Funga Zingine
+	Close Style Options	Funga Chaguo za Mtindo
+	Close Tab Group	Funga Kikundi cha Vichupo
+	Clouds	Mawingu
+	Clumped	Iliyokusanyika
+	Cmd	Cmd
+	Coarse Dots	Nukta Kubwa
+	Coated CMYK	CMYK ya Karatasi Iliyopakwa
+	Coerce to sRGB	Lazimisha kuwa sRGB
+	Collapse	Kunja
+	Collapse All Groups	Kunja Vikundi Vyote
+	Collapse Panel Group	Kunja Kikundi cha Paneli
+	Collapse group  ({key}-click: all groups)	Kunja kikundi  (bofya kwa {key}: vikundi vyote)
+	Collapse group  (⌥-click: all groups)	Kunja kikundi  (bofya kwa ⌥: vikundi vyote)
+	Color	Rangi
+	Color & Swatches	Rangi na Sampuli za Rangi
+	Color Adaptation	Urekebishaji wa Rangi
+	Color Balance	Usawa wa Rangi
+	Color Balance…	Usawa wa Rangi…
+	Color Blindness — Deuteranopia-type	Upofu wa Rangi — aina ya Deuteranopia
+	Color Blindness — Protanopia-type	Upofu wa Rangi — aina ya Protanopia
+	Color Burn	Kuchoma Rangi
+	Color Burn (Paint.NET)	Kuchoma Rangi (Paint.NET)
+	Color Decontaminate	Ondoa Uchafu wa Rangi
+	Color Decontaminate…	Ondoa Uchafu wa Rangi…
+	Color Detail	Undani wa Rangi
+	Color Dodge	Kufifisha Rangi
+	Color Dodge (Paint.NET)	Kufifisha Rangi (Paint.NET)
+	Color Dynamics	Mabadiliko ya Rangi
+	Color Grading	Upangaji wa Rangi
+	Color Halftone	Nusu-toni ya Rangi
+	Color Halftone…	Nusu-toni ya Rangi…
+	Color Lookup	Utafutaji wa Rangi
+	Color Lookup Tables	Majedwali ya Utafutaji wa Rangi
+	Color Lookup Tables…	Majedwali ya Utafutaji wa Rangi…
+	Color Lookup…	Utafutaji wa Rangi…
+	Color Management	Usimamizi wa Rangi
+	Color Management Policies	Sera za Usimamizi wa Rangi
+	Color Mixer	Kichanganyaji cha Rangi
+	Color Mode	Hali ya Rangi
+	Color Noise Reduction	Kupunguza Kelele ya Rangi
+	Color Overlay	Rangi ya Juu
+	Color Overlay…	Rangi ya Juu…
+	Color Picker (Crop Shield Color)	Kichaguzi cha Rangi (Rangi ya Kinga ya Kukata)
+	Color Picker (Fill Color)	Kichaguzi cha Rangi (Rangi ya Kujaza)
+	Color Picker (Layer Style Color)	Kichaguzi cha Rangi (Rangi ya Mtindo wa Tabaka)
+	Color Picker (Solid Color)	Kichaguzi cha Rangi (Rangi Tupu)
+	Color Picker (Stroke Color)	Kichaguzi cha Rangi (Rangi ya Mstari)
+	Color Picker (Text Color)	Kichaguzi cha Rangi (Rangi ya Maandishi)
+	Color Picker ({name})	Kichaguzi cha Rangi ({name})
+	Color Priority	Kipaumbele cha Rangi
+	Color Profile	Wasifu wa Rangi
+	Color Range	Masafa ya Rangi
+	Color Range preview	Onyesho la Masafa ya Rangi
+	Color Range…	Masafa ya Rangi…
+	Color Replacement	Ubadilishaji wa Rangi
+	Color Settings	Mipangilio ya Rangi
+	Color Settings…	Mipangilio ya Rangi…
+	Color Table	Jedwali la Rangi
+	Color Table…	Jedwali la Rangi…
+	Color indicates	Rangi inaonyesha
+	Color picker	Kichaguzi cha rangi
+	Color space	Nafasi ya rangi
+	Color to Alpha…	Rangi kuwa Alfa…
+	Color:	Rangi:
+	ColorMatch RGB	ColorMatch RGB
+	ColorSync	ColorSync
+	Colored Pencil	Penseli ya Rangi
+	Colorize	Tia Rangi
+	Colors	Rangi
+	Color…	Rangi…
+	Column width	Upana wa safu wima
+	Columns	Safu Wima
+	Combine Shapes	Unganisha Maumbo
+	Comic Book	Kitabu cha Vibonzo
+	Command	Amri
+	Commit Perspective Warp ({key})	Thibitisha Upindaji wa Mtazamo ({key})
+	Commit Perspective Warp (↩)	Thibitisha Upindaji wa Mtazamo (↩)
+	Commit Puppet Warp ({key})	Thibitisha Upindaji wa Kikaragosi ({key})
+	Commit Puppet Warp (↩)	Thibitisha Upindaji wa Kikaragosi (↩)
+	Commit any current edits ({key})	Thibitisha uhariri wowote wa sasa ({key})
+	Commit any current edits (⌘↩)	Thibitisha uhariri wowote wa sasa (⌘↩)
+	Commit current crop operation  ({key})	Thibitisha upunguzaji wa sasa  ({key})
+	Commit current crop operation  (↵)	Thibitisha upunguzaji wa sasa  (↵)
+	Commit transform ({key})	Thibitisha ubadilishaji ({key})
+	Commit transform (↩)	Thibitisha ubadilishaji (↩)
+	Commit warp ({key})	Thibitisha upindaji ({key})
+	Commit warp (↩)	Thibitisha upindaji (↩)
+	Commits	Komiti
+	Company	Kampuni
+	Compatibility	Uoanifu
+	Compose	Tunga
+	Concise	Fupi
+	Condensed	Iliyobanwa
+	Conditional Mode Change	Badiliko la Hali kwa Masharti
+	Conditional Mode Change…	Badiliko la Hali kwa Masharti…
+	Cone	Koni
+	Cone (Inverted)	Koni (Iliyogeuzwa)
+	Conform	Fuata Umbo
+	Consolidate All to Tabs	Unganisha Zote kwenye Vichupo
+	Constant	Isiyobadilika
+	Constrain proportions	Dumisha uwiano
+	Constraints	Vikwazo
+	Constraints ({n})	Vikwazo ({n})
+	Contact Sheet II	Karatasi ya Picha Ndogo II
+	Contact Sheet II…	Karatasi ya Picha Ndogo II…
+	Content-Aware	Inayozingatia Maudhui
+	Content-Aware Fill	Ujazaji Unaozingatia Maudhui
+	Content-Aware Fill needs a selection on a pixel layer	Ujazaji Unaozingatia Maudhui unahitaji uteuzi kwenye tabaka la pikseli
+	Content-Aware Fill…	Ujazaji Unaozingatia Maudhui…
+	Content-Aware Move	Kusogeza Kunakozingatia Maudhui
+	Content-Aware Move Tool	Zana ya Kusogeza Inayozingatia Maudhui
+	Content-Aware Scale	Kupima Kunakozingatia Maudhui
+	Contents:	Maudhui:
+	Contextual Alternates	Mbadala za Muktadha
+	Contiguous	Zinazofuatana
+	Contract	Punguza
+	Contract…	Punguza…
+	Contrast	Utofautishaji
+	Contrasty	Utofautishaji Mkubwa
+	Contributors	Wachangiaji
+	Contributors: {contributors} · Commits: {commits}	Wachangiaji: {contributors} · Komiti: {commits}
+	Control port	Lango la udhibiti
+	Control:	Udhibiti:
+	Conté Crayon	Kalamu ya Conté
+	Convert Frames > Video Layers	Badilisha Fremu > Matabaka ya Video
+	Convert document's colors to the working space	Badilisha rangi za hati kuwa nafasi ya kazi
+	Convert for Smart Filters	Badilisha kwa Vichujio Mahiri
+	Convert to Embedded	Badilisha kuwa Iliyopachikwa
+	Convert to Grayscale	Badilisha kuwa Kijivu
+	Convert to Layers	Badilisha kuwa Matabaka
+	Convert to Linked	Badilisha kuwa Iliyounganishwa
+	Convert to Linked…	Badilisha kuwa Iliyounganishwa…
+	Convert to Paragraph Text	Badilisha kuwa Maandishi ya Aya
+	Convert to Point Text	Badilisha kuwa Maandishi ya Nukta
+	Convert to Profile	Badilisha kuwa Wasifu
+	Convert to Profile…	Badilisha kuwa Wasifu…
+	Convert to Shape	Badilisha kuwa Umbo
+	Convert to Smart Object	Badilisha kuwa Kitu Mahiri
+	Convert to sRGB	Badilisha kuwa sRGB
+	Convert to srgb	Badilisha kuwa srgb
+	Cool	Baridi
+	Cooling L B B	Kupoza L B B
+	Cooling80	Kupoza80
+	Cooling82	Kupoza82
+	Copies	Nakala
+	Copper	Shaba
+	Copy	Nakili
+	Copy Layer Style	Nakili Mtindo wa Tabaka
+	Copy Merged	Nakili Iliyounganishwa
+	Copyright	Hakimiliki
+	Copyright Info URL	URL ya Taarifa za Hakimiliki
+	Copyright Status	Hali ya Hakimiliki
+	Copyright and Contact Info	Taarifa za Hakimiliki na Mawasiliano
+	Copyrighted	Ina Hakimiliki
+	Corner Crop Marks	Alama za Kukata za Kona
+	Corner radius	Nusu-kipenyo cha kona
+	Corners	Kona
+	Correct C A	Rekebisha C A
+	Correct Distortion	Rekebisha Upotoshaji
+	Correct Vignette	Rekebisha Vinyeti
+	Correction	Marekebisho
+	Could not complete the Free Transform command because the layer is locked.	Haikuweza kukamilisha amri ya Ubadilishaji Huru kwa sababu tabaka limefungwa.
+	Could not open	Haikuweza kufungua
+	Could not transform: the layer is empty	Haikuweza kubadilisha: tabaka ni tupu
+	Could not use Perspective Warp: the layer is empty	Haikuweza kutumia Upindaji wa Mtazamo: tabaka ni tupu
+	Could not use Puppet Warp: no opaque pixels	Haikuweza kutumia Upindaji wa Kikaragosi: hakuna pikseli zisizopenyeza mwanga
+	Could not use Puppet Warp: the layer is empty	Haikuweza kutumia Upindaji wa Kikaragosi: tabaka ni tupu
+	Could not use the move tool because the layer is locked.	Haikuweza kutumia zana ya kusogeza kwa sababu tabaka limefungwa.
+	Couldn't place {name}: {error}	Haikuweza kuweka {name}: {error}
+	Count	Idadi
+	Count Jitter	Mtikisiko wa Idadi
+	Count Tool	Zana ya Kuhesabu
+	Count: {n}	Idadi: {n}
+	Country	Nchi
+	Crack Brightness	Mng'ao wa Ufa
+	Crack Depth	Kina cha Ufa
+	Crack Spacing	Nafasi kati ya Nyufa
+	Craquelure	Nyufa za Rangi
+	Create	Unda
+	Create By	Imeundwa Na
+	Create Clipping Mask	Unda Barakoa ya Kubana
+	Create Date	Tarehe ya Kuundwa
+	Create Droplet	Unda Droplet
+	Create Droplet…	Unda Droplet…
+	Create Ellipse	Unda Duaradufu
+	Create Layer	Unda Tabaka
+	Create Multiple Picture Packages	Unda Vifurushi Vingi vya Picha
+	Create Plane	Unda Ndege
+	Create Polygon	Unda Poligoni
+	Create Rectangle	Unda Mstatili
+	Create Snapshot	Unda Picha ya Hali
+	Create Texture	Unda Umbile
+	Create Triangle	Unda Pembetatu
+	Create Video Timeline	Unda Ratiba ya Video
+	Create Warped Text	Unda Maandishi Yaliyopindwa
+	Create Work Path	Unda Njia ya Kazi
+	Create a new count group	Unda kikundi kipya cha kuhesabu
+	Create a new document or open an existing file.	Unda hati mpya au fungua faili iliyopo.
+	Create a new group	Unda kikundi kipya
+	Create a new layer	Unda tabaka jipya
+	Create a new layer  (⇧⌘N)	Unda tabaka jipya  (⇧⌘N)
+	Create new action	Unda kitendo kipya
+	Create new brush from the current settings	Unda brashi mpya kutoka mipangilio ya sasa
+	Create new brush from these settings	Unda brashi mpya kutoka mipangilio hii
+	Create new brush preset from the current settings	Unda mpangilio mpya wa brashi kutoka mipangilio ya sasa
+	Create new channel	Unda chaneli mpya
+	Create new count group	Unda kikundi kipya cha kuhesabu
+	Create new document from current state	Unda hati mpya kutoka hali ya sasa
+	Create new fill or adjustment layer	Unda tabaka jipya la kujaza au la marekebisho
+	Create new gradient	Unda gredienti mpya
+	Create new group	Unda kikundi kipya
+	Create new layer	Unda tabaka jipya
+	Create new layer comp	Unda mpangilio mpya wa matabaka
+	Create new path	Unda njia mpya
+	Create new pattern from the selection	Unda ruwaza mpya kutoka kwenye uteuzi
+	Create new set	Unda seti mpya
+	Create new shape from the current path	Unda umbo jipya kutoka njia ya sasa
+	Create new snapshot	Unda picha mpya ya hali
+	Create new style (from the selected type)	Unda mtindo mpya (kutoka maandishi yaliyochaguliwa)
+	Create new style from the selected layer	Unda mtindo mpya kutoka tabaka lililochaguliwa
+	Create new swatch	Unda sampuli mpya ya rangi
+	Create new tool preset	Unda mpangilio mpya wa zana
+	Credit	Sifa
+	Crisp	Kali
+	Crop	Kata
+	Crop Factor	Kipengele cha Kukata
+	Crop Shield color	Rangi ya Kinga ya Kukata
+	Crop Tool	Zana ya Kukata
+	Crop and Straighten Photos	Kata na Nyoosha Picha
+	Cross	Msalaba
+	Cross Process	Uchakataji Mtambuko
+	Crosshatch	Mistari Mtambuko
+	Crosswise	Kwa Mkato
+	Crystallize	Fanya Fuwele
+	Crystallize…	Fanya Fuwele…
+	Ctrl	Ctrl
+	Current	Ya sasa
+	Current & Below	Ya Sasa na Chini
+	Current & Below No Adjustments	Ya Sasa na Chini Bila Marekebisho
+	Current Layer	Tabaka la Sasa
+	Current Path	Njia ya Sasa
+	Current Size	Ukubwa wa Sasa
+	Current Time	Muda wa Sasa
+	Current Tool	Zana ya Sasa
+	Current Tool Only	Zana ya Sasa Pekee
+	Cursors	Viashiria
+	Cursors…	Viashiria…
+	Curve	Mkunjo
+	Curve Darks	Mkunjo wa Giza
+	Curve Highlights	Mkunjo wa Mwangaza Mkali
+	Curve Lights	Mkunjo wa Mwanga
+	Curve Shadows	Mkunjo wa Vivuli
+	Curve Splits	Mgawanyiko wa Mkunjo
+	Curves	Mikunjo
+	Curves…	Mikunjo…
+	Custom	Maalum
+	Custom Branch Color	Rangi Maalum ya Matawi
+	Custom Pattern:	Ruwaza Maalum:
+	Custom Pixel Aspect Ratio	Uwiano Maalum wa Pikseli
+	Custom Pixel Aspect Ratio…	Uwiano Maalum wa Pikseli…
+	Custom Shape Tool	Zana ya Umbo Maalum
+	Custom Shapes	Maumbo Maalum
+	Custom dark	Meusi maalum
+	Custom light	Meupe maalum
+	Custom pattern	Ruwaza maalum
+	Custom…	Maalum…
+	Cut	Kata
+	Cutout	Kipande Kilichokatwa
+	Cyan	Samawati
+	Cyan  ·  Red	Samawati  ·  Nyekundu
+	Cyans	Samawati
+	Cycle Orientation	Zungusha Mwelekeo
+	Cycle Overlay	Zungusha Tabaka-juu
+	Cycle Screen Mode	Zungusha Hali ya Skrini
+	D1/DV NTSC (0.91)	D1/DV NTSC (0.91)
+	D1/DV NTSC Widescreen (1.21)	D1/DV NTSC Skrini Pana (1.21)
+	D1/DV PAL (1.09)	D1/DV PAL (1.09)
+	D1/DV PAL Widescreen (1.46)	D1/DV PAL Skrini Pana (1.46)
+	DVCPRO HD 1080/HDV 1080 (1.5)	DVCPRO HD 1080/HDV 1080 (1.5)
+	Daisies	Maua ya Daisi
+	Dark	Giza
+	Dark Intensity	Ukali wa Giza
+	Dark Rough	Giza Kali
+	Dark Strokes	Mipigo ya Giza
+	Dark Theme	Mandhari Meusi
+	Dark gray	Kijivu iliyokolea
+	Darken	Fanya Giza
+	Darken Amount	Kiasi cha Kufanya Giza
+	Darken Only	Fanya Giza Pekee
+	Darker Color	Rangi Nyeusi Zaidi
+	Darkness	Giza
+	Darks	Maeneo ya Giza
+	Dash	Kistari
+	Dash / gap lengths × stroke width	Urefu wa kistari / pengo × upana wa mstari
+	Dash offset	Msogeo wa kistari
+	Dashed	Ya Vistari
+	Dashed line	Mstari wa vistari
+	Dashed lines	Mistari ya vistari
+	Data	Data
+	Data Sets	Seti za Data
+	Data Sets as Files	Seti za Data kama Faili
+	Data Sets as Files…	Seti za Data kama Faili…
+	Data Sets…	Seti za Data…
+	Date Created	Tarehe ya Kuundwa
+	Date and Time	Tarehe na Muda
+	DateTime Original	TareheMuda ya Asili
+	Day For Night	Mchana Kuwa Usiku
+	De-Interlace	Ondoa Mpishano
+	De-Interlace…	Ondoa Mpishano…
+	Deep Blue	Bluu Iliyokolea
+	Deep Emerald	Zumaridi Iliyokolea
+	Deep Red	Nyekundu Iliyokolea
+	Deep Yellow	Njano Iliyokolea
+	Default	Chaguo-msingi
+	Default Features	Vipengele Chaguo-msingi
+	Default Foreground and Background Colors	Rangi Chaguo-msingi za Mbele na Mandharinyuma
+	Default Leaves	Majani Chaguo-msingi
+	Default PhotoCraft Size	Ukubwa Chaguo-msingi wa PhotoCraft
+	Default colours (D)	Rangi chaguo-msingi (D)
+	Default printer	Printa chaguo-msingi
+	Default restored.	Chaguo-msingi limerejeshwa.
+	Defaults restored.	Chaguo-msingi zimerejeshwa.
+	Define	Bainisha
+	Define Brush Preset	Bainisha Mpangilio wa Brashi
+	Define Brush Preset…	Bainisha Mpangilio wa Brashi…
+	Define Custom Shape	Bainisha Umbo Maalum
+	Define Custom Shape…	Bainisha Umbo Maalum…
+	Define Pattern	Bainisha Ruwaza
+	Define Pattern…	Bainisha Ruwaza…
+	Define at least one variable first.	Bainisha angalau kigezo kimoja kwanza.
+	Define…	Bainisha…
+	Definition	Ufafanuzi
+	Defringe	Ondoa Ukingo wa Rangi
+	Defringe…	Ondoa Ukingo wa Rangi…
+	Dehaze	Ondoa Ukungu wa Hewa
+	Delete	Futa
+	Delete All Empty Layers	Futa Matabaka Yote Matupu
+	Delete Brush	Futa Brashi
+	Delete Cropped Pixels	Futa Pikseli Zilizokatwa
+	Delete Filter Mask	Futa Barakoa ya Kichujio
+	Delete Frame	Futa Fremu
+	Delete Group	Futa Kikundi
+	Delete Layer	Futa Tabaka
+	Delete Layer Mask	Futa Barakoa ya Tabaka
+	Delete Layers	Futa Matabaka
+	Delete Layer…	Futa Tabaka…
+	Delete Path	Futa Njia
+	Delete Pins	Futa Pini
+	Delete Preset…	Futa Mpangilio…
+	Delete Shortcut	Futa Njia ya Mkato
+	Delete Smart Filters	Futa Vichujio Mahiri
+	Delete Snapshot	Futa Picha ya Hali
+	Delete Timeline	Futa Ratiba
+	Delete Tool Preset	Futa Mpangilio wa Zana
+	Delete Vector Mask	Futa Barakoa ya Vekta
+	Delete Workspace	Futa Nafasi ya Kazi
+	Delete Workspace…	Futa Nafasi ya Kazi…
+	Delete and Fill Selection	Futa na Jaza Uteuzi
+	Delete brush	Futa brashi
+	Delete count group	Futa kikundi cha kuhesabu
+	Delete current channel	Futa chaneli ya sasa
+	Delete current state	Futa hali ya sasa
+	Delete effect layer	Futa tabaka la athari
+	Delete layer	Futa tabaka
+	Delete layer comp	Futa mpangilio wa matabaka
+	Delete layer ‘{name}’?	Futa tabaka ‘{name}’?
+	Delete layer?	Futa tabaka?
+	Delete note	Futa dokezo
+	Delete path	Futa njia
+	Delete selected measurements	Futa vipimo vilivyochaguliwa
+	Delete style	Futa mtindo
+	Delete tool preset	Futa mpangilio wa zana
+	Delete vector mask	Futa barakoa ya vekta
+	Delete {count} layers? {names}	Futa matabaka {count}? {names}
+	Density	Msongamano
+	Density:	Msongamano:
+	Depth	Kina
+	Depth Jitter	Mtikisiko wa Kina
+	Depth Map	Ramani ya Kina
+	Depth Mode	Hali ya Kina
+	Desaturate	Ondoa Ukolezaji
+	Desaturate Monitor Colors By	Ondoa Ukolezaji wa Rangi za Skrini kwa
+	Description	Maelezo
+	Deselect	Ondoa Uteuzi
+	Deselect All	Ondoa Uteuzi Wote
+	Deselect Layers	Ondoa Uteuzi wa Matabaka
+	Despeckle	Ondoa Madoa
+	Destination	Mahali pa Kufikia
+	Detail	Undani
+	Detailed	Kwa Undani
+	Details	Maelezo ya Kina
+	Detect Faces	Tambua Nyuso
+	Developing {name}	Inachakata {name}
+	Diagonal	Mshazari
+	Diagonal (Descending)	Mshazari (Kushuka)
+	Diameter:	Kipenyo:
+	Diamond	Almasi
+	Diamond Gradient	Gredienti ya Almasi
+	Difference	Tofauti
+	Difference Clouds	Mawingu ya Tofauti
+	Diffuse	Sambaza
+	Diffuse Glow	Mng'ao Uliosambaa
+	Diffuse…	Sambaza…
+	Diffusion	Usambazaji
+	Digits	Tarakimu
+	Dimensions:	Vipimo:
+	Direct Selection Tool	Zana ya Uteuzi wa Moja kwa Moja
+	DirectX 12	DirectX 12
+	Direction	Mwelekeo
+	Direction Balance	Usawa wa Mwelekeo
+	Direction of Stroke	Mwelekeo wa Mpigo
+	Disable Filter Mask	Zima Barakoa ya Kichujio
+	Disable Layer Mask	Zima Barakoa ya Tabaka
+	Disable Smart Filters	Zima Vichujio Mahiri
+	Discard Layers and Save a Copy	Tupa Matabaka na Uhifadhi Nakala
+	Discard the embedded profile (don't color manage)	Tupa wasifu uliopachikwa (usisimamie rangi)
+	Discontiguous	Zisizofuatana
+	Discord	Discord
+	Discretionary Ligatures	Viungo vya Herufi vya Hiari
+	Disks	Diski
+	Dismiss	Ondoa
+	Displace	Hamisha
+	Displace…	Hamisha…
+	Display P3	Display P3
+	Display Text	Maandishi ya Kuonyesha
+	Display name	Jina la kuonyesha
+	Display p3	Display p3
+	Dissolve	Yeyusha
+	Distance	Umbali
+	Distort	Potosha
+	Distortion	Upotoshaji
+	Distribute	Sambaza
+	Distribution	Mgawanyo
+	Dither	Mchanganyiko wa Nukta
+	Divide	Gawanya
+	Divide…	Gawanya…
+	Do you want to save the changes you made to “{name}” before closing?	Je, unataka kuhifadhi mabadiliko uliyofanya kwenye “{name}” kabla ya kufunga?
+	Do you want to save the changes you made to “{name}” before quitting?	Je, unataka kuhifadhi mabadiliko uliyofanya kwenye “{name}” kabla ya kuondoka?
+	Do you want to save you made to “{name}” before quitting?	Je, unataka kuhifadhi mabadiliko uliyofanya kwenye “{name}” kabla ya kuondoka?
+	Doc: {flat}/{layered}	Hati: {flat}/{layered}
+	Doc: {w} × {h} px	Hati: {w} × {h} px
+	Document	Hati
+	Document Bounds	Mipaka ya Hati
+	Document Dimensions	Vipimo vya Hati
+	Document Profile	Wasifu wa Hati
+	Document Size	Ukubwa wa Hati
+	Document Sizes	Ukubwa wa Hati
+	Dodge	Fifisha
+	Dodge Tool	Zana ya Kufifisha
+	Dodge/Burn	Fifisha/Choma
+	Domed	Kuba
+	Domed (Inverted)	Kuba (Iliyogeuzwa)
+	Don't Import	Usiingize
+	Don't Save	Usihifadhi
+	Don't show again	Usionyeshe tena
+	Done	Imekamilika
+	Dot	Nukta
+	Dots	Nukta
+	Dotted	Ya Nukta
+	Double Line	Mstari Mara Mbili
+	Double click layer mask launches select and mask	Kubofya mara mbili barakoa ya tabaka hufungua chagua na barakoa
+	Down	Chini
+	Draft	Rasimu
+	Drag (lasso) or click points (polygonal) · {add} add · {sub} subtract	Buruta (kamba) au bofya nukta (poligoni) · {add} ongeza · {sub} toa
+	Drag a crop box · drag inside to move · edges resize ({ratio} ratio, {centre} centre) · Space moves while drawing · arrows nudge · X swaps orientation · {commit} commits · Esc cancels	Buruta kisanduku cha kukata · buruta ndani kusogeza · kingo hubadilisha ukubwa ({ratio} uwiano, {centre} katikati) · Space husogeza unapochora · mishale husogeza kidogo · X hubadilisha mwelekeo · {commit} huthibitisha · Esc hughairi
+	Drag a rectangle around the object	Buruta mstatili kuzunguka kitu
+	Drag around the centre to rotate the view  ·  Shift constrains to 15°	Buruta kuzunguka katikati kuzungusha mwonekano  ·  Shift huzuia kwa 15°
+	Drag on the image to add a constraint; Shift for horizontal/vertical; right-click to delete.	Buruta kwenye picha kuongeza kizuizi; Shift kwa mlalo/wima; bofya kulia kufuta.
+	Drag or click polygon points · hold Alt during lasso for straight segments · {add} add · {sub} before drawing subtracts	Buruta au bofya nukta za poligoni · shikilia Alt wakati wa kamba kwa vipande vilivyonyooka · {add} ongeza · {sub} kabla ya kuchora hutoa
+	Drag the arrow to set the angle, the dots to set the roundness	Buruta mshale kuweka pembe, nukta kuweka mviringo
+	Drag to draw a gradient	Buruta kuchora gredienti
+	Drag to move the active layer	Buruta kusogeza tabaka hai
+	Drag to move the active shape's path or the Work Path	Buruta kusogeza njia ya umbo hai au Njia ya Kazi
+	Drag to move the layer	Buruta kusogeza tabaka
+	Drag to pan  ·  hold Space with any tool	Buruta kusogeza mwonekano  ·  shikilia Space na zana yoyote
+	Draw with the Pen tool (P) or make a work path from a selection.	Chora kwa zana ya Kalamu (P) au tengeneza njia ya kazi kutoka kwenye uteuzi.
+	Drop Shadow	Kivuli
+	Drop Shadow…	Kivuli…
+	Drop an image or PSD anywhere to open it.	Dondosha picha au PSD popote ili kuifungua.
+	Drop shadow	Kivuli
+	Dry Brush	Brashi Kavu
+	Dual Axis	Mihimili Miwili
+	Dual Brush	Brashi Mbili
+	Duotone	Toni Mbili
+	Duotone…	Toni Mbili…
+	Duplicate	Nakala
+	Duplicate Frame	Nakili Fremu
+	Duplicate Layer	Nakili Tabaka
+	Duplicate Layer Comp	Nakili Mpangilio wa Matabaka
+	Duplicate Layers	Nakili Matabaka
+	Duplicate Layers…	Nakili Matabaka…
+	Duplicate Layer…	Nakili Tabaka…
+	Duplicate Path	Nakili Njia
+	Duplicate style	Nakili mtindo
+	Duplicated selection name	Jina la uteuzi lililorudiwa
+	Duplicate…	Nakili…
+	Duplication	Unakili
+	Duration	Muda
+	Dust & Scratches	Vumbi na Mikwaruzo
+	Dust & Scratches…	Vumbi na Mikwaruzo…
+	Dynamic color sliders	Vitelezi vya rangi vinavyobadilika
+	Dynamics	Mabadiliko
+	EXIF	EXIF
+	EXIF Version	Toleo la EXIF
+	East Asian Features	Vipengele vya Asia Mashariki
+	East asian	Asia mashariki
+	Edge	Ukingo
+	Edge Brightness	Mng'ao wa Ukingo
+	Edge Extension	Upanuzi wa Ukingo
+	Edge Fidelity	Uaminifu wa Ukingo
+	Edge Intensity	Ukali wa Ukingo
+	Edge Only	Ukingo Pekee
+	Edge Simplicity	Urahisi wa Ukingo
+	Edge Thickness	Unene wa Ukingo
+	Edge Width	Upana wa Ukingo
+	Edit	Hariri
+	Edit Contents	Hariri Maudhui
+	Edit Pins	Hariri Pini
+	Edit Plane	Hariri Ndege
+	Edit Toolbar	Hariri Upau wa Zana
+	Edit Toolbar…	Hariri Upau wa Zana…
+	Edit Type	Hariri Maandishi
+	Edit in Quick Mask Mode	Hariri katika Hali ya Barakoa ya Haraka
+	Edit in Quick Mask Mode  (Q)	Hariri katika Hali ya Barakoa ya Haraka  (Q)
+	Edit in Standard Mode  (Q)	Hariri katika Hali ya Kawaida  (Q)
+	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Hariri › Njia za Mkato za Kibodi › Rejesha Zote kwa Chaguo-msingi hutengua uingizaji.
+	Edit › Paste	Hariri › Bandika
+	Edits that change the whole document, such as a layer's blend mode, opacity or visibility, redraw all of it.	Mabadiliko yanayobadilisha hati nzima, kama hali ya mchanganyiko, uangavu au uonekanaji wa tabaka, huichora upya yote.
+	Effect cache mb	Akiba ya athari mb
+	Effects	Athari
+	Efficiency	Ufanisi
+	Efficiency: 100%	Ufanisi: 100%
+	Elevation	Mwinuko
+	Eliminate	Ondoa
+	Ellipse Tool	Zana ya Duaradufu
+	Elliptical Marquee Tool	Zana ya Uteuzi wa Duaradufu
+	Email	Barua pepe
+	Embed Color Profile	Pachika Wasifu wa Rangi
+	Embed profiles	Pachika wasifu
+	Embedded Profile Mismatch	Wasifu Uliopachikwa Haulingani
+	Emboss	Nakshi
+	Emboss…	Nakshi…
+	Enable Crop Shield	Washa Kinga ya Kukata
+	Enable Layer Mask	Washa Barakoa ya Tabaka
+	Enable Smart Filters	Washa Vichujio Mahiri
+	Enable Timeline Quick Config	Washa Usanidi wa Haraka wa Ratiba
+	Enable Vector Mask	Washa Barakoa ya Vekta
+	Enable airbrush-style build-up effects	Washa athari za kujilimbikiza kama brashi ya hewa
+	Enable flick panning	Washa kusogeza kwa kupepesa
+	Enable floating document window docking	Washa kuweka madirisha ya hati yanayoelea
+	Enable narrow options bar	Washa upau mwembamba wa chaguo
+	Enable {name}	Washa {name}
+	Enabled	Imewashwa
+	End X	X ya Mwisho
+	End Y	Y ya Mwisho
+	Enhance Edge	Boresha Ukingo
+	Enhanced Controls	Vidhibiti Vilivyoboreshwa
+	Enhanced Controls…	Vidhibiti Vilivyoboreshwa…
+	Enlarged	Imekuzwa
+	Enter description…	Andika maelezo…
+	Entire Font	Fonti Nzima
+	Entropy	Entropia
+	Equalize	Sawazisha
+	Erase	Futa
+	Eraser	Kifutio
+	Eraser Tool	Zana ya Kifutio
+	Error	Hitilafu
+	Error File	Faili ya Hitilafu
+	Errors	Hitilafu
+	Esc to cancel	Esc kughairi
+	Essentials	Muhimu
+	Even Fields	Sehemu Shufwa
+	Exact	Kamili
+	Exclude Overlapping Shapes	Tenga Maumbo Yanayopishana
+	Exclusion	Utengaji
+	Exit	Toka
+	Expand	Panua
+	Expand All Groups	Panua Vikundi Vyote
+	Expand Panel Group	Panua Kikundi cha Paneli
+	Expand group  ({key}-click: all groups)	Panua kikundi  (bofya kwa {key}: vikundi vyote)
+	Expand group  (⌥-click: all groups)	Panua kikundi  (bofya kwa ⌥: vikundi vyote)
+	Expand…	Panua…
+	Expansion:	Upanuzi:
+	Export	Hamisha
+	Export As	Hamisha Kama
+	Export As…	Hamisha Kama…
+	Export Contents	Hamisha Maudhui
+	Export Contents…	Hamisha Maudhui…
+	Export Preferences	Mapendeleo ya Kuhamisha
+	Export Preferences…	Mapendeleo ya Kuhamisha…
+	Export Presets	Hamisha Mipangilio
+	Export Swatches for Exchange…	Hamisha Sampuli za Rangi kwa Kubadilishana…
+	Export Swatches…	Hamisha Sampuli za Rangi…
+	Export clipboard	Hamisha ubao wa kunakili
+	Export selected measurements (CSV)	Hamisha vipimo vilivyochaguliwa (CSV)
+	Export/Import Presets	Hamisha/Ingiza Mipangilio
+	Export/Import Presets…	Hamisha/Ingiza Mipangilio…
+	Export…	Hamisha…
+	Exposure	Mwangaza
+	Exposure Program	Programu ya Mwangaza
+	Exposure and Gamma	Mwangaza na Gamma
+	Exposure:	Mwangaza:
+	Exposure…	Mwangaza…
+	Extend	Ongeza Urefu
+	Extensions	Viendelezi
+	Extra Bold	Nzito Zaidi
+	Extra Large	Kubwa Zaidi
+	Extra Light	Nyembamba Zaidi
+	Extra large	Kubwa zaidi
+	ExtraBold	NzitoZaidi
+	ExtraLight	NyembambaZaidi
+	Extras	Ziada
+	Extrude	Chomoza
+	Extrude…	Chomoza…
+	Eyedropper	Kidondoshi
+	Eyedropper Tool	Zana ya Kidondoshi
+	Eyedroppers:	Vidondoshi:
+	F	F
+	Facet	Upande
+	Factor:	Kipengele:
+	Fade	Fifia
+	Fade steps	Hatua za kufifia
+	Faded Film	Filamu Iliyofifia
+	Fade…	Fifia…
+	Fast	Haraka
+	Faux Bold	Nzito Bandia
+	Faux Italic	Mlalo Bandia
+	Feather	Lainisha Kingo
+	Feather…	Lainisha Kingo…
+	Fewer Points	Nukta Chache
+	Fiber Length	Urefu wa Nyuzi
+	Fibers	Nyuzi
+	Fibers…	Nyuzi…
+	Field Blur	Ukungu wa Uga
+	Field Blur…	Ukungu wa Uga…
+	File	Faili
+	File Handling	Ushughulikiaji wa Faili
+	File Handling…	Ushughulikiaji wa Faili…
+	File Info	Taarifa za Faili
+	File Info…	Taarifa za Faili…
+	File Naming	Kuipa Faili Majina
+	File Settings	Mipangilio ya Faili
+	File path	Njia ya faili
+	Fill	Jaza
+	Fill Content	Maudhui ya Kujaza
+	Fill Layer	Tabaka la Kujaza
+	Fill Light	Mwanga wa Kujaza
+	Fill Opacity	Uangavu wa Kujaza
+	Fill Path	Jaza Njia
+	Fill Screen	Jaza Skrini
+	Fill color	Rangi ya kujaza
+	Fill new type layers with placeholder	Jaza matabaka mapya ya maandishi kwa maandishi ya muda
+	Fill path with foreground color	Jaza njia kwa rangi ya mbele
+	Fill:	Jaza:
+	Fill…	Jaza…
+	Film & Video	Filamu na Video
+	Film Grain	Chembechembe za Filamu
+	Filter	Kichujio
+	Filter Gallery	Matunzio ya Vichujio
+	Filter Gallery…	Matunzio ya Vichujio…
+	Filter for adjustment layers	Chuja kwa matabaka ya marekebisho
+	Filter for pixel layers	Chuja kwa matabaka ya pikseli
+	Filter for shape layers	Chuja kwa matabaka ya maumbo
+	Filter for smart objects	Chuja kwa vitu mahiri
+	Filter for type layers	Chuja kwa matabaka ya maandishi
+	Filter:	Kichujio:
+	Find Edges	Tafuta Kingo
+	Find Layers	Tafuta Matabaka
+	Find and Replace Text	Tafuta na Ubadilishe Maandishi
+	Find and Replace Text…	Tafuta na Ubadilishe Maandishi…
+	Fine	Laini
+	Fine Dots	Nukta Ndogo
+	Finger Painting	Uchoraji kwa Kidole
+	First	Kwanza
+	First Color Readout	Usomaji wa Rangi wa Kwanza
+	First Line Indent	Ujongezaji wa Mstari wa Kwanza
+	First commit	Komiti ya kwanza
+	Fish	Samaki
+	Fisheye	Jicho la Samaki
+	Fit	Tosheleza
+	Fit Artboard on Screen	Tosheleza Ubao wa Sanaa kwenye Skrini
+	Fit Image	Tosheleza Picha
+	Fit Image…	Tosheleza Picha…
+	Fit Layer(s) on Screen	Tosheleza Matabaka kwenye Skrini
+	Fit Screen	Tosheleza Skrini
+	Fit in View	Tosheleza kwenye Mwonekano
+	Fit on Screen	Tosheleza kwenye Skrini
+	Fixed	Isiyobadilika
+	Fixed Ratio	Uwiano Usiobadilika
+	Fixed Size	Ukubwa Usiobadilika
+	Flag	Bendera
+	Flame	Mwali
+	Flame Bottom Alignment	Mpangilio wa Chini wa Mwali
+	Flame Lines	Mistari ya Mwali
+	Flame Shape	Umbo la Mwali
+	Flame Style	Mtindo wa Mwali
+	Flame Type	Aina ya Mwali
+	Flame…	Mwali…
+	Flash	Mweko
+	Flat	Bapa
+	Flat Shading	Uvuli Bapa
+	Flatten All Layer Effects	Bapisha Athari Zote za Tabaka
+	Flatten All Masks	Bapisha Barakoa Zote
+	Flatten Frames Into Clips	Bapisha Fremu Kuwa Klipu
+	Flatten Frames Into Layers	Bapisha Fremu Kuwa Matabaka
+	Flatten Image	Bapisha Picha
+	Flip	Geuza
+	Flip Canvas Horizontal	Geuza Turubai kwa Mlalo
+	Flip Canvas Vertical	Geuza Turubai kwa Wima
+	Flip Horizontal	Geuza kwa Mlalo
+	Flip Vertical	Geuza kwa Wima
+	Flip X	Geuza X
+	Flip X Jitter	Mtikisiko wa Kugeuza X
+	Flip Y	Geuza Y
+	Flip Y Jitter	Mtikisiko wa Kugeuza Y
+	Float All in Windows	Elea Zote kwenye Madirisha
+	Float in Window	Elea kwenye Dirisha
+	Floating point	Desimali
+	Flow	Mtiririko
+	Flow Jitter	Mtikisiko wa Mtiririko
+	Flower Color	Rangi ya Ua
+	Focal Distance	Umbali wa Fokasi
+	Focal Length	Urefu wa Fokasi
+	Focal Length35mm	Urefu wa Fokasi 35mm
+	Focus	Fokasi
+	Focus Area	Eneo la Fokasi
+	Focus Area…	Eneo la Fokasi…
+	Font	Fonti
+	Font Preview Size	Ukubwa wa Onyesho la Fonti
+	Font Size:	Ukubwa wa Fonti:
+	Font preview	Onyesho la fonti
+	Font size	Ukubwa wa fonti
+	Foreground	Mbele
+	Foreground Color	Rangi ya Mbele
+	Foreground Level	Kiwango cha Mbele
+	Foreground to Background	Mbele hadi Mandharinyuma
+	Foreground/Background Jitter	Mtikisiko wa Mbele/Mandharinyuma
+	Format	Muundo
+	Fractions	Sehemu
+	Fragment	Kipande
+	Frame	Fremu
+	Frame Duration	Muda wa Fremu
+	Frame Sync	Usawazishaji wa Fremu
+	Frame from Layers	Fremu kutoka Matabaka
+	Frame from Layers…	Fremu kutoka Matabaka…
+	Frame {current} / {total}	Fremu {current} / {total}
+	Free	Huru
+	Free Transform	Ubadilishaji Huru
+	Free Transform a Copy	Ubadilishaji Huru wa Nakala
+	Freeze Lasso: drag to freeze an area, Alt-drag to thaw it (L)	Kamba ya Kugandisha: buruta kugandisha eneo, Alt-buruta kuliyeyusha (L)
+	Frequency	Marudio
+	Fresco	Fresko
+	From	Kutoka
+	From Center	Kutoka Katikati
+	From Left	Kutoka Kushoto
+	From Right	Kutoka Kulia
+	From Transparency	Kutoka Uwazi
+	Front Image	Picha ya Mbele
+	Frosted	Yenye Barafu
+	Fuchsia	Fuksia
+	Full Screen Mode	Hali ya Skrini Nzima
+	Full Screen Mode With Menu Bar	Hali ya Skrini Nzima na Upau wa Menyu
+	Full Spherical	Tufe Kamili
+	Full size tip	Ncha ya ukubwa kamili
+	Full-resolution preview unavailable	Onyesho la ubora kamili halipatikani
+	Fuzziness	Ukungu
+	Fuzziness:	Ukungu:
+	GPS	GPS
+	GPU	GPU
+	GPU Backend	Mfumo wa Nyuma wa GPU
+	GPU acceleration could not continue. Your documents are unchanged.	Kuongeza kasi kwa GPU hakukuweza kuendelea. Hati zako hazijabadilika.
+	GPU backend	Mfumo wa nyuma wa GPU
+	Gamma	Gamma
+	Gamma Correction	Urekebishaji wa Gamma
+	Gamma:	Gamma:
+	Gamut Warning	Onyo la Gamut
+	Gamut warning color	Rangi ya onyo la gamut
+	Gamut warning opacity	Uangavu wa onyo la gamut
+	Gap	Pengo
+	Gaussian	Gaussian
+	Gaussian Blur	Ukungu wa Gaussian
+	Gaussian Blur…	Ukungu wa Gaussian…
+	General	Jumla
+	General Blend	Mchanganyiko wa Jumla
+	General Brushes	Brashi za Jumla
+	General…	Jumla…
+	Generate	Zalisha
+	Generator enabled	Kizalishaji kimewashwa
+	Generators	Vizalishaji
+	Generic	Jumla
+	Gif	Gif
+	GitHub	GitHub
+	Glass	Kioo
+	Global	Jumla
+	Global Light	Mwanga wa Jumla
+	Global Light…	Mwanga wa Jumla…
+	Gloss	Mng'ao
+	Glossy	Inayong'aa
+	Glow	Mwangaza
+	Glow Amount	Kiasi cha Mwangaza
+	Glow Brightness	Mng'ao wa Mwangaza
+	Glow Color	Rangi ya Mwangaza
+	Glow Size	Ukubwa wa Mwangaza
+	Glowing Edges	Kingo Zinazong'aa
+	Glyph	Glifu
+	Glyph Scaling	Kupima Glifu
+	Glyphs	Glifu
+	Glyphs Panel	Paneli ya Glifu
+	Go to Layer	Nenda kwenye Tabaka
+	Golden Ratio	Uwiano wa Dhahabu
+	Golden Spiral	Ond ya Dhahabu
+	Good	Nzuri
+	Grab bag	Mchanganyiko
+	Grade Balance	Usawa wa Upangaji
+	Grade Blending	Mchanganyiko wa Upangaji
+	Grade Global	Upangaji wa Jumla
+	Grade Highlights	Upangaji wa Mwangaza Mkali
+	Grade Midtones	Upangaji wa Toni za Kati
+	Grade Shadows	Upangaji wa Vivuli
+	Gradient	Gredienti
+	Gradient Editor	Kihariri cha Gredienti
+	Gradient Map	Ramani ya Gredienti
+	Gradient Map…	Ramani ya Gredienti…
+	Gradient Options	Chaguo za Gredienti
+	Gradient Overlay	Gredienti ya Juu
+	Gradient Overlay…	Gredienti ya Juu…
+	Gradient Tool	Zana ya Gredienti
+	Gradient picker	Kichaguzi cha gredienti
+	Gradient stops	Vituo vya gredienti
+	Gradients	Gredienti
+	Gradient…	Gredienti…
+	Grain	Chembechembe
+	Grain Amount	Kiasi cha Chembechembe
+	Grain Roughness	Ukwaru wa Chembechembe
+	Grain Size	Ukubwa wa Chembechembe
+	Grain Type	Aina ya Chembechembe
+	Graininess	Uchembechembe
+	Grainy Dots	Nukta za Chembechembe
+	Graphic Pen	Kalamu ya Michoro
+	Graphic and Web	Michoro na Wavuti
+	Graphic and web	Michoro na wavuti
+	Graphics	Michoro
+	Gray	Kijivu
+	Gray Gamma 2.2	Gamma ya Kijivu 2.2
+	Gray Value (Maximum)	Thamani ya Kijivu (Upeo)
+	Gray Value (Mean)	Thamani ya Kijivu (Wastani)
+	Gray Value (Median)	Thamani ya Kijivu (Kati)
+	Gray Value (Minimum)	Thamani ya Kijivu (Kiwango cha Chini)
+	Gray:	Kijivu:
+	Grayscale	Kijivu
+	Grayscale Slider	Kitelezi cha Kijivu
+	Green	Kijani
+	Greens	Kijani
+	Grid	Gridi
+	Grid  (⌘')	Gridi  (⌘')
+	Grid color	Rangi ya gridi
+	Grid colors	Rangi za gridi
+	Grid size	Ukubwa wa gridi
+	Grid style	Mtindo wa gridi
+	Grid unit	Kipimo cha gridi
+	Grid:	Gridi:
+	Gridline every	Mstari wa gridi kila
+	Group	Kikundi
+	Group Layer	Tabaka la Kikundi
+	Group Layers	Panga Matabaka Kikundi
+	Group from Layers	Kikundi kutoka Matabaka
+	Group from Layers…	Kikundi kutoka Matabaka…
+	Group name	Jina la kikundi
+	Group · {n} layer	Kikundi · tabaka {n}
+	Group…	Kikundi…
+	Grout Width	Upana wa Saruji ya Viungo
+	Grow	Kuza
+	Guide color	Rangi ya mwongozo
+	Guide style	Mtindo wa mwongozo
+	Guides	Miongozo
+	Guides, Grid & Slices	Miongozo, Gridi na Vipande
+	Guides, Grid & Slices…	Miongozo, Gridi na Vipande…
+	Gutter	Nafasi ya Katikati
+	H	U
+	HDR Toning	Utoni wa HDR
+	HDR Toning…	Utoni wa HDR…
+	HDTV (Rec. 709)	HDTV (Rec. 709)
+	HDV 1080/DVCPRO HD 720 (1.33)	HDV 1080/DVCPRO HD 720 (1.33)
+	HSB Color	Rangi ya HSB
+	HSB/HSL	HSB/HSL
+	HSL/Grayscale	HSL/Kijivu
+	Halftone Pattern	Ruwaza ya Nusu-toni
+	Hand	Mkono
+	Hand Tool	Zana ya Mkono
+	Hanging Punctuation	Alama za Uakifishaji Zinazoning'inia
+	Hard	Ngumu
+	Hard Light	Mwanga Mkali
+	Hard Mix	Mchanganyiko Mgumu
+	Hardness	Ugumu
+	Hardness:	Ugumu:
+	Heal	Ponya
+	Heal Auto	Ponya Otomatiki
+	Heal Color	Ponya Rangi
+	Heal Off	Kuponya Kumezimwa
+	Heal On	Kuponya Kumewashwa
+	Healing	Uponyaji
+	Healing Brush Tool	Zana ya Brashi ya Kuponya
+	Heart	Moyo
+	Hearts	Mioyo
+	Height	Urefu
+	Height:	Urefu:
+	Help	Msaada
+	Heptagon	Pembesaba
+	Hexagon	Pembesita
+	Hidden Layers	Matabaka Yaliyofichwa
+	Hide	Ficha
+	Hide All	Ficha Zote
+	Hide All Effects	Ficha Athari Zote
+	Hide Auto Slices	Ficha Vipande vya Otomatiki
+	Hide Layers	Ficha Matabaka
+	Hide Properties	Ficha Sifa
+	Hide Selection	Ficha Uteuzi
+	Hide the layer's effects  ({key}-click: all layers)	Ficha athari za tabaka  (bofya kwa {key}: matabaka yote)
+	Hide the layer's effects  (⌥-click: all layers)	Ficha athari za tabaka  (bofya kwa ⌥: matabaka yote)
+	High	Juu
+	High Pass	Kipitishi cha Juu
+	High Pass…	Kipitishi cha Juu…
+	Highlight	Angazia
+	Highlight Amount	Kiasi cha Kuangazia
+	Highlight Area	Eneo la Kuangazia
+	Highlight Clipping Warning (O)	Onyo la Ukataji wa Mwangaza Mkali (O)
+	Highlight Compression	Ubanaji wa Mwangaza Mkali
+	Highlight Priority	Kipaumbele cha Mwangaza Mkali
+	Highlight Radius	Nusu-kipenyo cha Kuangazia
+	Highlight Strength	Nguvu ya Kuangazia
+	Highlight Tone	Toni ya Kuangazia
+	Highlights	Mwangaza Mkali
+	Highlights from:	Mwangaza mkali kutoka:
+	Histogram	Histogramu
+	Histories	Historia
+	History	Historia
+	History Brush	Brashi ya Historia
+	History Brush Tool	Zana ya Brashi ya Historia
+	History Log	Kumbukumbu ya Historia
+	History Log…	Kumbukumbu ya Historia…
+	History states	Hali za historia
+	Hold Alt while drawing for straight segments	Shikilia Alt unapochora kwa vipande vilivyonyooka
+	Home	Mwanzo
+	Horizontal	Mlalo
+	Horizontal Centers	Vituo vya Mlalo
+	Horizontal Only	Mlalo Pekee
+	Horizontal Type Tool	Zana ya Maandishi ya Mlalo
+	Horizontal scale	Kipimo cha mlalo
+	Horizontal type	Maandishi ya mlalo
+	Horizontally	Kwa mlalo
+	Hotspot	Sehemu Moto
+	Hsb	Hsb
+	Hsl	Hsl
+	Hsl Hue	Hue ya Hsl
+	Hsl Lum	Mng'ao wa Hsl
+	Hsl Sat	Ukolezaji wa Hsl
+	Hue	Rangi Msingi
+	Hue Jitter	Mtikisiko wa Rangi Msingi
+	Hue/Saturation	Rangi Msingi/Ukolezaji
+	Hue/Saturation…	Rangi Msingi/Ukolezaji…
+	Huge	Kubwa Sana
+	Humidity	Unyevu
+	Hyphenate	Tenga kwa Kistari
+	ISO	ISO
+	ISO Speed	Kasi ya ISO
+	Ignore	Puuza
+	Ignore All	Puuza Zote
+	Ignore exif profile tag	Puuza lebo ya wasifu wa exif
+	Image	Picha
+	Image Assets	Rasilimali za Picha
+	Image Balance	Usawa wa Picha
+	Image Processor	Kichakataji cha Picha
+	Image Processor…	Kichakataji cha Picha…
+	Image Rotation	Mzunguko wa Picha
+	Image Size	Ukubwa wa Picha
+	Image Size:	Ukubwa wa Picha:
+	Image Size…	Ukubwa wa Picha…
+	Image interpolation	Ukadiriaji wa picha
+	Image previews	Maonyesho ya picha
+	Import	Ingiza
+	Import Brushes	Ingiza Brashi
+	Import Brushes…	Ingiza Brashi…
+	Import Brushes… (.abr)	Ingiza Brashi… (.abr)
+	Import Presets	Ingiza Mipangilio
+	Import Shortcuts…	Ingiza Njia za Mkato…
+	Import Swatches…	Ingiza Sampuli za Rangi…
+	Import brushes (.abr)	Ingiza brashi (.abr)
+	Import keyboard shortcuts?	Ingiza njia za mkato za kibodi?
+	Imported	Imeingizwa
+	Imported {n} shortcuts from {file}. Click OK to keep them.	Njia za mkato {n} zimeingizwa kutoka {file}. Bofya OK kuzihifadhi.
+	Import…	Ingiza…
+	Impressionist	Kiimpreshonisti
+	In	Ndani
+	In Black	Nyeusi ya Kuingiza
+	In White	Nyeupe ya Kuingiza
+	Inches	Inchi
+	Include ICC Profile	Jumuisha Wasifu wa ICC
+	Including layers will increase file size.	Kujumuisha matabaka kutaongeza ukubwa wa faili.
+	Indent First	Jongeza Kwanza
+	Indent Left	Jongeza Kushoto
+	Indent Right	Jongeza Kulia
+	Indent first line	Jongeza mstari wa kwanza
+	Indent left margin	Jongeza pambizo la kushoto
+	Indent right margin	Jongeza pambizo la kulia
+	Indexed	Iliyoorodheshwa
+	Indexed Color	Rangi Zilizoorodheshwa
+	Indexed Color…	Rangi Zilizoorodheshwa…
+	Indigo	Nili
+	Industry Standard	Kiwango cha Sekta
+	Infinite	Isiyo na Kikomo
+	Inflate	Vimbisha
+	Info	Taarifa
+	Info Options…	Chaguo za Taarifa…
+	Initial Direction	Mwelekeo wa Mwanzo
+	Initial Direction of Stroke	Mwelekeo wa Mwanzo wa Mpigo
+	Ink Outlines	Mistari ya Wino
+	Inner Bevel	Ukingo wa Ndani wa Mshazari
+	Inner Glow	Mwangaza wa Ndani
+	Inner Glow…	Mwangaza wa Ndani…
+	Inner Shadow	Kivuli cha Ndani
+	Inner Shadow…	Kivuli cha Ndani…
+	Input Mode	Hali ya Kuingiza
+	Input:	Ingizo:
+	Insert Blank Frame	Ingiza Fremu Tupu
+	Inside	Ndani
+	Install Plug-in	Sakinisha Programu-jalizi
+	Install Plug-in…	Sakinisha Programu-jalizi…
+	Integer	Namba Kamili
+	Integrated Density	Msongamano Jumuishi
+	Integrations	Miunganiko
+	Integrations…	Miunganiko…
+	Intensity	Ukali
+	Interface	Kiolesura
+	Interface…	Kiolesura…
+	Interlaced	Iliyopishana
+	Internet Standard RGB	RGB ya Kiwango cha Mtandao
+	Interpolation	Ukadiriaji
+	Interpolation:	Ukadiriaji:
+	Interpret Footage	Tafsiri Picha za Video
+	Interpret Footage…	Tafsiri Picha za Video…
+	Intersect Shape Areas	Kutana kwa Maeneo ya Maumbo
+	Intersect with	Kutana na
+	Intersect with selection  ({key})	Kutana na uteuzi  ({key})
+	Intersect with selection  (⇧⌥)	Kutana na uteuzi  (⇧⌥)
+	Interval	Muda kati
+	Invalid delete command	Amri ya kufuta si sahihi
+	Invalid {mode} profile	Wasifu wa {mode} si sahihi
+	Inverse	Kinyume
+	Inverse Selection	Geuza Uteuzi
+	Invert	Geuza Rangi
+	Invert All	Geuza Zote
+	Invert has no settings.	Kugeuza rangi hakuna mipangilio.
+	Invert…	Geuza Rangi…
+	Iris Blur	Ukungu wa Iris
+	Iris Blur…	Ukungu wa Iris…
+	Isolate Layers	Tenga Matabaka
+	Italic	Mlalo
+	Its layers don't fit the GPU memory budget. Raising Memory usage in Preferences › Performance raises the budget, up to a quarter of this computer's memory.	Matabaka yake hayatoshei kwenye bajeti ya kumbukumbu ya GPU. Kuongeza Matumizi ya kumbukumbu katika Mapendeleo › Utendaji huongeza bajeti, hadi robo ya kumbukumbu ya kompyuta hii.
+	Ivy	Mtambaa
+	Jag	Meno
+	Join the ArtCraft Discord	Jiunge na Discord ya ArtCraft
+	Join the ArtCraft Discord…	Jiunge na Discord ya ArtCraft…
+	Join us on Discord	Jiunge nasi kwenye Discord
+	Jpeg quality	Ubora wa Jpeg
+	Jpg	Jpg
+	Justification	Upangaji wa Mistari
+	Justify	Panga Pande Zote
+	Justify all	Panga pande zote kila mstari
+	Justify last centered	Panga pande zote, mstari wa mwisho katikati
+	Justify last left	Panga pande zote, mstari wa mwisho kushoto
+	Justify last right	Panga pande zote, mstari wa mwisho kulia
+	Keep Using CPU	Endelea Kutumia CPU
+	Keep proportions	Dumisha uwiano
+	Keep this tab open to retain your brushes.	Acha kichupo hiki wazi ili kuhifadhi brashi zako.
+	Keep view in sync	Weka mionekano sawa
+	Keeps the current texture when switching presets.	Huhifadhi umbile la sasa unapobadilisha mipangilio.
+	Kernel	Kiini
+	Kerning	Nafasi kati ya Herufi
+	Keyboard Shortcuts	Njia za Mkato za Kibodi
+	Keyboard Shortcuts and Menus	Njia za Mkato za Kibodi na Menyu
+	Keyboard Shortcuts…	Njia za Mkato za Kibodi…
+	Keyboard shortcuts imported	Njia za mkato za kibodi zimeingizwa
+	Keywords	Maneno Muhimu
+	Kind	Aina
+	Knockout	Toboa
+	Kurtosis	Kurtosisi
+	Lab	Lab
+	Lab Color	Rangi ya Lab
+	Label	Lebo
+	Label Size	Ukubwa wa Lebo
+	Labels	Lebo
+	Lanczos (sharp)	Lanczos (kali)
+	Landscape	Mlalo
+	Landscape, 10 x 8	Mlalo, 10 x 8
+	Landscape, 6 x 4	Mlalo, 6 x 4
+	Landscape, 7 x 5	Mlalo, 7 x 5
+	Language	Lugha
+	Language Options	Chaguo za Lugha
+	Large	Kubwa
+	Large document: redrawing on the CPU	Hati kubwa: inachorwa upya kwa CPU
+	Large tabs	Vichupo vikubwa
+	Lasso	Kamba
+	Lasso Tool	Zana ya Kamba
+	Lasso around an area, then drag the selection	Zungushia eneo kwa kamba, kisha buruta uteuzi
+	Last	Mwisho
+	Last Document State	Hali ya Mwisho ya Hati
+	Last Filter	Kichujio cha Mwisho
+	Last Modified	Ilibadilishwa Mwisho
+	Last commit	Komiti ya mwisho
+	Layer	Tabaka
+	Layer Comp	Mpangilio wa Matabaka
+	Layer Comps	Mipangilio ya Matabaka
+	Layer Comps to Files	Mipangilio ya Matabaka kwenda Faili
+	Layer Comps to Files…	Mipangilio ya Matabaka kwenda Faili…
+	Layer Content Options	Chaguo za Maudhui ya Tabaka
+	Layer Content Options…	Chaguo za Maudhui ya Tabaka…
+	Layer Count	Idadi ya Matabaka
+	Layer Edges	Kingo za Tabaka
+	Layer From Background	Tabaka Kutoka Mandharinyuma
+	Layer From Background…	Tabaka Kutoka Mandharinyuma…
+	Layer Knocks Out Drop Shadow	Tabaka Huondoa Kivuli
+	Layer Mask	Barakoa ya Tabaka
+	Layer Properties	Sifa za Tabaka
+	Layer Style	Mtindo wa Tabaka
+	Layer deleted, but confirmation preference could not be saved: {error}	Tabaka limefutwa, lakini mapendeleo ya uthibitisho hayakuweza kuhifadhiwa: {error}
+	Layer from Background	Tabaka kutoka Mandharinyuma
+	Layer from Background…	Tabaka kutoka Mandharinyuma…
+	Layer via Copy	Tabaka kwa Kunakili
+	Layer via Cut	Tabaka kwa Kukata
+	Layers	Matabaka
+	Layers to Files	Matabaka kwenda Faili
+	Layers to Files…	Matabaka kwenda Faili…
+	Layer…	Tabaka…
+	Layout	Mpangilio
+	Leading	Nafasi ya Mistari
+	Leading (set to the font size × auto-leading when Auto)	Nafasi ya Mistari (huwekwa kuwa ukubwa wa fonti × nafasi ya otomatiki ikiwa Otomatiki)
+	Leaf Color	Rangi ya Jani
+	Leave as is (don't color manage)	Acha kama ilivyo (usisimamie rangi)
+	Leaves Amount	Kiasi cha Majani
+	Leaves Color	Rangi ya Majani
+	Leaves Size	Ukubwa wa Majani
+	Left	Kushoto
+	Left Diagonal	Mshazari wa Kushoto
+	Left Edges	Kingo za Kushoto
+	Left align text	Panga maandishi kushoto
+	Legacy	Ya Zamani
+	Legacy Macintosh RGB	RGB ya Zamani ya Macintosh
+	Legacy compositing	Uunganishaji wa zamani
+	Legal	Kisheria
+	Length	Urefu
+	Length:	Urefu:
+	Lens	Lenzi
+	Lens Blur	Ukungu wa Lenzi
+	Lens Blur…	Ukungu wa Lenzi…
+	Lens Correction	Marekebisho ya Lenzi
+	Lens Corrections	Marekebisho ya Lenzi
+	Lens Correction…	Marekebisho ya Lenzi…
+	Lens Flare	Mng'ao wa Lenzi
+	Lens Flare…	Mng'ao wa Lenzi…
+	Lens Info	Taarifa za Lenzi
+	Letter	Barua
+	Letter Spacing	Nafasi kati ya Herufi
+	Level	Kiwango
+	Level Based	Kwa Kiwango
+	Levels	Viwango
+	Levels…	Viwango…
+	Libraries	Maktaba
+	Ligature	Kiungo cha Herufi
+	Light	Mwanga
+	Light Dark Balance	Usawa wa Mwanga na Giza
+	Light Direction	Mwelekeo wa Mwanga
+	Light Intensity	Ukali wa Mwanga
+	Light Rough	Mwanga Mkwaruzo
+	Light Source	Chanzo cha Mwanga
+	Light Theme	Mandhari Meupe
+	Light Type	Aina ya Mwanga
+	Light X	Mwanga X
+	Light Y	Mwanga Y
+	Light Z	Mwanga Z
+	Light gray	Kijivu hafifu
+	Lighten	Ng'arisha
+	Lighten Grout	Ng'arisha Saruji ya Viungo
+	Lighten Only	Ng'arisha Pekee
+	Lighter Color	Rangi Angavu Zaidi
+	Lighting	Mwangaza
+	Lighting Effects	Athari za Mwangaza
+	Lighting Effects…	Athari za Mwangaza…
+	Lightness	Wepesi
+	Lights	Maeneo ya Mwanga
+	Limit Playback	Weka Kikomo cha Kucheza
+	Limits:	Vikomo:
+	Line	Mstari
+	Line Tool	Zana ya Mstari
+	Line delta	Tofauti ya mistari
+	Linear	Mstari
+	Linear Burn	Kuchoma kwa Mstari
+	Linear Dodge (Add)	Kufifisha kwa Mstari (Ongeza)
+	Linear Gradient	Gredienti ya Mstari
+	Linear Height	Urefu wa Mstari
+	Linear Light	Mwanga wa Mstari
+	Lines	Mistari
+	Lines +/−	Mistari +/−
+	Lines added	Mistari iliyoongezwa
+	Lines deleted	Mistari iliyofutwa
+	Link Layer Mask	Unganisha Barakoa ya Tabaka
+	Link Layers	Unganisha Matabaka
+	Link Vector Mask	Unganisha Barakoa ya Vekta
+	Link layers	Unganisha matabaka
+	Link radii	Unganisha nusu-vipenyo
+	Link the mask to the layer	Unganisha barakoa na tabaka
+	Link width and height	Unganisha upana na urefu
+	Link with Layer	Unganisha na Tabaka
+	Linux display server	Seva ya onyesho ya Linux
+	Liquify	Yeyusha
+	Liquify is not open	Yeyusha haijafunguliwa
+	Liquify…	Yeyusha…
+	List	Orodha
+	Load	Pakia
+	Load 3D LUT	Pakia LUT ya 3D
+	Load 3D LUT…	Pakia LUT ya 3D…
+	Load Default Type Styles	Pakia Mitindo Chaguo-msingi ya Maandishi
+	Load Files into Stack	Pakia Faili kwenye Rundo
+	Load Files into Stack…	Pakia Faili kwenye Rundo…
+	Load Selection	Pakia Uteuzi
+	Load Selection…	Pakia Uteuzi…
+	Load a keyboard shortcut set saved as .kys	Pakia seti ya njia za mkato za kibodi iliyohifadhiwa kama .kys
+	Load channel as selection	Pakia chaneli kama uteuzi
+	Load path as a selection	Pakia njia kama uteuzi
+	Load…	Pakia…
+	Localize Color Clusters	Weka Makundi ya Rangi Mahali
+	Localized Color Clusters	Makundi ya Rangi ya Mahali
+	Location	Mahali
+	Location:	Mahali:
+	Lock	Funga
+	Lock Guides	Funga Miongozo
+	Lock Layers	Funga Matabaka
+	Lock Layers…	Funga Matabaka…
+	Lock Slices	Funga Vipande
+	Lock Workspace	Funga Nafasi ya Kazi
+	Lock all	Funga zote
+	Lock image pixels	Funga pikseli za picha
+	Lock layer	Funga tabaka
+	Lock position	Funga nafasi
+	Lock transparent pixels	Funga pikseli zenye uwazi
+	Lock:	Funga:
+	Lock: keep these settings when picking another preset	Funga: hifadhi mipangilio hii unapochagua mpangilio mwingine
+	Log Errors To File	Andika Hitilafu kwenye Faili
+	Logical Length:	Urefu wa Kimantiki:
+	Logical Units:	Vipimo vya Kimantiki:
+	Long Lines	Mistari Mirefu
+	Long Strokes	Mipigo Mirefu
+	Loop	Mzunguko
+	Lorem Ipsum	Lorem Ipsum
+	Lossless	Bila Kupoteza
+	Low	Chini
+	Low resolution previews	Maonyesho ya ubora wa chini
+	Lower	Shusha
+	Lowercase extension	Kiendelezi kwa herufi ndogo
+	Lum	Mng'ao
+	Luminance	Mng'ao
+	Luminance Detail	Undani wa Mng'ao
+	Luminance Smoothness	Ulaini wa Mng'ao
+	Luminosity	Mwangaza
+	Lut	Lut
+	Mac Crisp	Mac Crisp
+	Mac LCD	Mac LCD
+	Mac OS	Mac OS
+	Mac Sharp	Mac Sharp
+	Mac Smooth	Mac Smooth
+	Mac Strong	Mac Strong
+	Magenta	Majenta
+	Magenta  ·  Green	Majenta  ·  Kijani
+	Magentas	Majenta
+	Magic Eraser Tool	Zana ya Kifutio cha Kichawi
+	Magic Wand Tool	Zana ya Fimbo ya Kichawi
+	Magnetic Lasso	Kamba ya Sumaku
+	Magnetic Lasso Tool	Zana ya Kamba ya Sumaku
+	Maintain aspect ratio	Dumisha uwiano wa vipimo
+	Make	Tengeneza
+	Make Default	Fanya Chaguo-msingi
+	Make Selection	Tengeneza Uteuzi
+	Make Work Path	Tengeneza Njia ya Kazi
+	Make work path from selection	Tengeneza njia ya kazi kutoka kwenye uteuzi
+	Map Document	Ramani ya Hati
+	Map Layer	Ramani ya Tabaka
+	Map Path	Ramani ya Njia
+	Margin	Pambizo
+	Marker Size	Ukubwa wa Alama
+	Marquee	Fremu ya Uteuzi
+	Mask	Barakoa
+	Mask All	Barakoa Zote
+	Mask All Objects	Barakoa Vitu Vyote
+	Mask Incomplete Blocks	Barakoa Vizuizi Visivyokamilika
+	Mask Options	Chaguo za Barakoa
+	Masked Areas	Maeneo Yaliyofunikwa
+	Masking	Ufunikaji
+	Master	Kuu
+	Match All	Linganisha Zote
+	Match Canvas	Linganisha Turubai
+	Match Color	Linganisha Rangi
+	Match Color…	Linganisha Rangi…
+	Match Location	Linganisha Mahali
+	Match Rotation	Linganisha Mzunguko
+	Match Zoom	Linganisha Ukuzaji
+	Matte	Matte
+	Matting	Kufifisha Kingo
+	Max Offset	Upeo wa Msogeo
+	Max Radius	Upeo wa Nusu-kipenyo
+	Maximize	Kuza Kabisa
+	Maximize psd compatibility	Ongeza uoanifu wa psd
+	Maximum	Upeo
+	Maximum…	Upeo…
+	Mean	Wastani
+	Mean:	Wastani:
+	Measure	Pima
+	Measurement Log	Kumbukumbu ya Vipimo
+	Measurement Scale	Kipimo cha Vipimo
+	Measurement Scale Marker	Alama ya Kipimo cha Vipimo
+	Median	Kati
+	Median:	Kati:
+	Median…	Kati…
+	Medium	Wastani
+	Medium Dots	Nukta za Wastani
+	Medium Lines	Mistari ya Wastani
+	Medium Strokes	Mipigo ya Wastani
+	Medium gray	Kijivu cha wastani
+	Memory usage mb	Matumizi ya kumbukumbu mb
+	Menus	Menyu
+	Menus…	Menyu…
+	Merge Down	Unganisha Chini
+	Merge Layers	Unganisha Matabaka
+	Merge Shape Components	Unganisha Vipengele vya Umbo
+	Merge Visible	Unganisha Yanayoonekana
+	Merge to HDR Pro	Unganisha kuwa HDR Pro
+	Merge to HDR Pro…	Unganisha kuwa HDR Pro…
+	Merged PRs	PR zilizounganishwa
+	Mesh	Wavu
+	Mesh Size	Ukubwa wa Wavu
+	Metadata	Metadata
+	Metal	Metal
+	Metallic	Ya Metali
+	Metering Mode	Hali ya Kupima Mwanga
+	Method	Mbinu
+	Metrics	Vipimo
+	Mezzotint	Mezzotint
+	Mezzotint…	Mezzotint…
+	Middle Eastern & South Asian Composer	Kitunzi cha Mashariki ya Kati na Asia Kusini
+	Middle Eastern Features	Vipengele vya Mashariki ya Kati
+	Midpoint	Sehemu ya Kati
+	Midtone	Toni ya Kati
+	Midtones	Toni za Kati
+	Midtones from:	Toni za kati kutoka:
+	Midtones to:	Toni za kati hadi:
+	Migrate Presets	Hamisha Mipangilio
+	Millimeters	Milimita
+	Minimalistic	Ya Kimsingi
+	Minimize	Punguza
+	Minimum	Kiwango cha Chini
+	Minimum Depth	Kina cha Chini
+	Minimum Diameter	Kipenyo cha Chini
+	Minimum Roundness	Mviringo wa Chini
+	Minimum…	Kiwango cha Chini…
+	Missing Profiles: Ask When Opening	Wasifu Unaokosekana: Uliza Unapofungua
+	Missing delete command	Amri ya kufuta inakosekana
+	Missing glyph protection	Kinga ya glifu zinazokosekana
+	Miter	Kona Kali
+	Miter limit	Kikomo cha kona kali
+	Mix	Changanya
+	Mix Jitter	Mtikisiko wa Mchanganyiko
+	Mixer Brush	Brashi ya Kuchanganya
+	Mixer Brush Tool	Zana ya Brashi ya Kuchanganya
+	Mobile	Simu
+	Mode	Hali
+	Mode:	Hali:
+	Model	Modeli
+	Models	Modeli
+	Modern	Kisasa
+	Modifier Keys	Vitufe vya Kirekebishaji
+	Modify	Rekebisha
+	Modify Date	Tarehe ya Kurekebisha
+	Monitor RGB	RGB ya Skrini
+	Mono Contrast	Utofautishaji Mono
+	Monochromatic	Rangi Moja
+	Monochrome	Rangi Moja
+	More Points	Nukta Zaidi
+	More documents	Hati zaidi
+	More panels	Paneli zaidi
+	Mosaic	Mozaiki
+	Mosaic Tiles	Vigae vya Mozaiki
+	Mosaic…	Mozaiki…
+	Motion	Mwendo
+	Motion Blur	Ukungu wa Mwendo
+	Motion Blur…	Ukungu wa Mwendo…
+	Mouse Controls	Vidhibiti vya Kipanya
+	Mouse Coordinates	Viwianishi vya Kipanya
+	Move	Sogeza
+	Move Group Down	Sogeza Kikundi Chini
+	Move Group Up	Sogeza Kikundi Juu
+	Move Layer	Sogeza Tabaka
+	Move Tool	Zana ya Kusogeza
+	Move effect layer down	Sogeza tabaka la athari chini
+	Move effect layer up	Sogeza tabaka la athari juu
+	Move to	Sogeza hadi
+	Movie Prime	Movie Prime
+	Multichannel	Chaneli Nyingi
+	Multiple Flames Along Path	Miali Mingi Kando ya Njia
+	Multiple Flames One Direction	Miali Mingi Mwelekeo Mmoja
+	Multiple Flames Path Directions	Miali Mingi Mielekeo ya Njia
+	Multiple Flames Various Length	Miali Mingi Urefu Tofauti
+	Multiply	Zidisha
+	My Brushes	Brashi Zangu
+	NTSC (1953)	NTSC (1953)
+	NTSC Colors	Rangi za NTSC
+	Name	Jina
+	Name (A–Z)	Jina (A–Z)
+	Name:	Jina:
+	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Kuburuta na kudondosha faili hakujatumika kwenye Wayland bado. Tumia Faili › Fungua, au nakili picha kwenye kidhibiti faili chako na uibandike kwa {paste}.
+	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run PhotoCraft under XWayland with `WAYLAND_DISPLAY= photocraft`.	Kuburuta na kudondosha faili hakujatumika kwenye Wayland bado. Tumia Faili › Fungua, au endesha PhotoCraft chini ya XWayland kwa `WAYLAND_DISPLAY= photocraft`.
+	Native file drag-and-drop is unavailable	Kuburuta na kudondosha faili hakupatikani
+	Navigator	Kielekezi
+	Nearest Neighbor	Jirani wa Karibu
+	Nearest Neighbor (hard edges)	Jirani wa Karibu (kingo ngumu)
+	Nearest neighbor	Jirani wa karibu
+	Negation	Ukanushaji
+	Neon Glow	Mng'ao wa Neon
+	Neutralize	Ondoa Rangi Ziada
+	Neutrals	Rangi Zisizo na Upande
+	Never	Kamwe
+	Never Show Overlay	Usionyeshe Tabaka-juu Kamwe
+	New	Mpya
+	New Adjustment Layer	Tabaka Jipya la Marekebisho
+	New Blank Video Layer	Tabaka Jipya Tupu la Video
+	New Brush	Brashi Mpya
+	New Brush Preset…	Mpangilio Mpya wa Brashi…
+	New Channel	Chaneli Mpya
+	New Document	Hati Mpya
+	New Fill Layer	Tabaka Jipya la Kujaza
+	New Group	Kikundi Kipya
+	New Guide	Mwongozo Mpya
+	New Guide Layout	Mpangilio Mpya wa Miongozo
+	New Guide Layout…	Mpangilio Mpya wa Miongozo…
+	New Guides From Shape	Miongozo Mipya kutoka Umbo
+	New Guide…	Mwongozo Mpya…
+	New Layer	Tabaka Jipya
+	New Layer Based Slice	Kipande Kipya cha Tabaka
+	New Layer Comp	Mpangilio Mpya wa Matabaka
+	New Layer from Brush	Tabaka Jipya kutoka Brashi
+	New Layer…	Tabaka Jipya…
+	New Path	Njia Mpya
+	New Selection	Uteuzi Mpya
+	New Shape Layer	Tabaka Jipya la Umbo
+	New Size	Ukubwa Mpya
+	New Smart Object via Copy	Kitu Mahiri Kipya kwa Kunakili
+	New Snapshot	Picha Mpya ya Hali
+	New Style…	Mtindo Mpya…
+	New Swatch Group…	Kikundi Kipya cha Sampuli za Rangi…
+	New Swatch…	Sampuli Mpya ya Rangi…
+	New Tool Preset	Mpangilio Mpya wa Zana
+	New Type Layer	Tabaka Jipya la Maandishi
+	New Video Group	Kikundi Kipya cha Video
+	New Video Layer	Tabaka Jipya la Video
+	New Video Layer from File	Tabaka Jipya la Video kutoka Faili
+	New Video Layer from File…	Tabaka Jipya la Video kutoka Faili…
+	New Window for Document	Dirisha Jipya la Hati
+	New Workspace	Nafasi Mpya ya Kazi
+	New Workspace…	Nafasi Mpya ya Kazi…
+	New channel only	Chaneli mpya pekee
+	New document	Hati mpya
+	New document…	Hati mpya…
+	New document…     ⌘N	Hati mpya…     ⌘N
+	New effect layer	Tabaka jipya la athari
+	New from Clipboard	Mpya kutoka Ubao wa Kunakili
+	New selection	Uteuzi mpya
+	Newspaper	Gazeti
+	New…	Mpya…
+	Next Appearance Mode	Hali Inayofuata ya Mwonekano
+	Next Document	Hati Inayofuata
+	Next Theme	Mandhari Yanayofuata
+	Next frame	Fremu inayofuata
+	Next note	Dokezo linalofuata
+	No	Hapana
+	No Color	Bila Rangi
+	No Color Management	Bila Usimamizi wa Rangi
+	No Dither	Bila Mchanganyiko wa Nukta
+	No Layer Comps	Hakuna Mipangilio ya Matabaka
+	No author	Hakuna mwandishi
+	No brush presets	Hakuna mipangilio ya brashi
+	No character style	Hakuna mtindo wa herufi
+	No contributor data was built into this copy.	Hakuna data ya wachangiaji iliyojengwa kwenye nakala hii.
+	No document	Hakuna hati
+	No matching commands	Hakuna amri zinazolingana
+	No matching settings	Hakuna mipangilio inayolingana
+	No model credits were built into this copy.	Hakuna sifa za modeli zilizojengwa kwenye nakala hii.
+	No path to make a selection from: draw one with the Pen tool or select one in the Paths panel.	Hakuna njia ya kutengeneza uteuzi: chora moja kwa zana ya Kalamu au chagua moja kwenye paneli ya Njia.
+	No patterns	Hakuna ruwaza
+	No presets for the current tool.	Hakuna mipangilio kwa zana ya sasa.
+	No presets of this type.	Hakuna mipangilio ya aina hii.
+	No properties	Hakuna sifa
+	No saved presets yet.	Bado hakuna mipangilio iliyohifadhiwa.
+	No subject found — try Object Selection or the Lasso	Hakuna kitu kikuu kilichopatikana — jaribu Uteuzi wa Kitu au Kamba
+	No subject found — try a rectangle around the object	Hakuna kitu kikuu kilichopatikana — jaribu mstatili kuzunguka kitu
+	No tool presets.	Hakuna mipangilio ya zana.
+	Noise	Kelele
+	Noise Color	Rangi ya Kelele
+	Noise Color Detail	Undani wa Rangi ya Kelele
+	Noise Luminance	Mng'ao wa Kelele
+	Noise Luminance Detail	Undani wa Mng'ao wa Kelele
+	Noise Reduction	Kupunguza Kelele
+	None	Hakuna
+	Nonlinear History	Historia Isiyo ya Mstari
+	Normal	Kawaida
+	Normal tip	Ncha ya kawaida
+	Not a web colour: click for the nearest web colour	Si rangi ya wavuti: bofya kupata rangi ya wavuti iliyo karibu
+	Not in Dictionary:	Haipo kwenye Kamusi:
+	Note Paper	Karatasi ya Dokezo
+	Note Tool	Zana ya Dokezo
+	Note tool	Zana ya dokezo
+	Notes	Madokezo
+	Notes…	Madokezo…
+	Notification Duration (seconds)	Muda wa Arifa (sekunde)
+	Now drag the selection onto another area	Sasa buruta uteuzi hadi eneo lingine
+	Number Of Levels	Idadi ya Viwango
+	OK	Sawa
+	Object Name / Title	Jina la Kitu / Kichwa
+	Object Selection Tool	Zana ya Uteuzi wa Kitu
+	Object Selection found nothing there — try a tighter rectangle	Uteuzi wa Kitu haukupata chochote hapo — jaribu mstatili mdogo zaidi
+	Ocean Ripple	Mawimbi ya Bahari
+	Octagon	Pembenane
+	Odd Fields	Sehemu Witiri
+	Off	Imezimwa
+	Off: the speed of the pointer sets the spacing	Imezimwa: kasi ya kiashiria huweka nafasi
+	Offset	Msogeo
+	Offset…	Msogeo…
+	Oil Paint	Rangi ya Mafuta
+	Oil Paint…	Rangi ya Mafuta…
+	Oldstyle	Mtindo wa Zamani
+	One Flame Along Path	Mwali Mmoja Kando ya Njia
+	Only Web Colors	Rangi za Wavuti Pekee
+	Opacity	Uangavu
+	Opacity Jitter	Mtikisiko wa Uangavu
+	Opacity Mask	Barakoa ya Uangavu
+	Opacity Threshold	Kizingiti cha Uangavu
+	Opacity:	Uangavu:
+	Open	Fungua
+	Open As	Fungua Kama
+	Open As…	Fungua Kama…
+	Open EXR Parts…	Fungua Sehemu za EXR…
+	Open Recent	Fungua za Hivi Karibuni
+	Open a document to define variables.	Fungua hati ili kubainisha vigezo.
+	Open a document to select a colour range.	Fungua hati ili kuchagua masafa ya rangi.
+	Open a document to use the timeline.	Fungua hati ili kutumia ratiba.
+	Open as smart object	Fungua kama kitu mahiri
+	Open documents as tabs	Fungua hati kama vichupo
+	Open in camera raw	Fungua katika camera raw
+	Open paths use centered strokes	Njia wazi hutumia mistari ya katikati
+	OpenGL	OpenGL
+	OpenType	OpenType
+	Opening	Kufungua
+	Opening {name}	Inafungua {name}
+	Opening {name}…	Inafungua {name}…
+	Opening…	Inafungua…
+	Open…	Fungua…
+	Open…     ⌘O	Fungua…     ⌘O
+	Operation	Operesheni
+	Optical	Ya Macho
+	Optimized	Imeboreshwa
+	Option-click to define a source point to clone from	Bofya kwa Option kuweka sehemu ya chanzo cha kunakili
+	Options	Chaguo
+	Or set Preferences › Performance › Linux display server to X11: PhotoCraft then always starts under XWayland.	Au weka Mapendeleo › Utendaji › Seva ya onyesho ya Linux kuwa X11: PhotoCraft kisha itaanza chini ya XWayland kila mara.
+	Orange	Rangi ya Chungwa
+	Ordinals	Nambari za Mpangilio
+	Orientation	Mwelekeo
+	Original	Asili
+	Original Ratio	Uwiano wa Asili
+	Ornaments	Mapambo
+	Other	Nyingine
+	Other…	Nyingine…
+	Out	Nje
+	Out Black	Nyeusi ya Kutoa
+	Out From Center	Kutoka Katikati Nje
+	Out Of Gamut	Nje ya Gamut
+	Out White	Nyeupe ya Kutoa
+	Out of gamut for printing: click for the nearest printable colour	Nje ya gamut kwa uchapishaji: bofya kupata rangi inayochapishika iliyo karibu
+	Outer Bevel	Ukingo wa Nje wa Mshazari
+	Outer Glow	Mwangaza wa Nje
+	Outer Glow…	Mwangaza wa Nje…
+	Output Channel:	Chaneli ya Kutoa:
+	Output Levels:	Viwango vya Kutoa:
+	Output:	Matokeo:
+	Outside	Nje
+	Oval	Duaradufu
+	Overlay	Tabaka-juu
+	Overlay Color	Rangi ya Tabaka-juu
+	Overlay Edge	Ukingo wa Tabaka-juu
+	Overlay Opacity	Uangavu wa Tabaka-juu
+	Overlay: Rule of Thirds	Tabaka-juu: Kanuni ya Theluthi
+	Override Action "Save" Commands	Batilisha Amri za "Hifadhi" za Kitendo
+	Override Pressure	Batilisha Shinikizo
+	Override Rotation	Batilisha Mzunguko
+	Override Tilt	Batilisha Mwinamo
+	Overscroll	Kusogeza Zaidi
+	PAL/SECAM	PAL/SECAM
+	PDF Presentation…	Wasilisho la PDF…
+	PRESET DETAILS	MAELEZO YA MPANGILIO
+	PSD	PSD
+	Package	Kifurushi
+	Package…	Kifurushi…
+	Paint Bucket Tool	Zana ya Ndoo ya Rangi
+	Paint Daubs	Madoa ya Rangi
+	Paint Overlay	Rangi ya Juu
+	Painting	Uchoraji
+	Paints from the document's opening state	Huchora kutoka hali ya hati ilipofunguliwa
+	Palette Knife	Kisu cha Paleti
+	Panel Options…	Chaguo za Paneli…
+	Panel locations are saved in the workspace. Keyboard shortcuts, menus and toolbar are optional.	Mahali pa paneli huhifadhiwa kwenye nafasi ya kazi. Njia za mkato za kibodi, menyu na upau wa zana ni hiari.
+	Panels	Paneli
+	Paper	Karatasi
+	Paper Brightness	Mng'ao wa Karatasi
+	Paragraph	Aya
+	Paragraph Panel	Paneli ya Aya
+	Paragraph Styles	Mitindo ya Aya
+	Paragraph Styles Panel	Paneli ya Mitindo ya Aya
+	Parallel	Sambamba
+	Pass Through	Pita Moja kwa Moja
+	Paste	Bandika
+	Paste Into	Bandika Ndani
+	Paste Layer Style	Bandika Mtindo wa Tabaka
+	Paste Lorem Ipsum	Bandika Lorem Ipsum
+	Paste Outside	Bandika Nje
+	Paste Special	Bandika Maalum
+	Paste in Place	Bandika Mahali Pake
+	Patch	Kiraka
+	Patch Tool	Zana ya Kiraka
+	Patch:	Kiraka:
+	Patchwork	Kazi ya Viraka
+	Path	Njia
+	Path Blur	Ukungu wa Njia
+	Path Blur…	Ukungu wa Njia…
+	Path Selection Tool	Zana ya Uteuzi wa Njia
+	Path to Illustrator…	Njia kwenda Illustrator…
+	Path:	Njia:
+	Paths	Njia
+	Paths to Illustrator	Njia kwenda Illustrator
+	Paths to Illustrator…	Njia kwenda Illustrator…
+	Pattern	Ruwaza
+	Pattern Overlay	Ruwaza ya Juu
+	Pattern Overlay…	Ruwaza ya Juu…
+	Pattern Preview	Onyesho la Ruwaza
+	Pattern Size	Ukubwa wa Ruwaza
+	Pattern Stamp	Muhuri wa Ruwaza
+	Pattern Stamp Tool	Zana ya Muhuri wa Ruwaza
+	Pattern Type	Aina ya Ruwaza
+	Patterns	Ruwaza
+	Pattern…	Ruwaza…
+	Pause	Sitisha
+	Pen	Kalamu
+	Pen Pressure	Shinikizo la Kalamu
+	Pen Tilt	Mwinamo wa Kalamu
+	Pen Tool	Zana ya Kalamu
+	Pencil	Penseli
+	Pencil Tool	Zana ya Penseli
+	Pencil Width	Upana wa Penseli
+	Pentagon	Pembetano
+	Percent	Asilimia
+	Perceptual	Kimtazamo
+	Performance	Utendaji
+	Performance…	Utendaji…
+	Perimeter	Mzingo
+	Perspective	Mtazamo
+	Perspective Crop	Kukata kwa Mtazamo
+	Perspective Warp	Upindaji wa Mtazamo
+	Perspective Warp is not active	Upindaji wa Mtazamo hauko hai
+	Perspective Warp: draw planes along the image's perspective, then switch to Warp	Upindaji wa Mtazamo: chora ndege kufuata mtazamo wa picha, kisha badilisha kwenda Pinda
+	Phone	Simu
+	Photo	Picha
+	Photo (2 × 3 in)	Picha (inchi 2 × 3)
+	Photo (4 × 6 in)	Picha (inchi 4 × 6)
+	Photo (5 × 7 in)	Picha (inchi 5 × 7)
+	Photo (8 × 10 in)	Picha (inchi 8 × 10)
+	Photo Filter	Kichujio cha Picha
+	Photo Filter…	Kichujio cha Picha…
+	PhotoCraft	PhotoCraft
+	PhotoCraft Manages Colors	PhotoCraft Husimamia Rangi
+	PhotoCraft Website	Tovuti ya PhotoCraft
+	PhotoCraft found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from PhotoCraft's. Import it?	PhotoCraft imepata seti yako ya njia za mkato za kibodi {set} kutoka kihariri kingine cha picha kwenye kompyuta hii: njia {n} zake zinatofautiana na za PhotoCraft. Uiingize?
+	PhotoCraft is using the CPU image compositor. The window may still use your graphics adapter.	PhotoCraft inatumia kiunganishi cha picha cha CPU. Dirisha bado linaweza kutumia adapta yako ya michoro.
+	PhotoCraft on GitHub	PhotoCraft kwenye GitHub
+	PhotoCraft website	Tovuti ya PhotoCraft
+	PhotoCraft — Screen Color Picker	PhotoCraft — Kichaguzi cha Rangi ya Skrini
+	PhotoCraft — an open-source, native image editor written in Rust.	PhotoCraft — kihariri cha picha cha chanzo huria kilichoandikwa kwa Rust.
+	Photocopy	Nakala ya Fotokopi
+	Photography	Upigaji Picha
+	Photomerge	Photomerge
+	Photomerge…	Photomerge…
+	Picas	Pika
+	Pick a screen pixel or press Esc to cancel	Chagua pikseli ya skrini au bonyeza Esc kughairi
+	Pick screen color	Chagua rangi ya skrini
+	Picture Frame	Fremu ya Picha
+	Picture Frame…	Fremu ya Picha…
+	Picture Package…	Kifurushi cha Picha…
+	Pillow Emboss	Nakshi ya Mto
+	Pin Depth:	Kina cha Pini:
+	Pin Light	Mwanga wa Pini
+	Pinch	Bana
+	Pinch…	Bana…
+	Pins	Pini
+	Pixel	Pikseli
+	Pixel Art	Sanaa ya Pikseli
+	Pixel Art Preview	Onyesho la Sanaa ya Pikseli
+	Pixel Aspect Ratio	Uwiano wa Pikseli
+	Pixel Aspect Ratio Correction	Urekebishaji wa Uwiano wa Pikseli
+	Pixel Grid	Gridi ya Pikseli
+	Pixel Layer	Tabaka la Pikseli
+	Pixel Length:	Urefu wa Pikseli:
+	Pixel Replacement	Ubadilishaji wa Pikseli
+	Pixelate	Fanya Pikseli
+	Pixels	Pikseli
+	Pixels/Centimeter	Pikseli/Sentimita
+	Pixels/Inch	Pikseli/Inchi
+	Pixels:	Pikseli:
+	Place Embedded	Weka Iliyopachikwa
+	Place Embedded…	Weka Iliyopachikwa…
+	Place Linked	Weka Iliyounganishwa
+	Place Linked…	Weka Iliyounganishwa…
+	Place Scale Marker	Weka Alama ya Kipimo
+	Place Scale Marker…	Weka Alama ya Kipimo…
+	Plane	Ndege
+	Planes	Ndege
+	Plaster	Lipu
+	Plastic Wrap	Kifuniko cha Plastiki
+	Play	Cheza
+	Play Once	Cheza Mara Moja
+	Play selection	Cheza uteuzi
+	Plug-ins	Programu-jalizi
+	Plug-ins…	Programu-jalizi…
+	Png	Png
+	Point	Nukta
+	Point Curve	Mkunjo wa Nukta
+	Point Curve Blue	Mkunjo wa Nukta Bluu
+	Point Curve Green	Mkunjo wa Nukta Kijani
+	Point Curve Red	Mkunjo wa Nukta Nyekundu
+	Point Sample	Sampuli ya Nukta
+	Point size	Ukubwa wa pointi
+	Pointed	Iliyochongoka
+	Pointillize	Chora kwa Nukta
+	Pointillize…	Chora kwa Nukta…
+	Points	Pointi
+	Polar Coordinates	Viwianishi vya Ncha
+	Polar Coordinates…	Viwianishi vya Ncha…
+	Polar To Rectangular	Ncha hadi Mstatili
+	Polygon Tool	Zana ya Poligoni
+	Polygonal Lasso Tool	Zana ya Kamba ya Poligoni
+	Pond Ripples	Mawimbi ya Bwawa
+	Portrait	Wima
+	Portrait, 4 x 6	Wima, 4 x 6
+	Portrait, 5 x 7	Wima, 5 x 7
+	Position	Nafasi
+	Position and Size	Nafasi na Ukubwa
+	PostScript (72 points/inch)	PostScript (pointi 72/inchi)
+	Postcard	Postikadi
+	Poster	Bango
+	Poster Edges	Kingo za Bango
+	Posterization	Upunguzaji wa Toni
+	Posterize	Punguza Toni
+	Posterize…	Punguza Toni…
+	Precise	Sahihi
+	Preferences	Mapendeleo
+	Preserve	Hifadhi
+	Preserve Details	Hifadhi Undani
+	Preserve Luminosity	Hifadhi Mwangaza
+	Preserve Transparency	Hifadhi Uwazi
+	Preserve details	Hifadhi undani
+	Preset	Mpangilio
+	Preset Manager	Kidhibiti cha Mipangilio
+	Preset Manager…	Kidhibiti cha Mipangilio…
+	Preset Name	Jina la Mpangilio
+	Preset Name:	Jina la Mpangilio:
+	Preset Type	Aina ya Mpangilio
+	Preset:	Mpangilio:
+	Presets	Mipangilio
+	Presets:	Mipangilio:
+	Press keys	Bonyeza vitufe
+	Press keys…	Bonyeza vitufe…
+	Pressure	Shinikizo
+	Pressure curve	Mkunjo wa shinikizo
+	Pressure for Opacity	Shinikizo kwa Uangavu
+	Pressure for Size	Shinikizo kwa Ukubwa
+	Prevent auto-nesting in and out of Artboards and Frames	Zuia kuweka ndani na nje kiotomatiki kwa Mbao za Sanaa na Fremu
+	Preview	Onyesho
+	Previous Document	Hati Iliyotangulia
+	Previous frame	Fremu iliyotangulia
+	Previous note	Dokezo lililotangulia
+	Prime105	Prime105
+	Prime35	Prime35
+	Print	Chapisha
+	Print One Copy	Chapisha Nakala Moja
+	Print Size	Ukubwa wa Uchapishaji
+	Print resolution	Ubora wa uchapishaji
+	Printer	Printa
+	Printer Manages Colors	Printa Husimamia Rangi
+	Printer Setup	Mpangilio wa Printa
+	Printing Marks	Alama za Uchapishaji
+	Print…	Chapisha…
+	Pro	Pro
+	Pro (Dark)	Pro (Meusi)
+	Pro (Medium Gray)	Pro (Kijivu cha Wastani)
+	Pro Medium	Pro ya Wastani
+	Pro Medium Gray Theme	Mandhari ya Pro Kijivu cha Wastani
+	Pro Theme	Mandhari ya Pro
+	Pro medium	Pro ya wastani
+	Pro photo	Pro photo
+	ProPhoto	ProPhoto
+	ProPhoto RGB	ProPhoto RGB
+	Profile	Wasifu
+	Profile Mismatches: Ask When Opening	Wasifu Usiolingana: Uliza Unapofungua
+	Progressive	Hatua kwa Hatua
+	Promote	Pandisha
+	Proof Colors	Rangi za Majaribio
+	Proof Setup	Mpangilio wa Majaribio
+	Properties	Sifa
+	Protect Detail	Linda Undani
+	Protect Foreground Color	Linda Rangi ya Mbele
+	Protect Texture	Linda Umbile
+	Protect Tones	Linda Toni
+	Province / State	Mkoa / Jimbo
+	Proximity Match	Ulinganifu wa Karibu
+	Public Domain	Kikoa cha Umma
+	Pulled String Mode	Hali ya Uzi Unaovutwa
+	Punctuation	Uakifishaji
+	Pupil Size	Ukubwa wa Mboni
+	Puppet Warp	Upindaji wa Kikaragosi
+	Puppet Warp is not active	Upindaji wa Kikaragosi hauko hai
+	Purge	Safisha
+	Purity	Usafi wa Rangi
+	Purple	Zambarau
+	Pyramids	Piramidi
+	Quality	Ubora
+	Quick Actions	Vitendo vya Haraka
+	Quick Export As PNG	Hamisha Haraka kama PNG
+	Quick Export as PNG	Hamisha Haraka kama PNG
+	Quick Mask	Barakoa ya Haraka
+	Quick Selection	Uteuzi wa Haraka
+	Quick Selection Tool	Zana ya Uteuzi wa Haraka
+	Quick Selection found nothing there	Uteuzi wa Haraka haukupata chochote hapo
+	Quick Sync	Usawazishaji wa Haraka
+	Quick export format	Muundo wa kuhamisha haraka
+	Quick export location	Mahali pa kuhamisha haraka
+	RGB	RGB
+	RGB Color	Rangi ya RGB
+	RGB:	RGB:
+	Radial	Mnururisho
+	Radial Blur	Ukungu wa Mnururisho
+	Radial Blur…	Ukungu wa Mnururisho…
+	Radial Gradient	Gredienti ya Mnururisho
+	Radius	Nusu-kipenyo
+	Radius X	Nusu-kipenyo X
+	Radius Y	Nusu-kipenyo Y
+	Radius:	Nusu-kipenyo:
+	Random	Nasibu
+	Randomize Length	Urefu wa Nasibu
+	Randomize Shapes	Maumbo ya Nasibu
+	Range	Masafa
+	Range:	Masafa:
+	Rasterize	Geuza kuwa Pikseli
+	Rasterize Fill Content	Geuza Maudhui ya Kujaza kuwa Pikseli
+	Rasterize Layer	Geuza Tabaka kuwa Pikseli
+	Rasterize Layer Style	Geuza Mtindo wa Tabaka kuwa Pikseli
+	Rasterize Layers	Geuza Matabaka kuwa Pikseli
+	Rasterize Shape	Geuza Umbo kuwa Pikseli
+	Rasterize Smart Object	Geuza Kitu Mahiri kuwa Pikseli
+	Rasterize Type	Geuza Maandishi kuwa Pikseli
+	Rasterize Type Layer	Geuza Tabaka la Maandishi kuwa Pikseli
+	Rasterize svg groups deeper than	Geuza kuwa pikseli vikundi vya svg vilivyo ndani zaidi ya
+	Rate	Kasi
+	Ratio	Uwiano
+	Raw Data	Data Ghafi
+	Raw Defaults	Chaguo-msingi za Raw
+	Raw Defaults…	Chaguo-msingi za Raw…
+	Reading	Inasoma
+	Reading…	Inasoma…
+	Real name	Jina halisi
+	Recent	Hivi Karibuni
+	Recent Items	Vipengee vya Hivi Karibuni
+	Recent file count	Idadi ya faili za hivi karibuni
+	Recent files	Faili za hivi karibuni
+	Recent fonts	Fonti za hivi karibuni
+	Recently Used	Zilizotumika Hivi Karibuni
+	Reconstruct	Jenga Upya
+	Record Measurements	Rekodi Vipimo
+	Record ● a sequence of edits, then play ▶ it on any document.	Rekodi ● mfuatano wa mabadiliko, kisha uucheze ▶ kwenye hati yoyote.
+	Recover on launch	Rejesha wakati wa kufungua
+	Recovery	Urejeshaji
+	Rectangle	Mstatili
+	Rectangle Tool	Zana ya Mstatili
+	Rectangular Marquee Tool	Zana ya Uteuzi wa Mstatili
+	Rectangular Selection	Uteuzi wa Mstatili
+	Rectangular To Polar	Mstatili hadi Ncha
+	Red	Nyekundu
+	Red Cyan	Nyekundu Samawati
+	Red Eye	Jicho Jekundu
+	Red Eye Tool	Zana ya Jicho Jekundu
+	Redefine style by current selection	Bainisha upya mtindo kwa uteuzi wa sasa
+	Redo	Rudia
+	Reds	Nyekundu
+	Reduce Color Noise	Punguza Kelele ya Rangi
+	Reduce Noise	Punguza Kelele
+	Reduce Noise…	Punguza Kelele…
+	Reference point location	Mahali pa sehemu ya rejea
+	Refine	Boresha
+	Reflect	Akisi
+	Reflected	Iliyoakisiwa
+	Reflected Gradient	Gredienti Iliyoakisiwa
+	Registration Marks	Alama za Usajili
+	Regular	Kawaida
+	Relative	Linganishi
+	Relative Colorimetric	Rangi Linganishi
+	Release Clipping Mask	Achilia Barakoa ya Kubana
+	Relief	Nakshi
+	Relight…	Mwangaza Upya…
+	Relink to File	Unganisha Upya na Faili
+	Relink to File…	Unganisha Upya na Faili…
+	Reload Frame	Pakia Upya Fremu
+	Remember workspace changes	Kumbuka mabadiliko ya nafasi ya kazi
+	Remove	Ondoa
+	Remove All Pins	Ondoa Pini Zote
+	Remove Background	Ondoa Mandharinyuma
+	Remove Black Matte	Ondoa Matte Nyeusi
+	Remove Jpeg Artifact	Ondoa Kasoro za Jpeg
+	Remove Planes	Ondoa Ndege
+	Remove Tool	Zana ya Kuondoa
+	Remove Warp Split	Ondoa Mgawanyiko wa Upindaji
+	Remove White Matte	Ondoa Matte Nyeupe
+	Remove from Recent	Ondoa kutoka za Hivi Karibuni
+	Remove pair	Ondoa jozi
+	Remove stop	Ondoa kituo
+	Remove variable	Ondoa kigezo
+	Remove {name} from Recent	Ondoa {name} kutoka za Hivi Karibuni
+	Rename	Badilisha Jina
+	Rename Brush	Badilisha Jina la Brashi
+	Rename Brush…	Badilisha Jina la Brashi…
+	Rename Group	Badilisha Jina la Kikundi
+	Rename Group…	Badilisha Jina la Kikundi…
+	Rename Layer	Badilisha Jina la Tabaka
+	Rename Layer Comp	Badilisha Jina la Mpangilio wa Matabaka
+	Rename Layer…	Badilisha Jina la Tabaka…
+	Rename Tool Preset	Badilisha Jina la Mpangilio wa Zana
+	Rename Tool Preset…	Badilisha Jina la Mpangilio wa Zana…
+	Rename…	Badilisha Jina…
+	Render	Onyesha
+	Render Video	Onyesha Video
+	Render Video…	Onyesha Video…
+	Rendering Mode	Hali ya Uonyeshaji
+	Rendering mode	Hali ya uonyeshaji
+	Reorder Layer	Panga Upya Tabaka
+	Repeat	Rudia
+	Replace All Missing Fonts	Badilisha Fonti Zote Zinazokosekana
+	Replace Color	Badilisha Rangi
+	Replace Color…	Badilisha Rangi…
+	Replace Contents	Badilisha Maudhui
+	Replace Contents…	Badilisha Maudhui…
+	Replace Footage	Badilisha Picha za Video
+	Replace Footage…	Badilisha Picha za Video…
+	Replace Swatches…	Badilisha Sampuli za Rangi…
+	Report an Issue	Ripoti Tatizo
+	Report an Issue…	Ripoti Tatizo…
+	Resample	Chukua Sampuli Upya
+	Reselect	Chagua Tena
+	Reset	Rejesha
+	Reset Alignment	Rejesha Mpangilio
+	Reset All to Defaults	Rejesha Zote kwa Chaguo-msingi
+	Reset GPU Backend	Rejesha Mfumo wa Nyuma wa GPU
+	Reset Section	Rejesha Sehemu
+	Reset Swatches	Rejesha Sampuli za Rangi
+	Reset Transform	Rejesha Ubadilishaji
+	Reset View	Rejesha Mwonekano
+	Reset Workspace	Rejesha Nafasi ya Kazi
+	Reset the brush to the defaults	Rejesha brashi kwa chaguo-msingi
+	Reset to Default	Rejesha kwa Chaguo-msingi
+	Reset to defaults	Rejesha kwa chaguo-msingi
+	Resize image during place	Badilisha ukubwa wa picha unapoweka
+	Resolution	Ubora
+	Resolution:	Ubora:
+	Resolution: {dpi} pixels/inch	Ubora: pikseli {dpi}/inchi
+	Resolve Missing Fonts	Tatua Fonti Zinazokosekana
+	Resolve Missing Fonts…	Tatua Fonti Zinazokosekana…
+	Restore	Rejesha
+	Restore All	Rejesha Zote
+	Restore All Frames	Rejesha Fremu Zote
+	Restore Defaults	Rejesha Chaguo-msingi
+	Restore Frame	Rejesha Fremu
+	Restore last viewed comp	Rejesha mpangilio ulioonekana mwisho
+	Restore original size	Rejesha ukubwa wa asili
+	Restrictive (Web)	Yenye Vikwazo (Wavuti)
+	Result	Matokeo
+	Reticulation	Mtandao wa Chembe
+	Retry GPU	Jaribu GPU Tena
+	Retry GPU requires a restart. Save your work first.	Kujaribu GPU tena kunahitaji kuanzisha upya. Hifadhi kazi yako kwanza.
+	Retry saving presets	Jaribu tena kuhifadhi mipangilio
+	Reveal All	Onyesha Zote
+	Reveal Selection	Onyesha Uteuzi
+	Reveal in Finder	Onyesha katika Finder
+	Reverse	Geuza
+	Reverse the order	Geuza mpangilio
+	Revert	Rudisha
+	Revert “{name}” to the last saved version? Your changes will be lost.	Rudisha “{name}” kwenye toleo la mwisho lililohifadhiwa? Mabadiliko yako yatapotea.
+	Rgb	Rgb
+	Ridges	Matuta
+	Right	Kulia
+	Right Diagonal	Mshazari wa Kulia
+	Right Edges	Kingo za Kulia
+	Right align text	Panga maandishi kulia
+	Right click with painting tools	Kubofya kulia kwa zana za kuchora
+	Rigid	Imara
+	Ring	Pete
+	Ripple	Mawimbi
+	Ripple Magnitude	Ukubwa wa Mawimbi
+	Ripple Size	Ukubwa wa Wimbi
+	Ripple…	Mawimbi…
+	Rise	Inuka
+	Roman	Kirumi
+	Roman Hanging Punctuation	Uakifishaji wa Kirumi Unaoning'inia
+	Rope	Kamba Nene
+	Roses	Waridi
+	Rotate	Zungusha
+	Rotate 180°	Zungusha 180°
+	Rotate 90° Clockwise	Zungusha 90° Mwendo wa Saa
+	Rotate 90° Counter Clockwise	Zungusha 90° Kinyume cha Saa
+	Rotate Auto	Zungusha Kiotomatiki
+	Rotate Fixed	Mzunguko Usiobadilika
+	Rotate View	Zungusha Mwonekano
+	Rotate View Tool	Zana ya Kuzungusha Mwonekano
+	Rotate view with trackpad	Zungusha mwonekano kwa trackpad
+	Rotate:	Zungusha:
+	Rotation	Mzunguko
+	Rough Pastels	Pastel Kali
+	Roughness	Ukwaru
+	Round	Mviringo
+	Roundness	Mviringo
+	Roundness Jitter	Mtikisiko wa Mviringo
+	Roundness:	Mviringo:
+	Row Order	Mpangilio wa Safu
+	Rule of Thirds	Kanuni ya Theluthi
+	Ruler	Rula
+	Ruler Tool	Zana ya Rula
+	Ruler Units	Vipimo vya Rula
+	Rulers	Rula
+	Rulers  (⌘R)	Rula  (⌘R)
+	Rulers & Grids	Rula na Gridi
+	SMPTE C	SMPTE C
+	Same folder	Folda ileile
+	Sample All Layers	Chukua Sampuli ya Matabaka Yote
+	Sample Size:	Ukubwa wa Sampuli:
+	Sample a pixel anywhere on the screen	Chukua sampuli ya pikseli popote kwenye skrini
+	Sample:	Sampuli:
+	Sample: foreground colour	Sampuli: rangi ya mbele
+	Sampled Colors	Rangi Zilizochukuliwa Sampuli
+	Sampler	Kichukua Sampuli
+	Sampling: Background Swatch	Kuchukua Sampuli: Sampuli ya Mandharinyuma
+	Sampling: Continuous	Kuchukua Sampuli: Mfululizo
+	Sampling: Once	Kuchukua Sampuli: Mara Moja
+	Sandstone	Mchanga Mgumu
+	Sat	Ukolezaji
+	Satin	Satini
+	Satin…	Satini…
+	Saturate	Kolesha
+	Saturation	Ukolezaji
+	Saturation Jitter	Mtikisiko wa Ukolezaji
+	Save	Hifadhi
+	Save As	Hifadhi Kama
+	Save As Preset	Hifadhi kama Mpangilio
+	Save As…	Hifadhi Kama…
+	Save Default Type Styles	Hifadhi Mitindo Chaguo-msingi ya Maandishi
+	Save HTML and Images	Hifadhi HTML na Picha
+	Save Pixel Aspect Ratio	Hifadhi Uwiano wa Pikseli
+	Save Preset…	Hifadhi Mpangilio…
+	Save Selection	Hifadhi Uteuzi
+	Save Selection…	Hifadhi Uteuzi…
+	Save a Copy	Hifadhi Nakala
+	Save a Copy…	Hifadhi Nakala…
+	Save as PDF	Hifadhi kama PDF
+	Save cancelled	Uhifadhi umeghairiwa
+	Save failed: {error}	Uhifadhi umeshindwa: {error}
+	Save for Web (Legacy)	Hifadhi kwa Wavuti (ya Zamani)
+	Save for Web (Legacy)…	Hifadhi kwa Wavuti (ya Zamani)…
+	Save in background	Hifadhi chinichini
+	Save selection as channel	Hifadhi uteuzi kama chaneli
+	Saved	Imehifadhiwa
+	Saved Multichannel	Chaneli Nyingi Zilizohifadhiwa
+	Save…	Hifadhi…
+	Saving brush presets… Keep this tab open until saving finishes.	Inahifadhi mipangilio ya brashi… Acha kichupo hiki wazi hadi uhifadhi ukamilike.
+	Saving {name}	Inahifadhi {name}
+	Scale	Pima
+	Scale Effects	Pima Athari
+	Scale Effects…	Pima Athari…
+	Scale Factor	Kipengele cha Kipimo
+	Scale Horizontally	Pima kwa Mlalo
+	Scale Units	Vipimo vya Kipimo
+	Scale Vertically	Pima kwa Wima
+	Scale to Fit Media	Pima Kutosha Karatasi
+	Scaling	Upimaji
+	Scallops	Magamba
+	Scatter	Tawanya
+	Scattering	Mtawanyiko
+	Scope	Upeo
+	Scratch Disks	Diski za Muda
+	Scratch Disks…	Diski za Muda…
+	Scratch Sizes	Ukubwa wa Muda
+	Scratch disks	Diski za muda
+	Scratch: {size}	Muda: {size}
+	Screen	Skrini
+	Screen Mode	Hali ya Skrini
+	Screen resolution	Ubora wa skrini
+	Script Events Manager	Kidhibiti cha Matukio ya Hati
+	Script Events Manager…	Kidhibiti cha Matukio ya Hati…
+	Scripts	Hati za Amri
+	Scroll to zoom	Sogeza ili kukuza
+	Scrubby Zoom	Kukuza kwa Kuburuta
+	Scrubby slider acceleration	Kasi ya kitelezi cha kuburuta
+	Seafoam	Povu la Bahari
+	Search	Tafuta
+	Search Brushes	Tafuta Brashi
+	Search commands	Tafuta amri
+	Search commands (⌘K)	Tafuta amri (⌘K)
+	Search commands, tools and panels	Tafuta amri, zana na paneli
+	Search commands, tools and panels…	Tafuta amri, zana na paneli…
+	Search fonts	Tafuta fonti
+	Search menus	Tafuta menyu
+	Search settings…	Tafuta mipangilio…
+	Search…	Tafuta…
+	Second Color Readout	Usomaji wa Rangi wa Pili
+	Seed	Mbegu
+	Select	Chagua
+	Select All	Chagua Zote
+	Select All Layers	Chagua Matabaka Yote
+	Select Bottom Layer	Chagua Tabaka la Chini Kabisa
+	Select Data Points	Chagua Nukta za Data
+	Select Data Points…	Chagua Nukta za Data…
+	Select Folder…	Chagua Folda…
+	Select Layer	Chagua Tabaka
+	Select Layer Above	Chagua Tabaka la Juu
+	Select Layer Below	Chagua Tabaka la Chini
+	Select Linked Layers	Chagua Matabaka Yaliyounganishwa
+	Select Plane	Chagua Ndege
+	Select Similar Colors	Chagua Rangi Zinazofanana
+	Select Subject	Chagua Kitu Kikuu
+	Select Top Layer	Chagua Tabaka la Juu Kabisa
+	Select a type layer or click into text to insert glyphs	Chagua tabaka la maandishi au bofya ndani ya maandishi kuingiza glifu
+	Select a type layer to edit its character and paragraph settings.	Chagua tabaka la maandishi kuhariri mipangilio yake ya herufi na aya.
+	Select and Mask	Chagua na Funika
+	Select and Mask…	Chagua na Funika…
+	Select text to apply a character style	Chagua maandishi kutumia mtindo wa herufi
+	Select:	Chagua:
+	Selected	Iliyochaguliwa
+	Selected Areas	Maeneo Yaliyochaguliwa
+	Selection	Uteuzi
+	Selection Edges	Kingo za Uteuzi
+	Selection Preview:	Onyesho la Uteuzi:
+	Selections	Teuzi
+	Selective	Teule
+	Selective Color	Rangi Teule
+	Selective Color…	Rangi Teule…
+	Semi Bold	Nzito Kiasi
+	SemiBold	NzitoKiasi
+	Send Backward	Peleka Nyuma
+	Send the selected pin backward	Peleka pini iliyochaguliwa nyuma
+	Send to Back	Peleka Nyuma Kabisa
+	Sepia	Sepia
+	Sessions only	Vipindi pekee
+	Set Black Point	Weka Nukta Nyeusi
+	Set Colors	Weka Rangi
+	Set Measurement Scale	Weka Kipimo cha Vipimo
+	Set Measurement Scale…	Weka Kipimo cha Vipimo…
+	Set Neutral Gray Point	Weka Nukta ya Kijivu Isiyo na Upande
+	Set New Snapshot as Default	Weka Picha Mpya ya Hali kama Chaguo-msingi
+	Set Start Timecode…	Weka Msimbo wa Muda wa Kuanza…
+	Set White Point	Weka Nukta Nyeupe
+	Set additional Crop options	Weka chaguo za ziada za Kukata
+	Set additional smoothing options	Weka chaguo za ziada za kulainisha
+	Set background color	Weka rangi ya mandharinyuma
+	Set foreground color	Weka rangi ya mbele
+	Set painting symmetry options	Weka chaguo za ulinganifu wa kuchora
+	Set shape fill type	Weka aina ya kujaza umbo
+	Set shape stroke type	Weka aina ya mstari wa umbo
+	Set the overlay options for the Crop tool	Weka chaguo za tabaka-juu kwa zana ya Kukata
+	Set the text color	Weka rangi ya maandishi
+	Settings	Mipangilio
+	Settings:	Mipangilio:
+	Settings…	Mipangilio…
+	Shadow	Kivuli
+	Shadow Amount	Kiasi cha Kivuli
+	Shadow Clipping Warning (U)	Onyo la Ukataji wa Vivuli (U)
+	Shadow Intensity	Ukali wa Kivuli
+	Shadow Radius	Nusu-kipenyo cha Kivuli
+	Shadow Tone	Toni ya Kivuli
+	Shadows	Vivuli
+	Shadows up to:	Vivuli hadi:
+	Shadows/Highlights	Vivuli/Mwangaza Mkali
+	Shadows/Highlights…	Vivuli/Mwangaza Mkali…
+	Shape	Umbo
+	Shape Blur	Ukungu wa Umbo
+	Shape Blur…	Ukungu wa Umbo…
+	Shape Dynamics	Mabadiliko ya Umbo
+	Shape Layer	Tabaka la Umbo
+	Shape:	Umbo:
+	Shapes	Maumbo
+	Sharp	Kali
+	Sharpen	Noa
+	Sharpen Amount	Kiasi cha Kunoa
+	Sharpen Detail	Undani wa Kunoa
+	Sharpen Details	Noa Undani
+	Sharpen Edges	Noa Kingo
+	Sharpen Masking	Ufunikaji wa Kunoa
+	Sharpen More	Noa Zaidi
+	Sharpen Radius	Nusu-kipenyo cha Kunoa
+	Sharpen Tool	Zana ya Kunoa
+	Sharpen for	Noa kwa ajili ya
+	Sharpening	Kunoa
+	Sharpness	Ukali
+	Shear	Pinda Kando
+	Shear…	Pinda Kando…
+	Shell Lower	Ganda la Chini
+	Shell Upper	Ganda la Juu
+	Shift	Shift
+	Shine	Mng'ao
+	Short Lines	Mistari Mifupi
+	Short Strokes	Mipigo Mifupi
+	Shortcut removed.	Njia ya mkato imeondolewa.
+	Show	Onyesha
+	Show All Menu Items	Onyesha Vipengee Vyote vya Menyu
+	Show Altered Video	Onyesha Video Iliyobadilishwa
+	Show Backdrop	Onyesha Mandhari ya Nyuma
+	Show Cropped Area	Onyesha Eneo Lililokatwa
+	Show Extras Options	Onyesha Chaguo za Ziada
+	Show Extras Options…	Onyesha Chaguo za Ziada…
+	Show Guides	Onyesha Miongozo
+	Show Guides  (⌘;)	Onyesha Miongozo  (⌘;)
+	Show Lab Color Readouts	Onyesha Usomaji wa Rangi wa Lab
+	Show Mask	Onyesha Barakoa
+	Show Mesh	Onyesha Wavu
+	Show New Snapshot Dialog by Default	Onyesha Kidirisha cha Picha Mpya ya Hali kwa Chaguo-msingi
+	Show Overlay	Onyesha Tabaka-juu
+	Show Red at 3 o'clock	Onyesha Nyekundu kwenye saa 3
+	Show Sampling Ring	Onyesha Pete ya Sampuli
+	Show Selected Region	Onyesha Eneo Lililochaguliwa
+	Show Skin Tone Indicator	Onyesha Kiashiria cha Rangi ya Ngozi
+	Show Transform Controls	Onyesha Vidhibiti vya Ubadilishaji
+	Show Vectorscope	Onyesha Vectorscope
+	Show bounding box when dragging layer	Onyesha kisanduku cha mipaka unapoburuta tabaka
+	Show channels in color	Onyesha chaneli kwa rangi
+	Show crosshair in brush tip	Onyesha msalaba kwenye ncha ya brashi
+	Show extension panels	Onyesha paneli za viendelezi
+	Show font names in english	Onyesha majina ya fonti kwa Kiingereza
+	Show highlight on rollover	Onyesha mwangaza kiashiria kikipita
+	Show in Explorer	Onyesha katika Explorer
+	Show in Folder	Onyesha katika Folda
+	Show menu colors	Onyesha rangi za menyu
+	Show only crosshair while painting	Onyesha msalaba pekee unapochora
+	Show or hide the Notes panel	Onyesha au ficha paneli ya Madokezo
+	Show slice numbers	Onyesha nambari za vipande
+	Show the layer mask as an overlay	Onyesha barakoa ya tabaka kama tabaka-juu
+	Show the layer's effects  ({key}-click: all layers)	Onyesha athari za tabaka  (bofya kwa {key}: matabaka yote)
+	Show the layer's effects  (⌥-click: all layers)	Onyesha athari za tabaka  (bofya kwa ⌥: matabaka yote)
+	Show tooltips	Onyesha vidokezo
+	Show transformation values	Onyesha thamani za ubadilishaji
+	Show/Hide All Panels	Onyesha/Ficha Paneli Zote
+	Show/Hide Panels	Onyesha/Ficha Paneli
+	Show:	Onyesha:
+	Shutter Speed	Kasi ya Shata
+	Sides	Pande
+	Sides:	Pande:
+	Similar	Zinazofanana
+	Simple	Rahisi
+	Sine	Sine
+	Single Column Marquee Tool	Zana ya Uteuzi wa Safu Wima Moja
+	Single Row Marquee Tool	Zana ya Uteuzi wa Safu Mlalo Moja
+	Single Word Justification	Upangaji wa Neno Moja
+	Size	Ukubwa
+	Size Jitter	Mtikisiko wa Ukubwa
+	Size:	Ukubwa:
+	Sketch	Mchoro
+	Skew	Inamisha
+	Skewness	Upogo
+	Sky	Anga
+	Slice Options	Chaguo za Kipande
+	Slice Options…	Chaguo za Kipande…
+	Slice Select Tool	Zana ya Kuchagua Kipande
+	Slice Tool	Zana ya Kipande
+	Slice color	Rangi ya kipande
+	Slices	Vipande
+	Slices From Guides	Vipande Kutoka Miongozo
+	Slices are locked (View › Lock Slices)	Vipande vimefungwa (Mwonekano › Funga Vipande)
+	Small	Ndogo
+	Small Caps	Herufi Kubwa Ndogo
+	Smart Blur	Ukungu Mahiri
+	Smart Blur…	Ukungu Mahiri…
+	Smart Filter	Kichujio Mahiri
+	Smart Filters	Vichujio Mahiri
+	Smart Guides	Miongozo Mahiri
+	Smart Object	Kitu Mahiri
+	Smart Object Layer	Tabaka la Kitu Mahiri
+	Smart Objects	Vitu Mahiri
+	Smart Sharpen	Kunoa Mahiri
+	Smart Sharpen…	Kunoa Mahiri…
+	Smart guide color	Rangi ya miongozo mahiri
+	Smart quotes	Alama za nukuu mahiri
+	Smooth	Laini
+	Smoothing	Ulainishaji
+	Smoothness	Ulaini
+	Smooth…	Lainisha…
+	Smudge Stick	Kijiti cha Kupaka
+	Smudge Tool	Zana ya Kupaka
+	Snap	Shikamana
+	Snap To	Shikamana na
+	Snap vector tools and transforms to pixel grid	Shikamanisha zana za vekta na ubadilishaji na gridi ya pikseli
+	Snapshot 1	Picha ya Hali 1
+	Snapshots	Picha za Hali
+	Snowflakes	Vipande vya Theluji
+	Soft	Laini
+	Soft Light	Mwanga Laini
+	Soften	Lainisha
+	Softness	Ulaini
+	Software	Programu
+	Solarize	Fanya Jua
+	Solarized Dark Theme	Mandhari Meusi ya Solarized
+	Solarized dark	Solarized meusi
+	Solid	Tupu
+	Solid Color	Rangi Tupu
+	Solid Color…	Rangi Tupu…
+	Solid Front Faces	Nyuso za Mbele Imara
+	Some brush presets could not be loaded	Baadhi ya mipangilio ya brashi haikuweza kupakiwa
+	Sort	Panga
+	Source	Chanzo
+	Source Layer	Tabaka la Chanzo
+	Source: not set ({key}-click with Clone Stamp)	Chanzo: hakijawekwa (bofya kwa {key} ukitumia Muhuri wa Kunakili)
+	Source: set	Chanzo: kimewekwa
+	Space After	Nafasi Baada
+	Space Before	Nafasi Kabla
+	Spacing	Nafasi
+	Spacing:	Nafasi:
+	Sparkle	Kumetameta
+	Spatter	Mrushiko
+	Speckle	Madoa
+	Speed	Kasi
+	Spell check complete.	Ukaguzi wa tahajia umekamilika.
+	Spherize	Fanya Tufe
+	Spherize…	Fanya Tufe…
+	Spin	Zunguka
+	Spin Blur	Ukungu wa Kuzunguka
+	Spin Blur…	Ukungu wa Kuzunguka…
+	Split Toning	Utoni Uliogawanyika
+	Split Warp Crosswise	Gawanya Upindaji kwa Mkato
+	Split Warp Horizontally	Gawanya Upindaji kwa Mlalo
+	Split Warp Vertically	Gawanya Upindaji kwa Wima
+	Split at Playhead	Gawanya kwenye Kiashiria cha Kucheza
+	Split:	Mgawanyiko:
+	Sponge	Sifongo
+	Sponge Tool	Zana ya Sifongo
+	Spot	Doa
+	Spot Channel	Chaneli ya Doa
+	Spot Color	Rangi ya Doa
+	Spot Healing	Uponyaji wa Doa
+	Spot Healing Brush Tool	Zana ya Brashi ya Kuponya Doa
+	Spot:	Doa:
+	Spray Radius	Nusu-kipenyo cha Mnyunyizo
+	Sprayed Strokes	Mipigo ya Kunyunyiza
+	Spread	Eneza
+	Sprinkles	Vinyunyizo
+	Square	Mraba
+	Square Size	Ukubwa wa Mraba
+	Square, 12 x 12	Mraba, 12 x 12
+	Square, 5 x 5	Mraba, 5 x 5
+	Squareness	Umraba
+	Squeeze	Bana
+	Srgb	Srgb
+	Stack Mode	Hali ya Rundo
+	Stagger	Pishanisha
+	Stained Glass	Kioo cha Rangi
+	Stamp	Muhuri
+	Stamp Down	Muhuri Chini
+	Stamp Visible	Muhuri Yanayoonekana
+	Standard	Kawaida
+	Standard Deviation	Mkengeuko Sanifu
+	Standard Ligatures	Viungo vya Kawaida vya Herufi
+	Standard Screen Mode	Hali ya Kawaida ya Skrini
+	Star	Nyota
+	Star Ratio:	Uwiano wa Nyota:
+	Star ratio	Uwiano wa nyota
+	Stars	Nyota
+	Start X	X ya Mwanzo
+	Start Y	Y ya Mwanzo
+	Statistics	Takwimu
+	Statistics…	Takwimu…
+	Status Information	Taarifa za Hali
+	Std Dev:	Mkengeuko Sanifu:
+	Step Backward	Hatua Nyuma
+	Step Forward	Hatua Mbele
+	Stippled	Ya Nukta-nukta
+	Stop	Simama
+	Stop For Errors	Simama Kwenye Hitilafu
+	Stop playing/recording	Simamisha kucheza/kurekodi
+	Stops	Vituo
+	Straighten	Nyoosha
+	Straighten Layer	Nyoosha Tabaka
+	Straighten the image by drawing a line on it	Nyoosha picha kwa kuchora mstari juu yake
+	Strength	Nguvu
+	Strength:	Nguvu:
+	Stretch	Nyoosha
+	Strikethrough	Mstari Katikati
+	Stroke	Mstari
+	Stroke Catch-up	Kufikia Mstari
+	Stroke Detail	Undani wa Mpigo
+	Stroke Direction	Mwelekeo wa Mpigo
+	Stroke Length	Urefu wa Mpigo
+	Stroke Options	Chaguo za Mstari
+	Stroke Path	Pigia Njia Mstari
+	Stroke Pressure	Shinikizo la Mpigo
+	Stroke Size	Ukubwa wa Mstari
+	Stroke Width	Upana wa Mstari
+	Stroke color	Rangi ya mstari
+	Stroke path with brush	Pigia njia mstari kwa brashi
+	Stroke:	Mstari:
+	Strokes	Mipigo
+	Stroke…	Mstari…
+	Strong	Imara
+	Structure:	Muundo:
+	Studio	Studio
+	Studio (Dark)	Studio (Meusi)
+	Studio (Light)	Studio (Meupe)
+	Studio Light	Studio Meupe
+	Studio Light Theme	Mandhari ya Studio Meupe
+	Studio Theme	Mandhari ya Studio
+	Studio light	Studio meupe
+	Style	Mtindo
+	Style Options	Chaguo za Mtindo
+	Style Options…	Chaguo za Mtindo…
+	Style {name} saved	Mtindo {name} umehifadhiwa
+	Style: Normal	Mtindo: Kawaida
+	Styles	Mitindo
+	Stylistic Alternates	Mbadala za Kimtindo
+	Stylization	Uwekaji Mtindo
+	Stylize	Weka Mtindo
+	Stylus Wheel	Gurudumu la Kalamu
+	Subdivisions	Migawanyiko
+	Subject	Kitu Kikuu
+	Subject Distance	Umbali wa Kitu Kikuu
+	Subscript	Herufi ya Chini
+	Subtract	Toa
+	Subtract Front Shape	Toa Umbo la Mbele
+	Subtract from	Toa kutoka
+	Subtract from Sample	Toa kutoka Sampuli
+	Subtract from selection  ({key})	Toa kutoka uteuzi  ({key})
+	Subtract from selection  (⌥)	Toa kutoka uteuzi  (⌥)
+	Suggestions:	Mapendekezo:
+	Sumi-e	Sumi-e
+	Summation	Jumla
+	Superscript	Herufi ya Juu
+	Supplemental Categories	Aina za Ziada
+	Surface Blur	Ukungu wa Uso
+	Surface Blur…	Ukungu wa Uso…
+	Swap colours (X)	Badilishana rangi (X)
+	Swaps height and width	Hubadilishana urefu na upana
+	Swash	Pambo la Herufi
+	Swatches	Sampuli za Rangi
+	Switch Foreground and Background Colors	Badilishana Rangi za Mbele na Mandharinyuma
+	Switch between free transform and warp modes	Badilisha kati ya hali za ubadilishaji huru na upindaji
+	Switch theme	Badilisha mandhari
+	Switched to CPU rendering	Imebadilishwa kwa uchoraji wa CPU
+	Symbols	Alama
+	Symmetry Off	Ulinganifu Umezimwa
+	Sync with system	Sawazisha na mfumo
+	System	Mfumo
+	System Info	Taarifa za Mfumo
+	System Info…	Taarifa za Mfumo…
+	System title bar	Upau wa kichwa wa mfumo
+	TIFF Options	Chaguo za TIFF
+	Table	Jedwali
+	Tabloid	Tabloidi
+	Taper	Chongoka
+	Target	Lengo
+	Target Path	Njia Lengwa
+	Target X	X ya Lengo
+	Target Y	Y ya Lengo
+	Teal Orange	Kijani-bluu na Chungwa
+	Technology Previews	Maonyesho ya Teknolojia
+	Technology Previews…	Maonyesho ya Teknolojia…
+	Temperature	Halijoto
+	Tetrahedral	Tetrahedra
+	Text Position:	Nafasi ya Maandishi:
+	Text Replacement	Ubadilishaji wa Maandishi
+	Text color	Rangi ya maandishi
+	Text engine	Injini ya maandishi
+	Text file	Faili ya maandishi
+	Texture	Umbile
+	Texture Coverage	Ufunikaji wa Umbile
+	Texture Each Tip	Umbile kwa Kila Ncha
+	Texturizer	Kitia Umbile
+	The GPU compositor wasn't used: {reason}	Kiunganishi cha GPU hakikutumika: {reason}
+	The document is closed	Hati imefungwa
+	The document or selected layers changed. Please request deletion again.	Hati au matabaka yaliyochaguliwa yamebadilika. Tafadhali omba kufuta tena.
+	The gradient the Gradient tool paints with	Gredienti inayochorwa na zana ya Gredienti
+	The keyboard shortcut set was not imported: {error}	Seti ya njia za mkato za kibodi haikuingizwa: {error}
+	Theme	Mandhari
+	These settings aren't available in PhotoCraft yet.	Mipangilio hii bado haipatikani katika PhotoCraft.
+	Thickness	Unene
+	Thin	Nyembamba
+	This redraw took {seconds} s on the CPU.	Uchoraji upya huu ulichukua sekunde {seconds} kwenye CPU.
+	Threshold	Kizingiti
+	Threshold Level	Kiwango cha Kizingiti
+	Threshold…	Kizingiti…
+	Thumbnail size (smallest: list)	Ukubwa wa picha ndogo (ndogo kabisa: orodha)
+	Tile	Kigae
+	Tile All Horizontally	Panga Zote kwa Mlalo
+	Tile All Vertically	Panga Zote kwa Wima
+	Tile Size	Ukubwa wa Kigae
+	Tiles	Vigae
+	Tiles…	Vigae…
+	Tilt	Inamisha
+	Tilt Scale	Kipimo cha Mwinamo
+	Tilt X	Mwinamo X
+	Tilt Y	Mwinamo Y
+	Tilt-Shift	Tilt-Shift
+	Tilt-Shift…	Tilt-Shift…
+	Time	Muda
+	Timecode	Msimbo wa Muda
+	Timeline	Ratiba
+	Timing	Muda
+	Tint	Rangi Hafifu
+	Tint Color	Rangi ya Rangi Hafifu
+	Tiny	Ndogo Sana
+	Tiny Lens	Lenzi Ndogo
+	Titling Alternates	Mbadala za Vichwa
+	To Center	Kuelekea Katikati
+	To drop files, start PhotoCraft under XWayland: `{command}`	Kudondosha faili, anzisha PhotoCraft chini ya XWayland: `{command}`
+	Toggle Last State	Badilisha Hali ya Mwisho
+	Toggle count group visibility	Badilisha uonekanaji wa kikundi cha kuhesabu
+	Toggle reference point	Badilisha sehemu ya rejea
+	Toggle text orientation	Badilisha mwelekeo wa maandishi
+	Toggle the Brush Settings panel  (F5)	Onyesha/ficha paneli ya Mipangilio ya Brashi  (F5)
+	Toggle visibility	Badilisha uonekanaji
+	Tolerance	Uvumilivu
+	Tolerance:	Uvumilivu:
+	Tone Curve	Mkunjo wa Toni
+	Tone Histogram	Histogramu ya Toni
+	Tone:	Toni:
+	Tool	Zana
+	Tool Presets	Mipangilio ya Zana
+	Toolbar	Upau wa Zana
+	Toolbars	Pau za Zana
+	Toolbar…	Upau wa Zana…
+	Tools	Zana
+	Tools…	Zana…
+	Top	Juu
+	Top Edges	Kingo za Juu
+	Top Left	Juu Kushoto
+	Top Right	Juu Kulia
+	Torn Edges	Kingo Zilizochanika
+	Total Ink	Jumla ya Wino
+	Total:	Jumla:
+	Touch gestures	Ishara za kugusa
+	Trace Contour	Fuatilia Kontua
+	Trace Contour…	Fuatilia Kontua…
+	Tracking	Nafasi ya Herufi
+	Tracking (1/1000 em)	Nafasi ya Herufi (1/1000 em)
+	Traditional (72.27 points/inch)	Ya Jadi (pointi 72.27/inchi)
+	Transfer	Uhamishaji
+	Transform	Badilisha Umbo
+	Transform Again on a Copy	Badilisha Umbo Tena kwenye Nakala
+	Transform Selection	Badilisha Umbo la Uteuzi
+	Transform Symmetry	Ulinganifu wa Ubadilishaji
+	Transition	Mpito
+	Transmission Reference	Rejea ya Upitishaji
+	Transparency	Uwazi
+	Transparency & Gamut	Uwazi na Gamut
+	Transparency & Gamut…	Uwazi na Gamut…
+	Transparency Threshold	Kizingiti cha Uwazi
+	Transparent	Wazi
+	Trap	Mtego wa Rangi
+	Trap…	Mtego wa Rangi…
+	Tree	Mti
+	Tree…	Mti…
+	Triangle	Pembetatu
+	Triangle Tool	Zana ya Pembetatu
+	Trilinear	Mistari Mitatu
+	Trim	Punguza Kingo
+	Trim…	Punguza Kingo…
+	Turbulent	Yenye Msukosuko
+	Twirl	Sokota
+	Twirl…	Sokota…
+	Twist	Sokota
+	Type	Maandishi
+	Type Layer	Tabaka la Maandishi
+	Type Options	Chaguo za Maandishi
+	Type Styles	Mitindo ya Maandishi
+	Type units	Vipimo vya maandishi
+	Type:	Maandishi:
+	Type…	Maandishi…
+	UI font size	Ukubwa wa fonti ya kiolesura
+	UI scale	Kipimo cha kiolesura
+	URLs	URL
+	Ultra Bold	Nzito Kabisa
+	Ultra Light	Nyembamba Kabisa
+	Unaltered	Haijabadilishwa
+	Unavailable in this color mode	Haipatikani katika hali hii ya rangi
+	Uncoated CMYK	CMYK ya Karatasi Isiyopakwa
+	Undefined Areas	Maeneo Yasiyobainishwa
+	Underline	Mstari Chini
+	Underpainting	Rangi ya Msingi
+	Underwater	Chini ya Maji
+	Undo	Tendua
+	Ungroup Layers	Tenganisha Matabaka
+	Uniform	Sawa
+	Unite Shapes	Unganisha Maumbo
+	Units	Vipimo
+	Units & Rulers	Vipimo na Rula
+	Units & Rulers…	Vipimo na Rula…
+	Unix	Unix
+	Unknown	Haijulikani
+	Unlink Layer Mask	Tenganisha Barakoa ya Tabaka
+	Unlink the mask from the layer	Tenganisha barakoa na tabaka
+	Unlock: picking a preset replaces these settings	Fungua: kuchagua mpangilio hubadilisha mipangilio hii
+	Unnamed {mode} profile	Wasifu wa {mode} usio na jina
+	Unsaved changes	Mabadiliko ambayo hayajahifadhiwa
+	Unsharp Mask	Barakoa ya Kunoa
+	Unsharp Mask…	Barakoa ya Kunoa…
+	Untagged {mode}	{mode} Bila Lebo
+	Untitled	Bila Jina
+	Untitled-1	Bila Jina-1
+	Update All Modified Content	Sasisha Maudhui Yote Yaliyobadilishwa
+	Update All Text Layers	Sasisha Matabaka Yote ya Maandishi
+	Update Layer Comp	Sasisha Mpangilio wa Matabaka
+	Update Modified Content	Sasisha Maudhui Yaliyobadilishwa
+	Update layer comp (visibility, position and appearance)	Sasisha mpangilio wa matabaka (uonekanaji, nafasi na mwonekano)
+	Update the current brush with these settings	Sasisha brashi ya sasa kwa mipangilio hii
+	Upper	Juu
+	Urgency	Uharaka
+	Use Classic Mode	Tumia Hali ya Kawaida
+	Use Custom Color	Tumia Rangi Maalum
+	Use Default	Tumia Chaguo-msingi
+	Use File › Open to open an image.	Tumia Faili › Fungua kufungua picha.
+	Use File › Open, or paste a copied image with {paste}.	Tumia Faili › Fungua, au bandika picha iliyonakiliwa kwa {paste}.
+	Use Global Light	Tumia Mwanga wa Jumla
+	Use Legacy	Tumia ya Zamani
+	Use Measurement Scale	Tumia Kipimo cha Vipimo
+	Use Selection In Source	Tumia Uteuzi Kwenye Chanzo
+	Use Selection In Target	Tumia Uteuzi Kwenye Lengo
+	Use additional plugins folder	Tumia folda ya ziada ya programu-jalizi
+	Use esc to commit	Tumia esc kuthibitisha
+	Use finite lengths and a positive pattern total	Tumia urefu wenye kikomo na jumla chanya ya ruwaza
+	Use gpu	Tumia gpu
+	Use legacy free transform	Tumia ubadilishaji huru wa zamani
+	Use shift key for tool switch	Tumia kitufe cha shift kubadilisha zana
+	Use tablet pressure	Tumia shinikizo la kibao
+	Use tablet pressure to change pen width	Tumia shinikizo la kibao kubadilisha upana wa kalamu
+	Use the embedded profile (instead of the working space)	Tumia wasifu uliopachikwa (badala ya nafasi ya kazi)
+	Username	Jina la mtumiaji
+	Uses the foreground and background colors.	Hutumia rangi za mbele na mandharinyuma.
+	Uses the foreground and background colours.	Hutumia rangi za mbele na mandharinyuma.
+	Vanishing Point	Sehemu ya Kutoweka
+	Vanishing Point…	Sehemu ya Kutoweka…
+	Variable Data Sets	Seti za Data za Vigezo
+	Variable Data Sets…	Seti za Data za Vigezo…
+	Variables	Vigezo
+	Variables bind a layer's visibility, text or pixels to a named data slot.	Vigezo huunganisha uonekanaji, maandishi au pikseli za tabaka na nafasi ya data yenye jina.
+	Variance	Tofauti
+	Vary round brush hardness on hud	Badilisha ugumu wa brashi ya duara kwenye hud
+	Vector Mask	Barakoa ya Vekta
+	Vector Mask from Current Path	Barakoa ya Vekta kutoka Njia ya Sasa
+	Version	Toleo
+	Version {version}	Toleo {version}
+	Vertical	Wima
+	Vertical Centers	Vituo vya Wima
+	Vertical Only	Wima Pekee
+	Vertical Type Tool	Zana ya Maandishi ya Wima
+	Vertical scale	Kipimo cha wima
+	Vertical type	Maandishi ya wima
+	Vertically	Kwa wima
+	Vibrance	Uchangamfu
+	Vibrance…	Uchangamfu…
+	Video	Video
+	Video Cache	Akiba ya Video
+	Video Frames to Layers	Fremu za Video kuwa Matabaka
+	Video Frames to Layers…	Fremu za Video kuwa Matabaka…
+	Video Layers	Matabaka ya Video
+	View	Mwonekano
+	View Options	Chaguo za Mwonekano
+	View menu	Menyu ya mwonekano
+	Vignette Amount	Kiasi cha Vinyeti
+	Vignette Feather	Ulainishaji wa Vinyeti
+	Vignette Highlights	Mwangaza Mkali wa Vinyeti
+	Vignette Midpoint	Sehemu ya Kati ya Vinyeti
+	Vignette Roundness	Mviringo wa Vinyeti
+	Vignette Style	Mtindo wa Vinyeti
+	Vignetting	Vinyeti
+	Vine Color	Rangi ya Mtambaa
+	Vine With Flowers	Mtambaa wenye Maua
+	Vine With Leaves	Mtambaa wenye Majani
+	Violent	Kali Sana
+	Violet	Urujuani
+	Violet, Orange	Urujuani, Chungwa
+	Visibility	Uonekanaji
+	Visible	Inaonekana
+	Vivid Light	Mwanga Angavu
+	Vulkan	Vulkan
+	W	U
+	W x H x Resolution	U x U x Ubora
+	WIA Support	Usaidizi wa WIA
+	WIA Support…	Usaidizi wa WIA…
+	Wand	Fimbo
+	Warm	Joto
+	Warming L B A	Kupasha Joto L B A
+	Warming81	Kupasha Joto81
+	Warming85	Kupasha Joto85
+	Warmth	Uchangamfu wa Rangi
+	Warp	Pinda
+	Warp Text	Pinda Maandishi
+	Warp Text…	Pinda Maandishi…
+	Warp:	Pinda:
+	Water Paper	Karatasi ya Maji
+	Watercolor	Rangi ya Maji
+	Watercolour look: lighter interior, darker rims.	Mwonekano wa rangi ya maji: ndani angavu zaidi, kingo nyeusi zaidi.
+	Wave	Wimbi
+	Wavelength Max	Upeo wa Urefu wa Wimbi
+	Wavelength Min	Kiwango cha Chini cha Urefu wa Wimbi
+	Waves	Mawimbi
+	Wave…	Wimbi…
+	Web	Wavuti
+	Web Color	Rangi ya Wavuti
+	Web Large	Wavuti Kubwa
+	Web Minimum	Wavuti Kiwango cha Chini
+	Web Most Common	Wavuti Zinazotumika Zaidi
+	Web Photo Gallery…	Matunzio ya Picha ya Wavuti…
+	Web Snap	Shikamana na Wavuti
+	WebP (lossless)	WebP (bila kupoteza)
+	Webp	Webp
+	Weight	Uzito
+	Weight:	Uzito:
+	Wet	Unyevu
+	Wet Edges	Kingo Zenye Unyevu
+	Wetness	Kiwango cha Unyevu
+	Wetness Jitter	Mtikisiko wa Unyevu
+	White	Nyeupe
+	White Balance: As Shot	Usawa wa Nyeupe: Kama Ilivyopigwa
+	White Clip	Ukataji wa Nyeupe
+	White Intensity	Ukali wa Nyeupe
+	White Is High	Nyeupe ni Juu
+	White Matte	Matte Nyeupe
+	Whites	Weupe
+	Wide Blurry	Ukungu Mpana
+	Wide Gamut RGB	RGB ya Gamut Pana
+	Wide Sharp	Upana Mkali
+	Width	Upana
+	Width and Height	Upana na Urefu
+	Width:	Upana:
+	Wind	Upepo
+	Window	Dirisha
+	Windows	Windows
+	Windows LCD	Windows LCD
+	Wind…	Upepo…
+	Word Spacing	Nafasi kati ya Maneno
+	Work Path	Njia ya Kazi
+	Working	Inafanya Kazi
+	Working Black Plate	Bamba Nyeusi la Kazi
+	Working CMY Plate	Bamba la CMY la Kazi
+	Working CMYK	CMYK ya Kazi
+	Working Cyan Plate	Bamba la Samawati la Kazi
+	Working Gray Plate	Bamba la Kijivu la Kazi
+	Working Magenta Plate	Bamba la Majenta la Kazi
+	Working Space	Nafasi ya Kazi
+	Working Spaces	Nafasi za Kazi
+	Working Yellow Plate	Bamba la Njano la Kazi
+	Working…	Inafanya kazi…
+	Workspace	Nafasi ya Kazi
+	Workspace…	Nafasi ya Kazi…
+	World ready	Tayari kwa dunia
+	Wrap	Funga
+	X	X
+	X11	X11
+	XOR	XOR
+	Y	Y
+	Yellow	Njano
+	Yellow  ·  Blue	Njano  ·  Bluu
+	Yellows	Njano
+	Yes	Ndiyo
+	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	Seti yako ya njia za mkato za kibodi {set} inatumika hapa: njia {n} zinatofautiana na chaguo-msingi. Hariri › Njia za Mkato za Kibodi inazionyesha; Rejesha Zote kwa Chaguo-msingi hutengua hili.
+	ZigZag	Zigizaga
+	ZigZag…	Zigizaga…
+	Zigzag	Zigizaga
+	Zoom	Kuza
+	Zoom In	Kuza Ndani
+	Zoom Out	Kuza Nje
+	Zoom Tool	Zana ya Kukuza
+	Zoom clicked point to center	Kuza nukta iliyobofywa hadi katikati
+	Zoom in	Kuza ndani
+	Zoom out	Kuza nje
+	Zoom resizes windows	Kukuza hubadilisha ukubwa wa madirisha
+	Zoom with scroll wheel	Kuza kwa gurudumu la kusogeza
+	Zoom with trackpad pinch	Kuza kwa kubana trackpad
+	command or shortcut	amri au njia ya mkato
+	current	ya sasa
+	image file path	njia ya faili ya picha
+	modified	imebadilishwa
+	name	jina
+	new	mpya
+	open source	chanzo huria
+	sRGB	sRGB
+	sRGB IEC61966-2.1	sRGB IEC61966-2.1
+	shortcut	njia ya mkato
+	{added}, {removed} subtracted	{added}, {removed} zimetolewa
+	{key} to subtract	{key} kutoa
+	{key}-click to set the source	bofya kwa {key} kuweka chanzo
+	{label} is writing the file and can no longer be cancelled	{label} inaandika faili na haiwezi kughairiwa tena
+	{mode} Color · {bits} bit	Rangi ya {mode} · biti {bits}
+	{name} Properties	Sifa za {name}
+	{name} options	Chaguo za {name}
+	{n} commands are not in PhotoCraft.	Amri {n} hazipo katika PhotoCraft.
+	{path}: the path is not valid Unicode; rename the file and open it again.	{path}: njia si Unicode halali; badilisha jina la faili kisha uifungue tena.
+	{size} (was {old})	{size} (awali {old})
+	{w} px x {h} px ({ppi} ppi)	{w} px x {h} px ({ppi} ppi)
+	{w} {unit} x {h} {unit} ({ppi} ppi)	{w} {unit} x {h} {unit} ({ppi} ppi)
+	{zoom}%	{zoom}%
+	…and {n} more	…na {n} zaidi
+	↑↓ navigate   {key} run   esc close	↑↓ sogeza   {key} endesha   esc funga
+	↑↓ navigate   ↵ run   esc close	↑↓ sogeza   ↵ endesha   esc funga
+@id	select.all	Zote
+@plural	Group · {n} layer|Group · {n} layers	Kikundi · tabaka {n}|Kikundi · matabaka {n}
+@plural	{n} Layer|{n} Layers	Tabaka {n}|Matabaka {n}
+@plural	{n} item|{n} items	Kipengee {n}|Vipengee {n}
+@plural	{n} layer|{n} layers	tabaka {n}|matabaka {n}
+@plural	{n} sample|{n} samples	sampuli {n}|sampuli {n}
+cameraRaw	Amount	Kiasi
+cameraRaw	Blacks	Weusi
+cameraRaw	Blending	Uchanganyaji
+cameraRaw	Color	Rangi
+cameraRaw	Darks	Maeneo ya Giza
+cameraRaw	Light	Mwangaza
+cameraRaw	Lights	Maeneo ya Mwanga
+cameraRaw	Masking	Ufunikaji
+cameraRaw	Tint	Rangi Hafifu
+fontWeight	Black	Nzito Kabisa
+fontWeight	Bold	Nzito
+fontWeight	ExtraBold	NzitoZaidi
+fontWeight	ExtraLight	NyembambaZaidi
+fontWeight	Italic	Mlalo
+fontWeight	Light	Nyepesi
+fontWeight	Medium	Wastani
+fontWeight	Regular	Kawaida
+fontWeight	SemiBold	NzitoKiasi
+fontWeight	Thin	Nyembamba

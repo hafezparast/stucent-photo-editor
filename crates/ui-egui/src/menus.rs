@@ -127,6 +127,9 @@ fn workspace_name(id: &str) -> Option<&'static str> {
 
 /// Run a command id from any source (menu, shortcut, palette, automation).
 pub fn invoke(app: &mut PhotocraftApp, ctx: &egui::Context, id: &str, params: Value) -> Result<Value, String> {
+    if locked(app, id) {
+        return Err(format!("`{id}` is turned off in exam mode"));
+    }
     if app.automation_input
         && let Some(authorize) = app.services.automation_command.as_ref()
     {
@@ -573,7 +576,15 @@ fn open_path(app: &mut PhotocraftApp, path: &str) -> Result<Value, String> {
     app.open_path(path).map(|w| json!({"warnings": w}))
 }
 
+/// Has the embedding page locked this command ([`crate::Services::locked_command`])?
+pub fn locked(app: &PhotocraftApp, id: &str) -> bool {
+    app.services.locked_command.is_some_and(|lock| lock(id))
+}
+
 pub fn is_enabled(app: &PhotocraftApp, id: &str) -> bool {
+    if locked(app, id) {
+        return false;
+    }
     if id == "ui.symmetryTransform" {
         return crate::symmetry_ui::can_transform(app);
     }
@@ -829,6 +840,10 @@ pub fn menu_items(app: &PhotocraftApp) -> Vec<MenuItem> {
     // 2) Our commands that Photoshop's tree doesn't list (or lists under another id).
     let mut extra: Vec<MenuItem> = Vec::new();
     for &(id, label, path, sc) in UI_COMMANDS {
+        // A build without the community links (`stucent-brand`) leaves their Help items out.
+        if crate::links::LINK_IDS.contains(&id) && crate::links::url_for(id).is_none() {
+            continue;
+        }
         extra.push(MenuItem {
             id: id.into(),
             label: label.into(),
@@ -1392,6 +1407,26 @@ mod tests {
         assert_eq!(checked(&app, "window.theme.studio"), Some(true));
     }
 
+    /// An embedding page's lock (`Services::locked_command`, the web bridge's exam mode) greys the
+    /// locked items in the menus and refuses them from any source, while other commands still run.
+    #[test]
+    fn locked_commands_show_disabled_and_are_refused() {
+        let mut app = PhotocraftApp::new(photocraft_engine::Session::new(), Default::default());
+        let ctx = egui::Context::default();
+        app.run("file.new", json!({"width": 64, "height": 64})).unwrap();
+        let enabled = |app: &PhotocraftApp, id: &str| menu_items(app).iter().find(|i| i.id == id).map(|i| i.enabled);
+        assert_eq!(enabled(&app, "file.open"), Some(true), "unlocked: File › Open is enabled");
+        app.services.locked_command = Some(|id| id == "file.open" || id == "image.duplicate");
+        assert_eq!(enabled(&app, "file.open"), Some(false), "locked: shown disabled");
+        assert!(!is_enabled(&app, "image.duplicate"));
+        let err = invoke(&mut app, &ctx, "image.duplicate", json!({})).unwrap_err();
+        assert!(err.contains("exam mode"), "{err}");
+        assert_eq!(app.session.documents().len(), 1, "the refused command did not run");
+        invoke(&mut app, &ctx, "select.all", json!({})).expect("an unlocked command still runs");
+        app.services.locked_command = None;
+        assert!(is_enabled(&app, "image.duplicate"), "unlocking restores the command");
+    }
+
     #[test]
     fn submenu_header_is_disabled_when_every_item_is() {
         let item = |label: &str, enabled: bool| MenuItem {
@@ -1618,6 +1653,8 @@ mod tests {
     /// #1447, #1438: a click on Help leaves its search field focused, so typing searches at once,
     /// and clicking into the field and typing keeps the menu open. Whole app, real clicks (press
     /// and release in separate frames), with the custom title bar (Windows, Linux) and without.
+    // Asserts the upstream name or links; the StuCent build has its own tests in brand.rs.
+    #[cfg(not(feature = "stucent-brand"))]
     #[test]
     fn help_search_takes_typing_and_clicks_without_closing_the_menu() {
         use egui::{Event, Modifiers, PointerButton};

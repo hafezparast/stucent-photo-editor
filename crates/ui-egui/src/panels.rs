@@ -520,7 +520,7 @@ pub fn title_bar(app: &mut PhotocraftApp, ui: &mut egui::Ui) {
                 let max = ui.ctx().input(|i| i.viewport().maximized.unwrap_or(false));
                 ui.ctx().send_viewport_cmd(egui::ViewportCommand::Maximized(!max));
             }
-            let title = app.session.active().map(|d| format!("{}{}", d.doc.name, if d.is_dirty() { "  •" } else { "" })).unwrap_or_else(|| "PhotoCraft".into());
+            let title = app.session.active().map(|d| format!("{}{}", d.doc.name, if d.is_dirty() { "  •" } else { "" })).unwrap_or_else(|| crate::brand::APP_NAME.into());
             // The menus and the right-hand controls are laid out first; the title is centred in
             // whatever room is left between them, shortened or dropped rather than drawn over them.
             let (mut menus_right, mut controls_left) = (full.left(), full.right());
@@ -584,7 +584,7 @@ pub fn title_bar(app: &mut PhotocraftApp, ui: &mut egui::Ui) {
                     }
                     // The community Discord, one click away while the bar has room for it
                     // (narrow windows drop it first; it is also Help › Discord).
-                    if ui.available_width() >= DISCORD_ROOM {
+                    if !cfg!(feature = "stucent-brand") && ui.available_width() >= DISCORD_ROOM {
                         let discord = egui::Button::image_and_text(
                             icons::image("message-square", 14.0, t.text_dim),
                             egui::RichText::new(tl!("Discord")).color(t.text_dim).size(12.0),
@@ -632,7 +632,7 @@ pub fn system_title_bar(app: &PhotocraftApp) -> bool {
 /// marks unsaved changes, like the `•` in the app-drawn title), or just the app name with no
 /// document open.
 pub fn window_title(app: &PhotocraftApp) -> String {
-    app.session.active().map(|d| format!("{}{} \u{2014} PhotoCraft", if d.is_dirty() { "*" } else { "" }, d.doc.name)).unwrap_or_else(|| "PhotoCraft".into())
+    app.session.active().map(|d| format!("{}{} \u{2014} {}", if d.is_dirty() { "*" } else { "" }, d.doc.name, crate::brand::APP_NAME)).unwrap_or_else(|| crate::brand::APP_NAME.into())
 }
 
 /// Keep the OS window title (and the taskbar / Alt-Tab entry) on the active file. Sends
@@ -707,11 +707,15 @@ mod title_tests {
         );
     }
 
+    // Asserts the upstream name or links; the StuCent build has its own tests in brand.rs.
+    #[cfg(not(feature = "stucent-brand"))]
     #[test]
     fn window_title_with_no_document_is_the_app_name() {
         assert_eq!(window_title(&app(true)), "PhotoCraft");
     }
 
+    // Asserts the upstream name or links; the StuCent build has its own tests in brand.rs.
+    #[cfg(not(feature = "stucent-brand"))]
     #[test]
     fn window_title_follows_the_active_file() {
         let mut app = app(true);
@@ -753,6 +757,8 @@ mod title_tests {
         }
     }
 
+    // Asserts the upstream name or links; the StuCent build has its own tests in brand.rs.
+    #[cfg(not(feature = "stucent-brand"))]
     #[test]
     fn sync_window_title_sends_only_on_change() {
         let mut app = app(true);

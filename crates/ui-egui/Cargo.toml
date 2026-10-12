@@ -4,6 +4,12 @@ version.workspace = true
 edition.workspace = true
 license.workspace = true
 
+[features]
+# StuCent Photo Editor (the hafezparast/stucent-photo-editor fork): the app is named "StuCent Photo
+# Editor", the community links (Discord, websites, GitHub) are gone, and the title bar shows a
+# neutral mark instead of the PhotoCraft icon. See `brand.rs`.
+stucent-brand = []
+
 [lints]
 workspace = true
 

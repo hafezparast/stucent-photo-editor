@@ -122,7 +122,7 @@ fn inflate(source: &[u8]) -> Result<String, String> {
 }
 
 /// The registry. English first: it is the fallback and the source language.
-pub static LANGUAGES: [LangInfo; 17] = [
+pub static LANGUAGES: [LangInfo; 21] = [
     LangInfo { code: "en", name: "English", source: b"", plural: plural_one_other, complete_menus: false, catalog: OnceLock::new() },
     LangInfo { code: "ja", name: "日本語", source: catalog!("ja"), plural: plural_none, complete_menus: true, catalog: OnceLock::new() },
     LangInfo { code: "zh-hans", name: "简体中文", source: catalog!("zh-hans"), plural: plural_none, complete_menus: true, catalog: OnceLock::new() },
@@ -145,6 +145,12 @@ pub static LANGUAGES: [LangInfo; 17] = [
     // Dutch; `nl-NL` and `nl-BE` locales both resolve here.
     LangInfo { code: "nl", name: "Nederlands", source: catalog!("nl"), plural: plural_one_other, complete_menus: true, catalog: OnceLock::new() },
     LangInfo { code: "it", name: "Italiano", source: catalog!("it"), plural: plural_one_other, complete_menus: true, catalog: OnceLock::new() },
+    // StuCent Photo Editor fork: Malay, Swahili, Turkish and Vietnamese (machine-assisted, awaiting
+    // native review). Malay, Turkish and Vietnamese keep the noun singular after a number.
+    LangInfo { code: "ms", name: "Bahasa Melayu", source: catalog!("ms"), plural: plural_none, complete_menus: true, catalog: OnceLock::new() },
+    LangInfo { code: "sw", name: "Kiswahili", source: catalog!("sw"), plural: plural_one_other, complete_menus: true, catalog: OnceLock::new() },
+    LangInfo { code: "tr", name: "Türkçe", source: catalog!("tr"), plural: plural_none, complete_menus: true, catalog: OnceLock::new() },
+    LangInfo { code: "vi", name: "Tiếng Việt", source: catalog!("vi"), plural: plural_none, complete_menus: true, catalog: OnceLock::new() },
 ];
 
 impl LangInfo {
@@ -157,7 +163,13 @@ impl LangInfo {
     }
 
     fn catalog(&self) -> &Catalog {
-        self.catalog.get_or_init(|| Catalog::parse(&self.text()))
+        self.catalog.get_or_init(|| {
+            #[allow(unused_mut)]
+            let mut catalog = Catalog::parse(&self.text());
+            #[cfg(feature = "stucent-brand")]
+            catalog.rebrand(crate::brand::UPSTREAM_NAME, crate::brand::APP_NAME);
+            catalog
+        })
     }
 }
 
@@ -305,9 +317,40 @@ pub fn sync_context(ctx: &egui::Context, language: &str) {
     }
 }
 
+/// The entries of `lang`'s bundled catalog file, as written (tests).
+#[cfg(test)]
+pub fn catalog_entries(lang: Lang) -> Vec<catalog::Entry> {
+    catalog::parse_entries(&lang.0.text()).0
+}
+
 /// Does `lang` have a catalog entry for this plain string? (English never does: it is the source.)
 pub fn has(lang: Lang, s: &str) -> bool {
     lang.catalog().plain(s).is_some()
+}
+
+/// English text as shown: with `stucent-brand`, the upstream product name replaced by
+/// [`crate::brand::APP_NAME`]. Each distinct string is rebranded once and kept for the life of the
+/// process, like a catalog entry (only the few strings that name the app are affected).
+#[cfg(feature = "stucent-brand")]
+fn branded(s: &str) -> &str {
+    use std::collections::HashMap;
+    use std::sync::Mutex;
+    if !s.contains(crate::brand::UPSTREAM_NAME) {
+        return s;
+    }
+    static SHOWN: OnceLock<Mutex<HashMap<String, &'static str>>> = OnceLock::new();
+    let mut shown = SHOWN.get_or_init(Default::default).lock().unwrap_or_else(|e| e.into_inner());
+    if let Some(text) = shown.get(s) {
+        return text;
+    }
+    let text: &'static str = Box::leak(crate::brand::rebrand(s).into_boxed_str());
+    shown.insert(s.to_string(), text);
+    text
+}
+
+#[cfg(not(feature = "stucent-brand"))]
+fn branded(s: &str) -> &str {
+    s
 }
 
 /// Translate an English UI string into the current language ([`tr`] with [`current`]).
@@ -317,7 +360,7 @@ pub fn t(s: &str) -> &str {
 
 /// Translate an English UI string; unknown strings come back unchanged.
 pub fn tr(lang: Lang, s: &str) -> &str {
-    lang.catalog().plain(s).unwrap_or(s)
+    lang.catalog().plain(s).unwrap_or_else(|| branded(s))
 }
 
 /// Like [`tr`], for an English string that needs a disambiguating `context`.
@@ -342,7 +385,7 @@ pub fn fmt(template: &str, args: &[(&str, &str)]) -> String {
 /// A plural-aware message: `one`/`other` are the English forms (with `{n}` where the count goes).
 pub fn trn(lang: Lang, n: u64, one: &str, other: &str) -> String {
     let idx = (lang.0.plural)(n);
-    let text = lang.catalog().plural(one, other, idx).unwrap_or(if n == 1 { one } else { other });
+    let text = lang.catalog().plural(one, other, idx).unwrap_or_else(|| branded(if n == 1 { one } else { other }));
     fmt(text, &[("n", &n.to_string())])
 }
 

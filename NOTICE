@@ -21,3 +21,15 @@ Builds made with craft-fonts (CRAFT_FONTS_DIR; all official releases) also embed
 https://github.com/storytold/craft-fonts/blob/main/ATTRIBUTION.md (today BIZ UDPGothic, Shippori Mincho and
 BIZ UDMincho; not the web build), under the SIL Open Font License 1.1. Their licence texts
 ship with the package as OFL-<family>.txt.
+
+Modifications (StuCent Photo Editor)
+
+This repository, hafezparast/stucent-photo-editor, is a modified version of PhotoCraft 0.7.0
+(https://github.com/storytold/photocraft, tag v0.7.0), distributed under the same MIT OR
+Apache-2.0 terms. Changes, all made in 2026 by the StuCent team: the web app is named "StuCent
+Photo Editor" and has no ArtCraft or PhotoCraft links or marks (cargo feature `stucent-brand`);
+a postMessage host bridge (apps/photocraft-web/src/host_bridge.rs, cargo feature `host-bridge`,
+protocol emu/1) lets a host page open and export documents, lock files in and out (exam mode),
+receive the edit log and autosave snapshots; Malay, Swahili, Turkish and Vietnamese UI catalogs;
+a build script and release workflow for the web bundle. It is not endorsed by the PhotoCraft or
+ArtCraft teams.

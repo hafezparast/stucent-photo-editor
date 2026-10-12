@@ -113,6 +113,8 @@ fn an_unreadable_shortcut_is_reported_not_imported() {
 /// The dialog's Import Shortcuts… button: the chosen file fills the overrides (a key
 /// equal to the default clears its override), reports what it did, and OK applies the set like
 /// hand-made changes, taking a moved key from its old owner.
+// Asserts the upstream name or links; the StuCent build has its own tests in brand.rs.
+#[cfg(not(feature = "stucent-brand"))]
 #[test]
 fn import_button_fills_the_dialog_and_ok_applies_the_set() {
     let answers = vec![Some(FileDialogAnswer::Contents("/sets/texcuts.kys".into(), SAMPLE.as_bytes().to_vec()))];

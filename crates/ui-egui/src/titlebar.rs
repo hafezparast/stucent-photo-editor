@@ -293,6 +293,8 @@ mod tests {
         Event::PointerButton { pos: p, button: egui::PointerButton::Primary, pressed, modifiers: Default::default() }
     }
 
+    // Asserts the upstream name or links; the StuCent build has its own tests in brand.rs.
+    #[cfg(not(feature = "stucent-brand"))]
     #[test]
     fn caption_buttons_take_the_right_end_and_nothing_overlaps_them() {
         for width in [760.0, 1100.0, 1440.0] {

@@ -1,0 +1,62 @@
+# StuCent Photo Editor: build the web bundle (host bridge `emu/1` + StuCent branding) on a release
+# tag and attach it to the GitHub release. Tags: v<upstream>-stucent.<n>, e.g. v0.7.0-stucent.1.
+# The same build runs locally with scripts/build-stucent-web.sh.
+name: stucent-web
+
+on:
+  push:
+    tags: ["v*-stucent.*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to build (must match VERSION in apps/photocraft-web/src/bridge_protocol.rs)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    env:
+      TRUNK_VERSION: 0.21.14
+      TRUNK_TOOLS_WASM_OPT: version_133
+      TAG: ${{ github.event.inputs.tag || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: stucent-web
+      - name: Install trunk
+        run: |
+          curl -fsSL "https://github.com/trunk-rs/trunk/releases/download/v${TRUNK_VERSION}/trunk-x86_64-unknown-linux-gnu.tar.gz" \
+            | tar -xz -C "$HOME/.cargo/bin" trunk
+          trunk --version
+      - name: Bridge and branding tests
+        run: |
+          cargo test -p photocraft-web --features stucent
+          cargo test -p photocraft-ui-egui --features stucent-brand --lib -- brand:: locked_commands i18n::
+      - name: Build and zip
+        run: scripts/build-stucent-web.sh "$TAG"
+      - name: Wasm size
+        run: |
+          {
+            echo "### StuCent Photo Editor $TAG"
+            echo
+            echo "| File | Bytes | gzip | Brotli |"
+            echo "| --- | ---: | ---: | ---: |"
+            for f in dist/web/*.wasm dist/web/*.js; do
+              echo "| $(basename "$f") | $(wc -c <"$f") | $(gzip -9c "$f" | wc -c) | $(brotli -c -q 11 "$f" | wc -c) |"
+            done
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Attach to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "StuCent Photo Editor $TAG" --notes "Web bundle for StuCent (protocol emu/1). Built by stucent-web.yml."
+          gh release upload "$TAG" "dist/stucent/stucent-photo-editor-web-$TAG.zip" dist/stucent/SHA256SUMS.txt --clobber

@@ -12,7 +12,14 @@ pub const APP_PAGE: &str = "https://getartcraft.com/apps/photocraft";
 pub const GITHUB: &str = "https://github.com/storytold/photocraft";
 pub const ISSUES: &str = "https://github.com/storytold/photocraft/issues";
 
-/// Help-menu link commands: (id, url). Labels live in `menus::UI_COMMANDS`.
+/// The Help menu's link commands, whether or not this build shows them (`stucent-brand` does not).
+pub const LINK_IDS: [&str; 5] = ["help.discord", "help.website", "help.artcraftWebsite", "help.github", "help.reportIssue"];
+
+/// Help-menu link commands: (id, url). Labels live in `menus::UI_COMMANDS`. The StuCent Photo Editor
+/// (`stucent-brand`) has none: its players stay inside the school's page.
+#[cfg(feature = "stucent-brand")]
+pub const COMMANDS: &[(&str, &str)] = &[];
+#[cfg(not(feature = "stucent-brand"))]
 pub const COMMANDS: &[(&str, &str)] =
     &[("help.discord", DISCORD), ("help.website", APP_PAGE), ("help.artcraftWebsite", ARTCRAFT_WEBSITE), ("help.github", GITHUB), ("help.reportIssue", ISSUES)];
 
@@ -33,6 +40,9 @@ pub fn open(app: &mut PhotocraftApp, ctx: &egui::Context, url: &str) -> Value {
 
 /// The prominent "Join us on Discord" button.
 pub fn discord_button(app: &mut PhotocraftApp, ui: &mut egui::Ui, min_width: f32) -> egui::Response {
+    if cfg!(feature = "stucent-brand") {
+        return ui.allocate_response(egui::Vec2::ZERO, egui::Sense::hover());
+    }
     let r = crate::widgets::primary_button(ui, tl!("Join us on Discord"), min_width).on_hover_text(DISCORD);
     if r.clicked() {
         open(app, ui.ctx(), DISCORD);
@@ -43,6 +53,9 @@ pub fn discord_button(app: &mut PhotocraftApp, ui: &mut egui::Ui, min_width: f32
 /// "PhotoCraft website · GitHub · ArtCraft" as links, centred. Clicks route through [`open`] (the
 /// platform browser service) rather than `ui.hyperlink_to`, which uses the unreliable `ctx.open_url`.
 pub fn link_row(app: &mut PhotocraftApp, ui: &mut egui::Ui) {
+    if cfg!(feature = "stucent-brand") {
+        return;
+    }
     let t = crate::theme::Tokens::get(ui.ctx());
     let links = [(tl!("PhotoCraft website"), APP_PAGE), (tl!("GitHub"), GITHUB), (tl!("ArtCraft"), ARTCRAFT_WEBSITE)];
     let font = egui::FontId::proportional(12.5);
@@ -97,6 +110,8 @@ mod tests {
         assert_eq!(opened.lock().unwrap().last().map(String::as_str), Some(DISCORD));
     }
 
+    // Asserts the upstream name or links; the StuCent build has its own tests in brand.rs.
+    #[cfg(not(feature = "stucent-brand"))]
     #[test]
     fn help_menu_lists_links_then_separator_then_system_info_and_about() {
         let app = PhotocraftApp::new(photocraft_engine::Session::new(), Default::default());
@@ -107,6 +122,8 @@ mod tests {
         }
     }
 
+    // Asserts the upstream name or links; the StuCent build has its own tests in brand.rs.
+    #[cfg(not(feature = "stucent-brand"))]
     #[test]
     fn link_commands_open_their_urls() {
         let mut app = PhotocraftApp::new(photocraft_engine::Session::new(), Default::default());

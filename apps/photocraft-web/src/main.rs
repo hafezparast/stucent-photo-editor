@@ -25,6 +25,12 @@ mod indexed_presets;
 #[cfg(target_arch = "wasm32")]
 mod web;
 
+#[cfg(any(test, all(target_arch = "wasm32", feature = "host-bridge")))]
+mod bridge_protocol;
+
+#[cfg(all(target_arch = "wasm32", feature = "host-bridge"))]
+mod host_bridge;
+
 #[cfg(target_arch = "wasm32")]
 fn main() {
     web::start();

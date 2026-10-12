@@ -82,6 +82,18 @@ impl Catalog {
         c
     }
 
+    /// Replace `from` with `to` in every translation (the `stucent-brand` app name).
+    #[cfg(feature = "stucent-brand")]
+    pub fn rebrand(&mut self, from: &str, to: &str) {
+        let fix = |s: &mut String| {
+            if s.contains(from) {
+                *s = s.replace(from, to);
+            }
+        };
+        self.plain.values_mut().chain(self.contextual.values_mut()).chain(self.ids.values_mut()).for_each(fix);
+        self.plurals.values_mut().flatten().for_each(fix);
+    }
+
     pub fn plain(&self, s: &str) -> Option<&str> {
         self.plain.get(s).map(String::as_str)
     }

@@ -23,7 +23,7 @@ mod alt_grab;
 pub mod analysis_ui;
 pub mod artboard_ui;
 pub(crate) mod blend_preview;
-mod brand;
+pub mod brand;
 pub mod brush_panel;
 pub mod brush_picker;
 pub mod brush_preview;
@@ -333,6 +333,10 @@ pub struct Services {
     /// each step of `actions.play`. Installed on the session only while a control request or
     /// an automation-driven [`PhotocraftApp::run`] runs, so a local play of a recorded `file.*` step still works.
     pub automation_authorize: Option<fn(&str, &serde_json::Value) -> photocraft_engine::Result<()>>,
+    /// Commands the embedding page has locked (the web host bridge's exam mode): shown disabled
+    /// in the menus and refused by [`menus::invoke`] from any source (menu, shortcut, palette).
+    /// Asked every frame, so the lock can change while the app runs.
+    pub locked_command: Option<fn(&str) -> bool>,
     /// Encode an RGBA8 image as PNG (used for screenshots and `ui.render`).
     pub encode_png: Option<EncodePngFn>,
     /// Open a URL in the system browser (native). Falls back to `ctx.open_url` (web) when unset.

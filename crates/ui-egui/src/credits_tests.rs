@@ -224,6 +224,8 @@ fn about_window(tab: &str, table: bool) -> (f32, f32, f32) {
     (title.top(), ok.top(), lowest)
 }
 
+// Asserts the upstream name or links; the StuCent build has its own tests in brand.rs.
+#[cfg(not(feature = "stucent-brand"))]
 #[test]
 fn about_and_models_end_where_their_content_does() {
     for tab in ["about", "models"] {
@@ -233,6 +235,8 @@ fn about_and_models_end_where_their_content_does() {
     }
 }
 
+// Asserts the upstream name or links; the StuCent build has its own tests in brand.rs.
+#[cfg(not(feature = "stucent-brand"))]
 #[test]
 fn switching_the_contributors_view_keeps_the_window_size() {
     // A new window is placed by its first frame, so compare the height, title to OK.

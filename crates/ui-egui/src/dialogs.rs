@@ -371,6 +371,13 @@ fn about_tab_body(app: &mut PhotocraftApp, ui: &mut egui::Ui, tab: &str) {
         _ => {
             ui.label(tl!("PhotoCraft — an open-source, native image editor written in Rust."));
             ui.label(crate::i18n::fmt(tl!("Version {version}"), &[("version", &photocraft_engine::build_info::long_version())]));
+            // The fork's attribution (Apache-2.0 / MIT): named as written, never rebranded.
+            #[cfg(feature = "stucent-brand")]
+            ui.weak(format!(
+                "A modified version of {} {} (github.com/storytold/photocraft), Apache-2.0 / MIT.",
+                crate::brand::UPSTREAM_NAME,
+                env!("CARGO_PKG_VERSION")
+            ));
             ui.add_space(12.0);
             ui.vertical_centered(|ui| {
                 crate::links::discord_button(app, ui, 220.0);
