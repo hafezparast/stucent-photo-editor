@@ -15,7 +15,7 @@ pub const VERSION: &str = "v0.7.0-stucent.1";
 /// The upstream PhotoCraft version the fork is based on (`ready.upstream`).
 pub const UPSTREAM: &str = env!("CARGO_PKG_VERSION");
 /// What the host can ask for (`ready.capabilities`).
-pub const CAPABILITIES: &[&str] = &["open", "export.psd", "export.png", "exam", "autosave", "commands", "lang"];
+pub const CAPABILITIES: &[&str] = &["open", "export.psd", "export.png", "exam", "autosave", "commands", "lang", "compact"];
 /// Longest `params` JSON forwarded per command in the edit log (brush strokes carry every point).
 pub const MAX_PARAMS_CHARS: usize = 512;
 /// Autosave never runs more often than this (a PSD export takes a few hundred milliseconds).
@@ -32,6 +32,8 @@ pub enum Kind {
     Export,
     Exam,
     Autosave,
+    /// The compact (tablet, touch) workspace on or off.
+    Compact,
 }
 
 /// What `export` writes.
@@ -99,6 +101,7 @@ pub fn kind(bridge: Option<&str>, ty: Option<&str>) -> Option<Kind> {
         "export" => Some(Kind::Export),
         "exam" => Some(Kind::Exam),
         "autosave" => Some(Kind::Autosave),
+        "compact" => Some(Kind::Compact),
         _ => None,
     }
 }
@@ -117,6 +120,12 @@ pub fn export_format(format: Option<&str>) -> Option<Format> {
 pub fn autosave_interval(ms: Option<f64>) -> Option<u32> {
     let ms = ms.filter(|m| m.is_finite() && *m > 0.0)?;
     Some(ms.clamp(f64::from(MIN_AUTOSAVE_MS), f64::from(MAX_AUTOSAVE_MS)) as u32)
+}
+
+/// The compact request's `on` flag: a missing or non-boolean value means on (the message exists to
+/// ask for it); `compact {on: false}` goes back to the desktop workspace.
+pub fn compact_request(on: Option<bool>) -> bool {
+    on.unwrap_or(true)
 }
 
 /// Is a snapshot due? Only when the interval has passed and commands ran since the last one.
@@ -168,6 +177,16 @@ pub fn ui_language(code: &str) -> &'static str {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn compact_is_a_message_and_a_capability() {
+        assert_eq!(kind(Some(PROTOCOL), Some("compact")), Some(Kind::Compact));
+        assert_eq!(kind(Some("other/1"), Some("compact")), None);
+        assert!(CAPABILITIES.contains(&"compact"));
+        assert!(compact_request(None));
+        assert!(compact_request(Some(true)));
+        assert!(!compact_request(Some(false)));
+    }
 
     #[test]
     fn host_origin_accepts_plain_http_origins_only() {

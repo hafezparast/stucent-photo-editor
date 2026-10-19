@@ -78,7 +78,13 @@ fn visible_sections(hidden: &[String]) -> Vec<Vec<(usize, Vec<Tool>)>> {
 
 pub fn toolbar(app: &mut PhotocraftApp, ui: &mut egui::Ui) {
     let t = Tokens::get(ui.ctx());
-    let (w1, bx, m) = if t.pro { (40.0, 30.0, 5i8) } else { (50.0, 36.0, 7i8) };
+    let (w1, bx, m) = if crate::compact::on() {
+        (crate::compact::TOOL_RAIL, crate::compact::TOUCH, 2i8)
+    } else if t.pro {
+        (40.0, 30.0, 5i8)
+    } else {
+        (50.0, 36.0, 7i8)
+    };
     let sections = visible_sections(&app.session.prefs().toolbar.hidden);
     // Two columns when the header chevron asks for them; a column that doesn't fit scrolls.
     let double = app.ui.panels.toolbar_double;
@@ -502,7 +508,7 @@ pub fn title_bar(app: &mut PhotocraftApp, ui: &mut egui::Ui) {
     let left = if cfg!(target_os = "macos") && app.integrated_titlebar { 78 } else { 10 };
     let right = if custom { 0 } else { 10 };
     let bar = egui::Panel::top("title_bar")
-        .exact_size(if t.pro { 32.0 } else { 38.0 })
+        .exact_size(if crate::compact::on() { crate::compact::TOUCH } else if t.pro { 32.0 } else { 38.0 })
         .frame(egui::Frame::NONE.fill(t.chrome).inner_margin(egui::Margin { left, right, top: 0, bottom: 0 }))
         .show(ui, |ui| {
             let full = ui.max_rect();
@@ -1465,12 +1471,19 @@ pub fn status_bar(app: &mut PhotocraftApp, ui: &mut egui::Ui) {
 pub fn right_dock(app: &mut PhotocraftApp, ui: &mut egui::Ui) {
     let t = Tokens::get(ui.ctx());
     let p = app.ui.panels.clone();
-    if t.pro {
+    let dock_shown = crate::compact::dock_visible(crate::compact::on(), crate::compact::drawer_open());
+    if t.pro && dock_shown {
         dock_panels(app, ui, &p, &t);
     }
     // Narrow icon rail, unless an embedding app hides it: shows, expands or collapses panel groups.
     if p.rail {
-        let (rw, rb) = if t.pro { (36.0, 28.0) } else { (44.0, 32.0) };
+        let (rw, rb) = if crate::compact::on() {
+            (crate::compact::TOUCH, crate::compact::TOUCH - 8.0)
+        } else if t.pro {
+            (36.0, 28.0)
+        } else {
+            (44.0, 32.0)
+        };
         egui::Panel::right("rail").resizable(false).exact_size(rw).frame(egui::Frame::NONE.fill(t.chrome).inner_margin(egui::Margin::symmetric(4, 8))).show(
             ui,
             |ui| {
@@ -1489,14 +1502,26 @@ pub fn right_dock(app: &mut PhotocraftApp, ui: &mut egui::Ui) {
                     // Studio floats Properties outside the dock.
                     let docked = t.pro || g != Group::Properties;
                     let on = g.shown(&p) && !(docked && app.ui.dock.is_collapsed(g));
+                    let on = on && (dock_shown || !docked);
                     if icons::rail_button(ui, icon, rb, on, name).clicked() {
-                        crate::dock::rail_click(app, g, docked);
+                        if crate::compact::on() && docked {
+                            // The dock is a drawer here: a button opens it on its group, or closes it.
+                            match crate::compact::rail_action(crate::compact::drawer_open(), g.shown(&p) && !app.ui.dock.is_collapsed(g)) {
+                                crate::compact::RailAction::CloseDrawer => crate::compact::set_drawer(false),
+                                crate::compact::RailAction::OpenOn => {
+                                    crate::dock::reveal(app, g);
+                                    crate::compact::set_drawer(true);
+                                }
+                            }
+                        } else {
+                            crate::dock::rail_click(app, g, docked);
+                        }
                     }
                 }
             },
         );
     }
-    if !t.pro {
+    if !t.pro && dock_shown {
         dock_panels(app, ui, &p, &t);
     }
     crate::dock::persist(app, ui.ctx());

@@ -1014,6 +1014,10 @@ pub fn menu_bar(app: &mut PhotocraftApp, ui: &mut egui::Ui) -> f32 {
         v.widgets.hovered.bg_stroke = egui::Stroke::NONE;
         egui::MenuBar::new().ui(ui, |ui| {
             ui.spacing_mut().button_padding = egui::vec2(6.0, 3.0);
+            if crate::compact::on() {
+                crate::compact::touch_spacing(ui);
+                ui.spacing_mut().button_padding.x = 12.0;
+            }
             nav.bar_bottom = Some(ui.max_rect().bottom());
             let mut buttons = Vec::with_capacity(TOP_MENUS.len());
             for top in TOP_MENUS {
@@ -1259,6 +1263,10 @@ fn render_level_rows(ui: &mut egui::Ui, items: &[&MenuItem], depth: usize, click
     // Rows touch, as in native menus: the dialog spacing between them made long menus a fifth
     // taller than they need to be (#402).
     ui.spacing_mut().item_spacing.y = 0.0;
+    // A touch screen: every row at least 44 pt tall (the compact workspace, #10966).
+    if crate::compact::on() {
+        crate::compact::touch_spacing(ui);
+    }
     // Secondary menus use the exact same Spectrum hover contrast and spacing.
     crate::widgets::style_spectrum_popup_menu(ui);
     // Walk in Photoshop order: leaves and separators at this depth; a submenu appears at the position
