@@ -18,8 +18,10 @@
 //! - `autosave {intervalMs}` (0 = off; clamped to 5 s – 10 min) → `autosave {intervalMs}`, then
 //!   `snapshot {seq, format: "psd", ok, bytes?, error?, commandCount}` each interval in which
 //!   commands ran
+//! - `compact {on}` (default on) → `compact {on}`: the tablet/touch workspace (`photocraft_ui_egui::compact`);
+//!   `?compact=1` starts in it
 //!
-//! App → host, unasked: `ready {protocol, app, version, upstream, exam, language, capabilities}`
+//! App → host, unasked: `ready {protocol, app, version, upstream, exam, compact, language, capabilities}`
 //! once at start, and `commands {ids, params}` with every engine command run since the last frame
 //! (the session journal) plus `bridge.open {name, size}` for each document the host opened.
 
@@ -75,6 +77,7 @@ enum HostMsg {
     Export { format: Option<Format>, asked: String, request_id: JsValue },
     Exam(bool),
     Autosave(Option<u32>),
+    Compact(bool),
 }
 
 /// The `?host=`, `?exam=` and `?lang=` parameters.
@@ -115,6 +118,7 @@ fn parse(data: &JsValue) -> Option<HostMsg> {
         }
         Kind::Exam => HostMsg::Exam(get(data, "on").as_bool().unwrap_or(true)),
         Kind::Autosave => HostMsg::Autosave(proto::autosave_interval(get(data, "intervalMs").as_f64())),
+        Kind::Compact => HostMsg::Compact(proto::compact_request(get(data, "on").as_bool())),
     })
 }
 
@@ -144,6 +148,9 @@ impl HostBridge {
     /// Listens for the host's messages when the page URL names a host origin; `None` otherwise.
     pub fn install(ctx: egui::Context, app: &mut PhotocraftApp) -> Option<Self> {
         let host = proto::host_origin(query_param("host").as_deref())?;
+        if query_param("compact").as_deref() == Some("1") {
+            photocraft_ui_egui::compact::set_on(true);
+        }
         if query_param("exam").as_deref() == Some("1") {
             EXAM.store(true, Ordering::Relaxed);
         }
@@ -205,6 +212,7 @@ impl HostBridge {
         set(&msg, "version", proto::VERSION);
         set(&msg, "upstream", proto::UPSTREAM);
         set(&msg, "exam", exam_mode());
+        set(&msg, "compact", photocraft_ui_egui::compact::on());
         set(&msg, "language", self.language.unwrap_or("auto"));
         set(&msg, "capabilities", proto::CAPABILITIES.iter().map(|c| JsValue::from_str(c)).collect::<Array>());
         self.post("ready", &msg, None);
@@ -228,6 +236,13 @@ impl HostBridge {
                     let reply = Object::new();
                     set(&reply, "on", on);
                     self.post("exam", &reply, None);
+                    ctx.request_repaint();
+                }
+                HostMsg::Compact(on) => {
+                    photocraft_ui_egui::compact::set_on(on);
+                    let reply = Object::new();
+                    set(&reply, "on", on);
+                    self.post("compact", &reply, None);
                     ctx.request_repaint();
                 }
                 HostMsg::Autosave(interval) => {
